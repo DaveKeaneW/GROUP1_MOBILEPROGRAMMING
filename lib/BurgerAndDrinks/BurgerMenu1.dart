@@ -9,7 +9,14 @@ class BurgerMenuPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // The code you provided goes here
+          Container(
+            width: 416,
+            height: 123,
+            // You can add child widgets to the Container if needed.
+            // For example, you can add an Image like this:
+            // child: Image.asset("assets/your_image.png"),
+          ),
+          // The rest of your code goes here
           // ...
         ],
       ),

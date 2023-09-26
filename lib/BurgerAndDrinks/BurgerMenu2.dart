@@ -69,6 +69,25 @@ class BurgerMenu2 extends StatelessWidget {
                   ),
                 ),
               ),
+              //WHITE RECTANGLE
+              Image.asset(
+                "images/Rectangle 1.png",
+                width: 899,
+                height: 123,
+              ),
+              //ELLIPSE PNG
+              Image.asset(
+                "images/Ellipse 2.png",
+                width: 90,
+                height: 135,
+              ),
+              //ARROW PNG
+              Image.asset(
+                "images/Arrow_Back.png",
+                width: 90,
+                height: 135,
+              ),
+
               Positioned(
                 left: 142,
                 top: 672,

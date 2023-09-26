@@ -16,21 +16,21 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          BurgerSize2(),
+          BurgerSize1(),
         ]),
       ),
     );
   }
 }
 
-class BurgerSize2 extends StatelessWidget {
+class BurgerSize1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          width: 375,
-          height: 812,
+          width: 975,
+          height: 912,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Color(0xFF201520),
@@ -62,43 +62,42 @@ class BurgerSize2 extends StatelessWidget {
                   decoration: BoxDecoration(),
                 ),
               ),
-              Positioned(
-                left: 96,
-                top: 58,
-                child: Text(
-                  'Bacon Swiss Burger',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 24,
-                    fontFamily: 'Jacques Francois',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
+              //WHITE RECTANGLE
+              Image.asset(
+                "images/Rectangle 1.png",
+                width: 899,
+                height: 123,
               ),
-              Positioned(
-                left: 49,
-                top: 170,
-                child: Container(
-                  width: 271,
-                  height: 308,
-                  decoration: ShapeDecoration(
-                    image: DecorationImage(
-                      image:
-                          NetworkImage("https://via.placeholder.com/271x308"),
-                      fit: BoxFit.fill,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                ),
+              //ELLIPSE PNG
+              Image.asset(
+                "images/Ellipse 2.png",
+                width: 90,
+                height: 135,
               ),
+              //ARROW PNG
+              Image.asset(
+                "images/Arrow_Back.png",
+                width: 90,
+                height: 135,
+              ),
+              //GAMBAR PRODUK
+              Image.asset(
+                "images/bacoswissburger.png",
+                width: 450,
+                height: 630,
+              ),
+              //FONT NYA
+              Image.asset(
+                "images/fontswissburger.png",
+                width: 470,
+                height: 135,
+              ),
+
               Positioned(
                 left: 36,
                 top: 501,
                 child: SizedBox(
-                  width: 304,
+                  width: 350,
                   height: 37,
                   child: Text(
                     'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.',
@@ -124,14 +123,14 @@ class BurgerSize2 extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 32,
-                        offset: Offset(0, 16),
-                        spreadRadius: 0,
-                      )
-                    ],
+                    //   shadows: [
+                    //   BoxShadow(
+                    //  color: Color(0x3F000000),
+                    // blurRadius: 32,
+                    //  offset: Offset(0, 16),
+                    //  spreadRadius: 0,
+                    //  )
+                    //  ],
                   ),
                 ),
               ),
@@ -150,7 +149,8 @@ class BurgerSize2 extends StatelessWidget {
                           width: 276,
                           height: 42,
                           decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
+                            color: const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0),
                             shape: RoundedRectangleBorder(
                               side: BorderSide(width: 1, color: Colors.white),
                               borderRadius: BorderRadius.circular(45),
@@ -160,7 +160,7 @@ class BurgerSize2 extends StatelessWidget {
                       ),
                       Positioned(
                         left: 22.38,
-                        top: 7,
+                        top: 13,
                         child: SizedBox(
                           width: 231.24,
                           height: 28,
@@ -183,7 +183,7 @@ class BurgerSize2 extends StatelessWidget {
               ),
               Positioned(
                 left: 96,
-                top: 560,
+                top: 561,
                 child: Container(
                   width: 180,
                   height: 93,
@@ -198,14 +198,14 @@ class BurgerSize2 extends StatelessWidget {
                           decoration: ShapeDecoration(
                             color: Color(0xFFD9D9D9),
                             shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
+                            //  shadows: [
+                            // BoxShadow(
+                            //   color: Color(0x3F000000),
+                            //  blurRadius: 32,
+                            //  offset: Offset(0, 16),
+                            ////  spreadRadius: 0,
+                            // )
+                            //  ],
                           ),
                         ),
                       ),
@@ -373,7 +373,7 @@ class BurgerSize2 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 105,
                                   child: Text(
-                                    'Rp.55.000 (Large)',
+                                    'Rp.50.000 (Large)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,

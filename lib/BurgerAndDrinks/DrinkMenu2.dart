@@ -29,8 +29,8 @@ class DrinkMenu1 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 375,
-          height: 812,
+          width: 975,
+          height: 912,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Color(0xFF201520),
@@ -62,6 +62,25 @@ class DrinkMenu1 extends StatelessWidget {
                   decoration: BoxDecoration(),
                 ),
               ),
+              //WHITE RECTANGLE
+              Image.asset(
+                "images/Rectangle 1.png",
+                width: 899,
+                height: 123,
+              ),
+              //ELLIPSE PNG
+              Image.asset(
+                "images/Ellipse 2.png",
+                width: 90,
+                height: 135,
+              ),
+              //ARROW PNG
+              Image.asset(
+                "images/Arrow_Back.png",
+                width: 90,
+                height: 135,
+              ),
+
               Positioned(
                 left: 139,
                 top: 151,

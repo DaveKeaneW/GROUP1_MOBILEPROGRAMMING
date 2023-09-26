@@ -187,20 +187,57 @@ class BurgerMenu1 extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 153,
-                top: 59,
-                child: Text(
-                  'Burger',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 24,
-                    fontFamily: 'Jacques Francois',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
+
+              //SOUTHWEST BURGER PNG
+              Image.asset(
+                "images/Spaghetti Bologneses 1.png",
+                width: 140,
+                height: 420,
               ),
+              //WHITE RECTANGLE
+              Image.asset(
+                "images/Rectangle 1.png",
+                width: 899,
+                height: 123,
+              ),
+              //TULISAN BURGER
+              Image.asset(
+                "images/Burger.png",
+                width: 450,
+                height: 135,
+              ),
+              //BACON SWISS BURGER
+              Image.asset(
+                "images/Our Favorite Recipes from an Entire Year of Cooking 1.png",
+                width: 140,
+                height: 660,
+              ),
+              //PULLED PORK BURGER
+              Image.asset(
+                "images/Tomato Confit Spaghetti - The Original Dish 1.png",
+                width: 140,
+                height: 950,
+              ),
+              //ELLIPSE PNG
+              Image.asset(
+                "images/Ellipse 2.png",
+                width: 90,
+                height: 135,
+              ),
+              //ARROW PNG
+              Image.asset(
+                "images/Arrow_Back.png",
+                width: 90,
+                height: 135,
+              ),
+              // DOUBLE CHEESE BURGER
+              Image.asset(
+                "images/Spaghetti alle vongole e pomodorini (o bianchi)_ Ricetta originale e Segreti! 1.png",
+                width: 140,
+                height: 150,
+              ),
+              // BEEF BURGER
+
               Positioned(
                 left: 291,
                 top: 235,

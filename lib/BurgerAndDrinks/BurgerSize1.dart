@@ -62,44 +62,42 @@ class BurgerSize1 extends StatelessWidget {
                   decoration: BoxDecoration(),
                 ),
               ),
-              Positioned(
-                left: 119,
-                top: 44,
-                child: Text(
-                  'SouthWest \nChicken Burger\n',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 24,
-                    fontFamily: 'Jacques Francois',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
+              //WHITE RECTANGLE
+              Image.asset(
+                "images/Rectangle 1.png",
+                width: 899,
+                height: 123,
               ),
-              Positioned(
-                left: 49,
-                top: 170,
-                child: Container(
-                  width: 271,
-                  height: 308,
-                  decoration: ShapeDecoration(
-                    image: DecorationImage(
-                      image:
-                          NetworkImage("https://via.placeholder.com/271x308"),
-                      fit: BoxFit.fill,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                ),
+              //ELLIPSE PNG
+              Image.asset(
+                "images/Ellipse 2.png",
+                width: 90,
+                height: 135,
               ),
+              //ARROW PNG
+              Image.asset(
+                "images/Arrow_Back.png",
+                width: 90,
+                height: 135,
+              ),
+              //GAMBAR PRODUK
+              Image.asset(
+                "images/Keto French Fries ONLY 3 INGREDIENTS _ BEST Keto French Fry Recipe 1.png",
+                width: 450,
+                height: 630,
+              ),
+              //FONT NYA
+              Image.asset(
+                "images/fontsouthwest.png",
+                width: 470,
+                height: 135,
+              ),
+
               Positioned(
                 left: 36,
                 top: 501,
                 child: SizedBox(
-                  width: 304,
+                  width: 350,
                   height: 37,
                   child: Text(
                     'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
@@ -125,14 +123,14 @@ class BurgerSize1 extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 32,
-                        offset: Offset(0, 16),
-                        spreadRadius: 0,
-                      )
-                    ],
+                    //   shadows: [
+                    //   BoxShadow(
+                    //  color: Color(0x3F000000),
+                    // blurRadius: 32,
+                    //  offset: Offset(0, 16),
+                    //  spreadRadius: 0,
+                    //  )
+                    //  ],
                   ),
                 ),
               ),
@@ -151,7 +149,8 @@ class BurgerSize1 extends StatelessWidget {
                           width: 276,
                           height: 42,
                           decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
+                            color: const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0),
                             shape: RoundedRectangleBorder(
                               side: BorderSide(width: 1, color: Colors.white),
                               borderRadius: BorderRadius.circular(45),
@@ -161,7 +160,7 @@ class BurgerSize1 extends StatelessWidget {
                       ),
                       Positioned(
                         left: 22.38,
-                        top: 7,
+                        top: 13,
                         child: SizedBox(
                           width: 231.24,
                           height: 28,
@@ -199,14 +198,14 @@ class BurgerSize1 extends StatelessWidget {
                           decoration: ShapeDecoration(
                             color: Color(0xFFD9D9D9),
                             shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
+                            //  shadows: [
+                            // BoxShadow(
+                            //   color: Color(0x3F000000),
+                            //  blurRadius: 32,
+                            //  offset: Offset(0, 16),
+                            ////  spreadRadius: 0,
+                            // )
+                            //  ],
                           ),
                         ),
                       ),

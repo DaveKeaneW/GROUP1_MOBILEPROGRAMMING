@@ -1,6 +1,6 @@
 import 'package:tesgit/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:tesgit/welcome2.dart'; // Import your WelcomeScreen2
+import 'package:tesgit/welcome2.dart'; 
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

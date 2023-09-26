@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MenuBurger extends StatelessWidget {
+class MenuDrinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu Burger'),
+        title: Text('Menu Drinks'),
       ),
       body: SingleChildScrollView(
         child: Column(

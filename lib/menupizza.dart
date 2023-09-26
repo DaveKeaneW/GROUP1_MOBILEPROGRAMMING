@@ -1,458 +1,546 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class MenuPizza extends StatelessWidget {
+  const MenuPizza({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 120, 
-        leading: Container(
-          margin: EdgeInsets.only(left: 10), 
-          width: 40, 
-          height: 40, 
-          decoration: BoxDecoration(
-            color: Colors.black, 
-            shape: BoxShape.circle, 
-          ),
-          child: IconButton(
-            iconSize: 24, 
-            icon: Icon(Icons.arrow_back, color: Colors.white), 
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ),
-        backgroundColor: Color(0xffffffff),
-        title: Text(
-          'Pizza',
-          style: TextStyle(
-            fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-            fontSize: 24,
-            fontWeight: FontWeight.w400,
-            color: Color(0xff000000),
-          ),
-        ),
-        centerTitle: true, // Membuat teks 'Pizza' menjadi ditengah AppBar
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
-      body: Container(
-        color: Color(0xff201520),
-        child: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.fromLTRB(12, 28, 10, 39),
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(5, 0, 16, 14),
-                  width: double.infinity,
-                  height: 111,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
-                        width: 114,
-                        height: 111,
-                        child: Image.asset('images/margarita.png', fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 4, 0, 10),
-                        width: 210,
-                        height: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.fromLTRB(0, 0, 0, 4),
-                              child: Text(
-                                'Margarita Pizza',
-                                style: TextStyle(
-                                  fontFamily: GoogleFonts.inter().fontFamily,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w700,
-                                  height: 1.2125,
-                                  color: Color(0xffffffff),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 78,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Align(
-                                      child: SizedBox(
-                                        width: 210,
-                                        height: 61,
-                                        child: Text(
-                                          'Our Margerita Pizza is best seller of pizza in\nour Deja Brew\'s Store. This pizza usually\ntopped with a variety of things, such as\ntomatoes, cheese, olives, anchovies, and garlic.',
-                                          style: TextStyle(
-                                            fontFamily: GoogleFonts.inter().fontFamily,
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w400,
-                                            height: 1.2125,
-                                            color: Color(0xffffffff),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    left: 156,
-                                    top: 60,
-                                    child: Container(
-                                      width: 37,
-                                      height: 18,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: Color(0xffffffff)),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Center(
-                                        child: Center(
-                                        child: Text(
-                                          'ADD',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: GoogleFonts.inter().fontFamily,
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w400,
-                                            height: 1.2125,
-                                            color: Color(0xffffffff),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  ),
-                                  ],
-                                 ),
-                                ),
-                             ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 8),
-              width: double.infinity,
-              height: 250,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0,0, 3, 0),
-                    width: 124,
-                    height: double.infinity,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Align(
-                            child: SizedBox(
-                              width: 124,
-                              height: 118,
-                              child: Image.asset('images/tomat.png', fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 0,
-                          top: 114,
-                          child: Align(
-                            child: SizedBox(
-                              width: 125,
-                              height: 136,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(2),
-                                child: Image.asset('images/meat.png', fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          toolbarHeight: 120,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            ),
+            title: Text(
+              'Pizza',
+              style: TextStyle(
+                fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
+                fontSize: 28,
+                color: Colors.black,
+              ),
+            ),
+            centerTitle: true,
+        ),
+        body: ListView(children: [
+          MenuPizzaPage1(),
+        ]),
+      ),
+    );
+  }
+}
+
+class MenuPizzaPage1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: 415,
+          height: 800,
+          clipBehavior: Clip.antiAlias,
+          decoration: ShapeDecoration(
+            color: Color(0xFF201520),
+            shape: RoundedRectangleBorder(
+              side: BorderSide(
+                width: 0,
+                strokeAlign: BorderSide.strokeAlignOutside,
+                color: Color(0xff201520),
+              ),
+            ),
+            shadows: [
+              BoxShadow(
+                color: Color(0x02374151),
+                blurRadius: 48,
+                offset: Offset(6, 7),
+                spreadRadius: 0,
+              )
+            ],
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                left: 170,
+                top: 35,
+                child: Text(
+                  'Margarita Pizza',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 55,
+                child: SizedBox(
+                  width: 209,
+                  child: Text(
+                    'Our Margerita Pizza is best seller of pizza in \nour Deja Brew’s Store. This pizza usually \ntopped with a variety of things, such as \ntomatoes, cheese, olives, anchovies, and garlic.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0, 7, 0, 13),
-                    height: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 89, 6),
-                          child: Text(
-                            'Cherry Tomatoes Pizza',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.inter().fontFamily,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              height: 1.2125,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 10, 5),
-                          constraints: BoxConstraints(
-                            maxWidth: 216,
-                          ),
-                          child: Text(
-                            'Homemade pizza dough topped with roasted\ncaramelized onions, burst summer tomatoes, \nsweet melted gouda cheese, herbs, creamy\nburrata, and topped with fresh basil.',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.inter().fontFamily,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(123, 0, 0, 30),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 170,
+                child: Text(
+                  'Cherry Tomatoes Pizza',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 190,
+                child: SizedBox(
+                  width: 216,
+                  child: Text(
+                    'Homemade pizza dough topped with roasted \ncaramelized onions, burst summer tomatoes, \nsweet melted gouda cheese, herbs, creamy \nburrata, and topped with fresh basil.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 472,
+                child: Text(
+                  'The pizza generally consists of pizza dough, \nolive oil, garlic, cheese, salt and sometimes \ntoppings including vegetables such as spinach, \ntomato, and herbs.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 305,
+                child: Text(
+                  'Pepperoni Pizza',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 448,
+                child: Text(
+                  'Garlic Cheese Pizza',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 580,
+                child: Text(
+                  'Mushroom Chicken Pizza',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 330,
+                child: SizedBox(
+                  width: 225,
+                  child: Text(
+                    'Pepperoni made from beef and cured pork mixed together and then seasoned with a blend that usually includes paprika, garlic, black pepper, crushed red pepper, cayenne pepper, mustard seed, and fennel seed.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ),
+              
+              Positioned(
+                left: 26,
+                top: 61,
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(),
+                ),
+              ),
+              
+              Positioned(
+                left: 310,
+                top: 255,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
                           width: 37,
                           height: 18,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color(0xffffffff)),
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: Center(
-                              child: Center(
-                                child: Text(
-                                  'ADD',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: GoogleFonts.inter().fontFamily,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                              ),
-                            ),
                           ),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0,0, 131,4),
-                            child: Text(
-                              'Pepperoni Pizza',
-                              style: TextStyle(
-                                fontFamily: GoogleFonts.inter().fontFamily,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                height: 1.2125,
-                                color: Color(0xffffffff),
-                              ),
-                            ),
-                          ),
-                          Container(margin: EdgeInsets.fromLTRB(0, 0, 0, 9),
-                          constraints: BoxConstraints(
-                            maxWidth: 226,
-                          ),
-                          child: Text(
-                            'Pepperoni made from beef and cured pork\nmixed together and then seasoned with a blend\n that usually includes paprika, garlic, black\npepper, crushed red pepper, cayenne pepper\n, mustard seed, and fennel seed.',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.inter().fontFamily,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2125,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(123, 0, 0, 0),
-                            width: 37,
-                            height: 18,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Color(0xffffffff)),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Center(
-                              child: Center(
-                                child: Text(
-                                  'ADD',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: GoogleFonts.inter().fontFamily,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                  Container(margin: EdgeInsets.fromLTRB(9, 0, 0, 22),
-                  width: double.infinity,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
-                        width: 106,
-                        height: 110,
-                        child: Image.asset('images/cheese.png', fit: BoxFit.cover,
                         ),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 0, 109, 6),
-                            child: Text(
-                              'Garlic Cheese Pizza',
-                              style: TextStyle(
-                                fontFamily: GoogleFonts.inter().fontFamily,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                height: 1.2125,
-                                color: Color(0xffffffff),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 0, 0, 14),
-                            constraints: BoxConstraints(
-                              maxWidth: 226,
-                            ),
-                            child: Text(
-                              'The pizza generally consists of pizza dough,\nolive oil, garlic, cheese, salt and sometimes\ntoppings including vegetables such as spinach,\ntomato, and herbs.',
-                              style: TextStyle(
-                                fontFamily: GoogleFonts.inter().fontFamily,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
-                                height: 1.2125,
-                                color: Color(0xfffffffff),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(123, 0, 0, 0),
-                            width: 37,
-                            height: 18,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Color(0xffffffff)),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Center(
-                              child: Center(
-                                child:Text(
-                                  'ADD',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: GoogleFonts.inter().fontFamily,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ), 
-                                ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(9, 0, 29, 0),
-                    width: double.infinity,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                          width: 106,
-                          height: 107,
-                          child: Image.asset('images/mushroom.png', fit: BoxFit.cover,
+                ),
+              ),
+              Positioned(
+                left: 310,
+                top: 130,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment:CrossAxisAlignment.end,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 43, 13),
-                                child: Text(
-                                  'Mushroom Chicken Pizza',
-                                  style: TextStyle(
-                                    fontFamily: GoogleFonts.inter().fontFamily,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.2125,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 0, 17),
-                                constraints: BoxConstraints(
-                                  maxWidth: 192,
-                                ),
-                                child: Text(
-                                  'This pizza made from chicken breast,\nmushroom, cherry tomatoes and melted\ncheese mozarella.',
-                                  style: TextStyle(
-                                    fontFamily: GoogleFonts.inter().fontFamily,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.2125,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 2, 0),
-                                width: 37,
-                                height: 18,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xffffffff)),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Center(
-                                  child: Center(
-                                    child: Text(
-                                      'ADD',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontFamily: GoogleFonts.inter().fontFamily,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.2125,
-                                        color: Color(0xffffffff),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ], ),
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                      ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            )
-              ],
+              Positioned(
+                left: 310,
+                top: 395,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 310,
+                top: 663,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 310,
+                top: 530,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 170,
+                top: 610,
+                child: SizedBox(
+                  width: 195,
+                  height: 45,
+                  child: Text(
+                    'This pizza made from chicken breast,\nmushroom, cherry tomatoes and melted \ncheese mozarella.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 32,
+                top: 35,
+                child: Container(
+                  width: 114,
+                  height: 111,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/margarita.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 28,
+                top: 160,
+                child: Container(
+                  width: 124,
+                  height: 125,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/tomat.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 18,
+                top: 290,
+                child: Container(
+                  width: 140,
+                  height: 140,
+                  decoration: ShapeDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/meat.png"),
+                      fit: BoxFit.fill,
+                    ),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 32,
+                top: 440,
+                child: Container(
+                  width: 106,
+                  height: 110,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/cheese.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 32,
+                top: 580,
+                child: Container(
+                  width: 111,
+                  height: 107,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/mushroom.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-      ),
         ),
-      ),
-        );
+      ],
+    );
   }
 }

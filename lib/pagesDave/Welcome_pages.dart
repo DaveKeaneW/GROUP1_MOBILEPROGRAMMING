@@ -14,17 +14,17 @@ class WellcomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: defaultMargin ),
           children: [
-            SizedBox(height: 100),
-            Image.asset('images/loginpage.png',
+            SizedBox(height: 130),
+            Image.asset('assets/image/loginpage.png',
                 height: 270,width: 233, alignment: Alignment.center, fit: BoxFit.cover),
-                SizedBox(height:40,),
+                SizedBox(height:30,),
                   Text("Welcome", style :welcomeTextStyle,textAlign: TextAlign.center,
                   ),
                    SizedBox(
                     height:15,),
                   Text("Before enjoying Foodmedia services \nPlease register first", style :biasaTextStyle.copyWith(fontSize:13),textAlign: TextAlign.center
                   ),
-                  SizedBox(height:51,
+                  SizedBox(height:101,
                   ),
                   Container(
                     height: 60,

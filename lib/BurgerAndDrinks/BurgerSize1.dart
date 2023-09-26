@@ -29,8 +29,8 @@ class BurgerSize1 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 375,
-          height: 812,
+          width: 975,
+          height: 912,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Color(0xFF201520),

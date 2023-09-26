@@ -549,7 +549,7 @@ Positioned(
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("img/spagg_bolo.png"),
+                      image: AssetImage("images/spagg_bolo.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -563,7 +563,7 @@ Positioned(
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("img/spagg_alio.png"),
+                      image: AssetImage("images/spagg_alio.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -577,7 +577,7 @@ Positioned(
                   height: 106,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: AssetImage("img/spagg_toma.png"),
+                      image: AssetImage("images/spagg_toma.png"),
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
@@ -592,7 +592,7 @@ Positioned(
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("img/spagg_alle.png"),
+                      image: AssetImage("images/spagg_alle.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -606,7 +606,7 @@ Positioned(
     height: 106,
     decoration: BoxDecoration(
       image: DecorationImage(
-        image: AssetImage("img/spagg_cream.png"),
+        image: AssetImage("images/spagg_cream.png"),
         fit: BoxFit.fill,
       ),
       borderRadius: BorderRadius.all(Radius.circular(15.0)), // Tambahkan border radius di sini

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menuburger.dart';
 
+//BEEF BURGER SIZE
+
 class BurgerSize4 extends StatelessWidget {
   const BurgerSize4({super.key});
 

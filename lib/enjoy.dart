@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tesgit/home_screen.dart';
 
 void main() {
   runApp(const enjoy());
@@ -233,8 +234,8 @@ class KanePunya extends StatelessWidget {
               
               
               Positioned(
-                left: 19,
-                top: 722,
+                left: 35,
+                top: 730,
                 child: Container(
                   width: 337,
                   height: 40,
@@ -257,28 +258,37 @@ class KanePunya extends StatelessWidget {
               
               
               
-              Positioned(
-                left: 55,
-                top: 744,
-                child: SizedBox(
-                  width: 299,
-                  height: 27,
-                  child: Text(
-                    'Back to Home',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'Inria Serif',
-                      fontWeight: FontWeight.w400,
-                      height: 0.08,
-                    ),
-                  ),
-                ),
-              ),
-              
-              
-              
+                    Positioned(
+  left: 55,
+  top: 736,
+  child: SizedBox(
+    width: 299,
+    height: 27,
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Color(0xFF2E1E2E), // Background color
+      ),
+      child: Text(
+        'Back to Home',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+          fontFamily: 'Inria Serif',
+          fontWeight: FontWeight.w400,
+          height: 0.08,
+        ),
+      ),
+    ),
+  ),
+),
+
               
               
               

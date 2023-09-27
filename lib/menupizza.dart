@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/home_screen.dart';
 import 'package:tesgit/margaritapizza.dart';
 
 
@@ -22,7 +23,10 @@ class MenuPizza extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: (){
-              Navigator.pop(context);
+               Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> HomeScreen(),
+                      ),
+                      );
             },
             ),
             title: Text(

@@ -16,10 +16,7 @@ class WellcomePage extends StatelessWidget {
           children: [
             SizedBox(height: 130),
             Image.asset('images/loginpage.png',
-                height: 270,
-                width: 233,
-                alignment: Alignment.center,
-                fit: BoxFit.cover),
+                height: 270,width: 233, alignment: Alignment.center, fit: BoxFit.cover),
             SizedBox(
               height: 30,
             ),
@@ -81,16 +78,19 @@ class WellcomePage extends StatelessWidget {
                   TextSpan(
                     text: 'By logging in or registering, you have agreed to ',
                     style: biasaTextStyle.copyWith(fontSize: 10),
+
                   ),
                   TextSpan(
                     text: 'the Terms and Conditions and Privacy Policy.',
                     style: termsTextStyle.copyWith(fontSize: 10),
                   ),
+
                 ],
               ),
             )
           ],
         ),
+
       ),
     );
   }

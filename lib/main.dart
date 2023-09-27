@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tesgit/home_screen.dart';
+import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/welcome.dart';
 
 void main() {
@@ -13,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+
+      home : WellcomePage(),
     );
   }
 }
+

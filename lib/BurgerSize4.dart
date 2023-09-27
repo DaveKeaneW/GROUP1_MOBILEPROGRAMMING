@@ -377,7 +377,7 @@ class MenuBurger4 extends StatelessWidget {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/beefburger.png'),
+                      image: AssetImage('images/beefburger.jpg'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

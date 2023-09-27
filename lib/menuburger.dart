@@ -86,7 +86,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 38,
                 child: Text(
-                  'SouthWest Chicken Burger', //JUDUL 1
+                  'SouthWest Burger', //JUDUL 1
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -221,7 +221,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 448,
                 child: Text(
-                  'Double Cheese Burger', //JUDUL 4
+                  'Cheese Burger', //JUDUL 4
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -657,14 +657,14 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 32,
+                left: 30,
                 top: 580,
                 child: Container(
-                  width: 115,
+                  width: 120,
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/beefburger.png"),
+                      image: AssetImage("images/beefburger.jpg"),
                       fit: BoxFit.fill, //GAMBAR 5
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),

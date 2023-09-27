@@ -59,14 +59,7 @@ class KanePunya extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x26000000),
-                        blurRadius: 15,
-                        offset: Offset(2, 2),
-                        spreadRadius: 0,
-                      )
-                    ],
+                    
                   ),
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
@@ -96,14 +89,7 @@ class KanePunya extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x26000000),
-                        blurRadius: 15,
-                        offset: Offset(2, 2),
-                        spreadRadius: 0,
-                      )
-                    ],
+                   
                   ),
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
@@ -149,14 +135,7 @@ class KanePunya extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x26000000),
-                        blurRadius: 15,
-                        offset: Offset(2, 2),
-                        spreadRadius: 0,
-                      )
-                    ],
+                   
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,

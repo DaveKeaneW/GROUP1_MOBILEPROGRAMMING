@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
+import 'package:tesgit/home_screen.dart';
+=======
 import 'package:tesgit/CherryPizza.dart';
 import 'package:tesgit/GarlicPizza.dart';
 import 'package:tesgit/MushroomPizza.dart';
 import 'package:tesgit/PepperoniPizza.dart';
+>>>>>>> 24074b2284f33d5afd5346ee91ef3158d99e4c68
 import 'package:tesgit/margaritapizza.dart';
 
 
@@ -26,7 +30,10 @@ class MenuPizza extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: (){
-              Navigator.pop(context);
+               Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> HomeScreen(),
+                      ),
+                      );
             },
             ),
             title: Text(

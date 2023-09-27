@@ -30,8 +30,8 @@ class MenuPizzaPage2 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 410,
-          height: 900,
+          width: 412,
+          height: 844,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Color(0xFF201520),
@@ -90,7 +90,7 @@ Image.asset('images/search.png')
 ),
 ),
               Positioned(
-                left: 36,
+                left: 46,
                 top: 496,
                 child: SizedBox(
                   width: 304,
@@ -321,8 +321,8 @@ Image.asset('images/search.png')
                 ),
               ),
               Positioned(
-                left: 41,
-                top: 684,
+                left: 50,
+                top: 742,
                 child: Container(
                   width: 299,
                   height: 59,
@@ -331,20 +331,16 @@ Image.asset('images/search.png')
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 32,
-                        offset: Offset(0, 16),
-                        spreadRadius: 0,
-                      )
-                    ],
+                    
+                      
+                      
+                    
                   ),
                 ),
               ),
               Positioned(
-                left: 53,
-                top: 693,
+                left: 62,
+                top: 750,
                 child: Container(
                   width: 276,
                   height: 42,
@@ -367,7 +363,7 @@ Image.asset('images/search.png')
                       ),
                       Positioned(
                         left: 22.38,
-                        top: 7,
+                        top: 12,
                         child: SizedBox(
                           width: 231.24,
                           height: 28,
@@ -376,7 +372,7 @@ Image.asset('images/search.png')
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 13,
+                              fontSize: 15,
                               fontFamily: 'Inter',
                               fontWeight: FontWeight.w400,
                               height: 0,
@@ -389,7 +385,7 @@ Image.asset('images/search.png')
                 ),
               ),
               Positioned(
-                left: 40,
+                left: 55, //tambah 10
                 top: 182,
                 child: Container(
                   width: 300,
@@ -421,13 +417,13 @@ Image.asset('images/search.png')
                 ),
               ),
               Positioned(
-                left: 103,
+                left: 112,
                 top: 55,
                 child: Text(
                   'Margarita Pizza',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 24,
+                    fontSize: 28,
                     fontFamily: 'Jacques Francois',
                     fontWeight: FontWeight.w400,
                     height: 0,

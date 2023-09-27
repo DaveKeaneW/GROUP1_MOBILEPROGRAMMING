@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tesgit/home_screen.dart';
 
-
 class WelcomeScreen3 extends StatelessWidget {
-  // ignore: use_key_in_widget_constructors
   const WelcomeScreen3({Key? key});
 
   @override
@@ -12,7 +10,7 @@ class WelcomeScreen3 extends StatelessWidget {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Container(
-          padding: const EdgeInsets.fromLTRB(28, 283, 26, 64), // Samakan dengan padding pada WelcomeScreen2
+          padding: const EdgeInsets.fromLTRB(28, 283, 26, 64),
           width: double.infinity,
           decoration: const BoxDecoration(
             color: Color(0xff201520),
@@ -28,9 +26,9 @@ class WelcomeScreen3 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: const EdgeInsets.fromLTRB(0, 0, 1, 16.16), // Sesuaikan margin dengan WelcomeScreen2
-                width: 290, // Samakan dengan lebar pada WelcomeScreen2
-                height: 297.84, // Samakan dengan tinggi pada WelcomeScreen2
+                margin: const EdgeInsets.fromLTRB(0, 0, 1, 16.16),
+                width: 290,
+                height: 297.84,
                 child: Image.asset("images/food.png"),
               ),
               Container(
@@ -46,7 +44,7 @@ class WelcomeScreen3 extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.fromLTRB(5, 0, 0, 50), // Sesuaikan margin dari bawah dengan WelcomeScreen2
+                margin: const EdgeInsets.fromLTRB(5, 0, 0, 50),
                 constraints: const BoxConstraints(
                   maxWidth: 283,
                 ),
@@ -61,7 +59,7 @@ class WelcomeScreen3 extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -82,9 +80,10 @@ class WelcomeScreen3 extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Spacer(), // Untuk memberikan ruang di antara Skip dan lingkaran (circle)
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 90,
+                    height: 70,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.transparent,
@@ -93,7 +92,7 @@ class WelcomeScreen3 extends StatelessWidget {
                       child: Image.asset('images/circle3.png'),
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  Spacer(), // Untuk memberikan ruang di antara lingkaran (circle) dan ikon panah
                   InkWell(
                     onTap: () {
                       Navigator.of(context).pushReplacement(

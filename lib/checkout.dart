@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const sukses());
+  runApp(const cekot());
 }
 
-class sukses extends StatelessWidget {
-  const sukses ({super.key});
+class cekot extends StatelessWidget {
+  const cekot ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -166,33 +166,22 @@ class KanePunya extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: ShapeDecoration(
-                            shape: OvalBorder(
-                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 3,
+                        left: 5,
                         top: 3,
                         child: Container(
                           width: 44,
                           height: 44,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/44x44"),
-                              fit: BoxFit.fill,
+                            shape: CircleBorder(
+                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
                             ),
-                            shape: OvalBorder(),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
                       ),
+                      
                     ],
                   ),
                 ),

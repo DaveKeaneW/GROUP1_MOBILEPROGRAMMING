@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menuburger.dart';
 import 'package:tesgit/menupizza.dart';
+import 'package:tesgit/menuspaghetti.dart';
+import 'package:tesgit/menudrinks.dart';
+import 'package:tesgit/menusnack.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SingleChildScrollView(
+      child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           border: Border.all(color: const Color(0xff201520)),
@@ -27,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              height: 260,
+              height: 280,
               child: Stack(
                 children: [
                   Positioned(
@@ -36,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                     child: Align(
                       child: SizedBox(
                         width: 506,
-                        height: 145,
+                        height: 150,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: Color(0xff3e2e3e),
@@ -103,8 +107,8 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Container(
                             margin: const EdgeInsets.fromLTRB(10, 0, 10, 1),
-                            width: 20.13,
-                            height: 20,
+                            width: 30,
+                            height: 30,
                             child: Image.asset('images/search.png'),
                           ),
                           Text(
@@ -162,8 +166,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: 86.5,
-                    top: 156,
+                    left: 100,
+                    top: 150,
                     child: Align(
                       child: SizedBox(
                         width: 196,
@@ -172,8 +176,8 @@ class HomeScreen extends StatelessWidget {
                           'Our Menu',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: GoogleFonts.inriaSerif().fontFamily,
-                            fontSize: 22,
+                            fontFamily: GoogleFonts.hurricane().fontFamily,
+                            fontSize: 40,
                             fontWeight: FontWeight.w400,
                             height: 1.2575,
                             color: const Color(0xffeacf94),
@@ -186,7 +190,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(25, 25, 25, 25),
+              padding: const EdgeInsets.fromLTRB(25, 15, 25, 25),
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -270,7 +274,10 @@ class HomeScreen extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> MenuPizza(),
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(
+                                builder: (context)=> MenuPizza(),
                             ),
                            );
                           },
@@ -348,25 +355,31 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(25, 0, 0, 15),
                     width: double.infinity,
                     height: 151,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(
+                              context, 
+                            MaterialPageRoute(
+                              builder: (context) => MenuSpaghetti(),
+                              ),
+                            );
+                          },
+                        child :Container(
                           margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           width: 148,
                           height: 151,
                           child: Stack(
                             children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Align(
+                               Align(
                                   child: SizedBox(
                                     width: 148,
-                                    height: 142,
+                                    height: 151,
                                     child: Container(
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
@@ -375,11 +388,11 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ),
-                              Positioned(
-                                left: 17,
-                                top: 4,
-                                child: Align(
+                                Positioned(
+                                  left: 15,
+                                  top: 8,
+                                  child: 
+                                Align(
                                   child: SizedBox(
                                     width: 115,
                                     height: 36,
@@ -396,11 +409,10 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ),
-                              Positioned(
-                                left: 0,
-                                top: 18,
-                                child: Align(
+                                ),
+                                Positioned(
+                                  top: 35,
+                                  child: Align(
                                   child: SizedBox(
                                     width: 145,
                                     height: 133,
@@ -409,11 +421,20 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ),
+                                ),
                             ],
                           ),
                         ),
-                        SizedBox(
+                        ),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, 
+                            MaterialPageRoute(builder: (context) => MenuSnack(),
+                            ),
+                           );
+                          },
+                        child: Container(
+                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           width: 148,
                           height: 151,
                           child: Stack(
@@ -424,7 +445,7 @@ class HomeScreen extends StatelessWidget {
                                 child: Align(
                                   child: SizedBox(
                                     width: 148,
-                                    height: 142,
+                                    height: 151,
                                     child: Container(
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
@@ -456,11 +477,11 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 9,
-                                top: 20,
+                                left: 5,
+                                top: 28,
                                 child: Align(
                                   child: SizedBox(
-                                    width: 130,
+                                    width: 140,
                                     height: 124,
                                     child: Image.asset('images/snack.png',
                                     fit: BoxFit.cover,
@@ -471,23 +492,32 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
+                        ),
                       ],
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.fromLTRB(125, 20, 125.58, 30),
-                    width: double.infinity,
+                    margin: const EdgeInsets.fromLTRB(125, 25, 125.58, 45),
+                    width: 148,
                     height: 151,
                     decoration: BoxDecoration(
                       color: const Color(0xff3e2e3e),
                       borderRadius: BorderRadius.circular(20),
                     ),
+                    child: InkWell(
+                      onTap: (){
+                         Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> MenuDrinks(),
+                      ),
+                      );
+                    },
                     child: Stack(
                       children: [
                         Positioned(
-                          left: 37,
-                          top: 7,
-                          child: Align(
+                          top: 5,
+                          left: 40,
+                          child: 
+                         Align(
                             child: SizedBox(
                               width: 69,
                               height: 36,
@@ -505,24 +535,27 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 23,
-                          top: 42,
-                          child: Align(
+                          Positioned(
+                            top: 30,
+                            left: 15,
+                            child: 
+                       Align(
                             child: SizedBox(
-                              width: 104,
-                              height: 91,
+                              width: 115,
+                              height: 120,
                               child: Image.asset('images/drinks.png'),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                       ),
+                     ),
+                   ),
                 ],
-              ),
-            ),
-        );
+               ),
+             ),
+           ),
+         ],
+        ),
+       ),       
+      ),
+    );
   }
 }
 

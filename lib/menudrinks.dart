@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tesgit/BurgerSize1.dart';
-import 'package:tesgit/BurgerSize2.dart';
-import 'package:tesgit/BurgerSize3.dart';
-import 'package:tesgit/BurgerSize4.dart';
-import 'package:tesgit/BurgerSize5.dart';
-import 'package:tesgit/home_screen.dart';
 
-class MenuBurger extends StatelessWidget {
-  const MenuBurger({super.key});
+class MenuDrinks extends StatelessWidget {
+  const MenuDrinks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +20,12 @@ class MenuBurger extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
-                ),
-              );
+              Navigator.pop(context);
             },
           ),
-          //JUDUL MAKANAN
+          //JUDUL MINUMAN
           title: Text(
-            'Burger',
+            'Drinks',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,
@@ -46,14 +35,14 @@ class MenuBurger extends StatelessWidget {
           centerTitle: true,
         ),
         body: ListView(children: [
-          MenuBurgerPage1(),
+          MenuDrinksPage1(),
         ]),
       ),
     );
   }
 }
 
-class MenuBurgerPage1 extends StatelessWidget {
+class MenuDrinksPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -84,9 +73,9 @@ class MenuBurgerPage1 extends StatelessWidget {
             children: [
               Positioned(
                 left: 170,
-                top: 38,
+                top: 35,
                 child: Text(
-                  'SouthWest Burger', //JUDUL 1
+                  'StrawBerry MilkShake', //JUDUL 1
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -98,14 +87,14 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 58,
+                top: 55,
                 child: SizedBox(
                   width: 209,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.', //DESC 1
+                        'sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, Strawberry.', //DESC 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -115,13 +104,13 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.50.000', //HARGA 1
+                        '\nRp.45.000', //HARGA 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 1,
+                          height: 0,
                         ),
                       ),
                     ],
@@ -130,9 +119,9 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 175,
+                top: 170,
                 child: Text(
-                  'Bacon Swiss Burger', //JUDUL 2
+                  'Lychee Ice Tea', //JUDUL 2
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -144,14 +133,14 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 195,
+                top: 190,
                 child: SizedBox(
                   width: 216,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.', //DESC 2
+                        'This lychee-infused iced green tea is a sweet and fruity drink inspired by the ancient Chinese lychee tea. Refreshing and energising.', //DESC 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11.5,
@@ -161,13 +150,13 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.55.000', //HARGA 2
+                        '\nRp.30.000', //HARGA 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 1,
+                          height: 0,
                         ),
                       ),
                     ],
@@ -181,7 +170,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'A Double Cheeseburger consists of two 1.6\noz. beef patties, two slices of American  \ncheese, a sesame seed bun, ketchup, pickle \nslices, onions, and mustard.', // DESC 4
+                      'navel, cara cara, or blood oranges—whichever\nyou prefer—just note that the color of your\ncocktails will vary depending on citrus you use.', // DESC 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 11,
@@ -191,13 +180,13 @@ class MenuBurgerPage1 extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\nRp.43.000', //HARGA 4
+                      '\nRp.65.000', //HARGA 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w700,
-                        height: 1,
+                        height: 1.3,
                       ),
                     ),
                   ],
@@ -205,9 +194,9 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 309,
+                top: 305,
                 child: Text(
-                  'Pulled Pork Burger', //JUDUL 3
+                  'Lemon Ice Tea', //JUDUL 3
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -221,7 +210,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 448,
                 child: Text(
-                  'Cheese Burger', //JUDUL 4
+                  'Orange Blush', //JUDUL 4
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -235,7 +224,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 580,
                 child: Text(
-                  'Beef Burger', // JUDUL 5
+                  'Thai Iced Tea', // JUDUL 5
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -247,14 +236,14 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 335,
+                top: 330,
                 child: SizedBox(
                   width: 225,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'The Pulled Pork Burger is a smoky, sweetand spicy burger that is sure to be a hit at your next cookout! This burger is packed withflavor', //DESC 3
+                        'Lemon iced tea combines black tea, fresh lemon juice, and sugar to make a bold and refreshing drink.', //DESC 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -264,7 +253,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.67.000', // HARGA 3
+                        '\nRp.35.000', // HARGA 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -290,281 +279,236 @@ class MenuBurgerPage1 extends StatelessWidget {
               Positioned(
                 left: 310,
                 top: 255,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize2(),
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
                       ),
-                    );
-                  },
-                  child: Container(
-                    width: 37,
-                    height: 18,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 37,
-                            height: 18,
-                            decoration: ShapeDecoration(
-                              color: Colors.white.withOpacity(0),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Colors.white),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 3,
-                          top: 3,
-                          child: SizedBox(
-                            width: 31,
-                            height: 12,
-                            child: Text(
-                              'ADD',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 1
-                top: 135,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize1(),
+                top: 121,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
                       ),
-                    );
-                  },
-                  child: Container(
-                    width: 37,
-                    height: 18,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 37,
-                            height: 18,
-                            decoration: ShapeDecoration(
-                              color: Colors.white.withOpacity(0),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Colors.white),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 3,
-                          top: 3,
-                          child: SizedBox(
-                            width: 31,
-                            height: 12,
-                            child: Text(
-                              'ADD',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 3
-                top: 389,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize3(),
+                top: 381,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
                       ),
-                    );
-                  },
-                  child: Container(
-                    width: 37,
-                    height: 18,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 37,
-                            height: 18,
-                            decoration: ShapeDecoration(
-                              color: Colors.white.withOpacity(0),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Colors.white),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 3,
-                          top: 3,
-                          child: SizedBox(
-                            width: 31,
-                            height: 12,
-                            child: Text(
-                              'ADD',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 5
-                top: 665,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize4(),
+                top: 667,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
                       ),
-                    );
-                  },
-                  child: Container(
-                    width: 37,
-                    height: 18,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 37,
-                            height: 18,
-                            decoration: ShapeDecoration(
-                              color: Colors.white.withOpacity(0),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Colors.white),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 3,
-                          top: 3,
-                          child: SizedBox(
-                            width: 31,
-                            height: 12,
-                            child: Text(
-                              'ADD',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
-                left: 310, // ADD BUTTON 4
-                top: 535,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize5(),
+                left: 310, //ADD BUTTON 4
+                top: 529,
+                child: Container(
+                  width: 37,
+                  height: 18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 37,
+                          height: 18,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
                       ),
-                    );
-                  },
-                  child: Container(
-                    width: 37,
-                    height: 18,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 37,
-                            height: 18,
-                            decoration: ShapeDecoration(
-                              color: Colors.white.withOpacity(0),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Colors.white),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
+                      Positioned(
+                        left: 3,
+                        top: 3,
+                        child: SizedBox(
+                          width: 31,
+                          height: 12,
+                          child: Text(
+                            'ADD', //ADD BUTTON 2
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 3,
-                          top: 3,
-                          child: SizedBox(
-                            width: 31,
-                            height: 12,
-                            child: Text(
-                              'ADD',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
                 left: 170,
-                top: 605,
+                top: 604,
                 child: SizedBox(
                   width: 225,
                   height: 90,
@@ -572,7 +516,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard..', //DESC 5
+                        'Thai Iced Tea is a refreshing drink that is served over ice and made with brewed black tea and spices like vanilla, cinnamon, cardamom.', //DESC 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -582,13 +526,13 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.45.000', //HARGA 5
+                        '\nRp.37.000', //HARGA 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 1,
+                          height: 0,
                         ),
                       ),
                     ],
@@ -603,8 +547,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/southwestburger.png"), //GAMBAR 1
+                      image: AssetImage("images/stroberimilk.png"), //GAMBAR 1
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -618,8 +561,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/bacoswissburger.png"), // GAMBAR 2
+                      image: AssetImage("images/leciicetea.png"), // GAMBAR 2
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -633,8 +575,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/pulledporkburger.png"), //GAMBAR 3
+                      image: AssetImage("images/lemonicetea.png"), //GAMBAR 3
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -650,21 +591,21 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/cheeseburger.png"),
+                      image: AssetImage("images/orangebush.png"),
                       fit: BoxFit.fill, // GAMBAR 4
                     ),
                   ),
                 ),
               ),
               Positioned(
-                left: 30,
+                left: 32,
                 top: 580,
                 child: Container(
-                  width: 120,
+                  width: 115,
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/beefburger.jpg"),
+                      image: AssetImage("images/thaiicetea.png"),
                       fit: BoxFit.fill, //GAMBAR 5
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),

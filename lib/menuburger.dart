@@ -169,7 +169,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Experience the timeless classic of Italian \ncuisine with our Spaghetti Tomato Sauce, \na comforting and flavorful dish that captures \nthe essence of Italy.',
+                      'A Double Cheeseburger consists of two 1.6\noz. beef patties, two slices of American  \ncheese, a sesame seed bun, ketchup, pickle \nslices, onions, and mustard.',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 11,
@@ -179,7 +179,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\nRp.47.000',
+                      '\nRp.43.000',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -195,7 +195,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 305,
                 child: Text(
-                  'Spaghetti Tomato Sauce',
+                  'Pulled Pork Burger',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -209,7 +209,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 448,
                 child: Text(
-                  'Spaghetti Alle Vongole',
+                  'Double Cheese Burger',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -223,7 +223,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 580,
                 child: Text(
-                  'Spaghetti Creamy Mushroom',
+                  'Beef Burger',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -242,7 +242,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Our classic spaghetti alle vongole is the \nperfect menu dinner for a warm summer \nevening. This simple dish of spaghetti and \nclams is flavored with garlic, chili, white wine \nand parsley.',
+                        'The Pulled Pork Burger is a smoky, sweetand spicy burger that is sure to be a hit at your next cookout! This burger is packed withflavor',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -252,7 +252,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.68.000',
+                        '\nRp.67.000',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -515,7 +515,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Indulge in the rich and savory flavors of our Creamy Mushroom Spaghetti. Made with the finest ingredients  and a touch of culinary expertise.',
+                        'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard..',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -525,7 +525,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.57.000',
+                        '\nRp.45.000',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -546,7 +546,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/spagg_bolo.png"),
+                      image: AssetImage("images/southwestburger.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -560,7 +560,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/spagg_alio.png"),
+                      image: AssetImage("images/bacoswissburger.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -574,7 +574,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/spagg_toma.png"),
+                      image: AssetImage("images/pulledporkburger.png"),
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -590,7 +590,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/spagg_alle.png"),
+                      image: AssetImage("images/cheeseburger.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -604,11 +604,10 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/spagg_cream.png"),
+                      image: AssetImage("images/beefburger.png"),
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(
-                        15.0)), // Tambahkan border radius di sini
+                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
                   ),
                 ),
               ),

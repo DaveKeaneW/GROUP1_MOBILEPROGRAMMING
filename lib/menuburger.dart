@@ -71,7 +71,7 @@ class MenuBurgerPage1 extends StatelessWidget {
             ],
           ),
           child: Stack(
-            children: <Widget>[
+            children: [
               Positioned(
                 left: 170,
                 top: 38,
@@ -288,14 +288,23 @@ class MenuBurgerPage1 extends StatelessWidget {
                       Positioned(
                         left: 0,
                         top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => BurgerSize1(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
@@ -602,16 +611,18 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 255,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => BurgerSize1(),
-                      ),
-                    );
-                  },
+                left: 32,
+                top: 580,
+                child: Container(
+                  width: 115,
+                  height: 106,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/beefburger.png"),
+                      fit: BoxFit.fill, //GAMBAR 5
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  ),
                 ),
               ),
             ],

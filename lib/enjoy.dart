@@ -29,8 +29,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 415,
-          height: 3000,
+          width: 412,
+          height: 843,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -61,15 +61,18 @@ class KanePunya extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
-                        top: 0,
+                        left: 5,
+                        top: 3,
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 44,
+                          height: 44,
                           decoration: ShapeDecoration(
-                            shape: OvalBorder(
+                            shape: CircleBorder(
                               side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
                             ),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
                       ),

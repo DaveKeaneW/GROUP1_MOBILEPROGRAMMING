@@ -544,19 +544,18 @@ class HomeScreen extends StatelessWidget {
                               width: 115,
                               height: 120,
                               child: Image.asset('images/drinks.png'),
-                            ),
-                          ),
-                          ),
-                      ],
-                          ),
-                  ),
+                       ),
+                     ),
+                   ),
+                ],
+               ),
+             ),
+           ),
+         ],
         ),
-        ],
+       ),       
       ),
-                    ),
-                  ),
     );
-
   }
 }
 

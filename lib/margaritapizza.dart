@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menupizza.dart';
 
 class MargaritaPizza extends StatelessWidget {
-  const MargaritaPizza ({super.key});
+  const MargaritaPizza({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,35 +15,39 @@ class MargaritaPizza extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 120,
           backgroundColor: Colors.white,
-          title: Text('Margarita Pizza',
-          style: TextStyle(
-            fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-            fontSize: 32,
-            color: Colors.black,
-           ),
+          title: Text(
+            'Margarita Pizza',
+            style: TextStyle(
+              fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
+              fontSize: 32,
+              color: Colors.black,
+            ),
           ),
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back,
-            color: Colors.black,
-            size: 32,
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+              size: 32,
             ),
-            onPressed: (){
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context) => MenuPizza()),
+            onPressed: () {
+              //BACK BUTTON
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MenuPizza()),
               );
             },
           ),
         ),
-        body: ListView(children: [
-          MargaritaPizza1(),
-        ],
+        body: ListView(
+          children: [
+            MargaritaPizza1(),
+          ],
         ),
-      ), 
-      );
+      ),
+    );
   }
 }
-
 
 class MargaritaPizza1 extends StatelessWidget {
   @override
@@ -316,10 +320,6 @@ class MargaritaPizza1 extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    
-                      
-                      
-                    
                   ),
                 ),
               ),
@@ -401,7 +401,6 @@ class MargaritaPizza1 extends StatelessWidget {
                   decoration: BoxDecoration(),
                 ),
               ),
-             
             ],
           ),
         ),

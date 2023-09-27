@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/BurgerSize1.dart';
+import 'package:tesgit/BurgerSize2.dart';
+import 'package:tesgit/BurgerSize3.dart';
+import 'package:tesgit/BurgerSize4.dart';
+import 'package:tesgit/BurgerSize5.dart';
+import 'package:tesgit/home_screen.dart';
 
 class MenuBurger extends StatelessWidget {
   const MenuBurger({super.key});
@@ -21,7 +26,12 @@ class MenuBurger extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              );
             },
           ),
           //JUDUL MAKANAN
@@ -280,22 +290,22 @@ class MenuBurgerPage1 extends StatelessWidget {
               Positioned(
                 left: 310,
                 top: 255,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => BurgerSize1(),
-                              ),
-                            );
-                          },
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize2(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
                           child: Container(
                             width: 37,
                             height: 18,
@@ -308,211 +318,247 @@ class MenuBurgerPage1 extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 1
                 top: 135,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize1(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 3
                 top: 389,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize3(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 5
                 top: 665,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize4(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, // ADD BUTTON 4
                 top: 539,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize5(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

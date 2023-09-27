@@ -52,7 +52,6 @@ class MenuBurgerSize2 extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                // rectangle2K67 (125:366)
                 left: 0,
                 top: 0,
                 child: Align(
@@ -81,7 +80,6 @@ class MenuBurgerSize2 extends StatelessWidget {
                 height: 135,
               ),
               Positioned(
-                // ellipse3poZ (125:371)
                 left: 20,
                 top: 53,
                 child: Align(

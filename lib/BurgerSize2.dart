@@ -291,7 +291,7 @@ class MenuBurger2 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.50.000 (Large)',
+                                    'Rp.55.000 (Large)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,

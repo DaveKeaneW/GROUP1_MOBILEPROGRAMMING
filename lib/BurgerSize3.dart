@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const BurgerSize3());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class BurgerSize3 extends StatelessWidget {
+  const BurgerSize3({super.key});
 
   @override
   Widget build(BuildContext context) {

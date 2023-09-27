@@ -1,4 +1,4 @@
-import 'package:lib/.dart';
+import 'package:testgit/.dart';
 import 'package:flutter/material.dart';
 
 class StartApp extends StatelessWidget {

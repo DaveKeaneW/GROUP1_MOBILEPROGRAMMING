@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menupizza.dart';
 
-class MargaritaPizza extends StatelessWidget {
-  const MargaritaPizza ({super.key});
+class PepperoniPizza extends StatelessWidget {
+  const PepperoniPizza ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class MargaritaPizza extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 120,
           backgroundColor: Colors.white,
-          title: Text('Margarita Pizza',
+          title: Text('Pepperoni Pizza',
           style: TextStyle(
             fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-            fontSize: 32,
+            fontSize: 30,
             color: Colors.black,
            ),
           ),
@@ -76,12 +76,12 @@ class MargaritaPizza1 extends StatelessWidget {
             children: [
               Positioned(
                 left: 51,
-                top: 370,
+                top: 363,
                 child: SizedBox(
                   width: 304,
                   height: 80,
                   child: Text(
-                    'Our Margerita Pizza is best seller of pizza in \nour Deja Brew\'s Store. This pizza usually \ntopped with a variety of things, such as \ntomatoes, cheese, olives, anchovies, and garlic.',
+                    'Pepperoni made from beef and cured pork mixed together and then seasoned with a blend that usually includes paprika, garlic, black pepper, crushed red pepper, cayenne pepper, mustard seed, and fennel seed.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -197,7 +197,7 @@ class MargaritaPizza1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.90.000 (Personal)',
+                                    'Rp.100.000 (Personal)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -236,12 +236,12 @@ class MargaritaPizza1 extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: -5,
+                                left: -8,
                                 top: 4,
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.110.000 (Regular)',
+                                    'Rp.125.000 (Regular)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -280,12 +280,12 @@ class MargaritaPizza1 extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: -11,
+                                left: -13,
                                 top: 4,
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.130.000 (Large)',
+                                    'Rp.145.000 (Large)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -370,14 +370,14 @@ class MargaritaPizza1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 57, //tambah 10
-                top: 50,
+                left: 40, //tambah 10
+                top: 45,
                 child: Container(
-                  width: 300,
-                  height: 283,
+                  width: 330,
+                  height: 313,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/margarita.png'),
+                      image: AssetImage('images/meat.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

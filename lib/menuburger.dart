@@ -73,7 +73,7 @@ class MenuBurgerPage1 extends StatelessWidget {
             children: [
               Positioned(
                 left: 170,
-                top: 35,
+                top: 38,
                 child: Text(
                   'SouthWest Chicken Burger', //JUDUL 1
                   style: TextStyle(
@@ -87,7 +87,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 55,
+                top: 58,
                 child: SizedBox(
                   width: 209,
                   child: Column(
@@ -119,7 +119,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 170,
+                top: 175,
                 child: Text(
                   'Bacon Swiss Burger', //JUDUL 2
                   style: TextStyle(
@@ -133,7 +133,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 190,
+                top: 195,
                 child: SizedBox(
                   width: 216,
                   child: Column(
@@ -194,7 +194,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 305,
+                top: 309,
                 child: Text(
                   'Pulled Pork Burger', //JUDUL 3
                   style: TextStyle(
@@ -236,7 +236,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 330,
+                top: 335,
                 child: SizedBox(
                   width: 225,
                   child: Column(
@@ -323,8 +323,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 130,
+                left: 310, //ADD BUTTON 1
+                top: 135,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -369,8 +369,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 395,
+                left: 310, //ADD BUTTON 3
+                top: 389,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -415,8 +415,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 663,
+                left: 310, //ADD BUTTON 5
+                top: 665,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -461,8 +461,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 540,
+                left: 310, // ADD BUTTON 4
+                top: 539,
                 child: Container(
                   width: 37,
                   height: 18,

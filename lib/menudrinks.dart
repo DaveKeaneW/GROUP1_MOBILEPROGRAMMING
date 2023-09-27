@@ -186,7 +186,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                         fontSize: 14,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w700,
-                        height: 0,
+                        height: 1.3,
                       ),
                     ),
                   ],
@@ -323,8 +323,8 @@ class MenuDrinksPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 130,
+                left: 310, //ADD BUTTON 1
+                top: 121,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -369,8 +369,8 @@ class MenuDrinksPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 395,
+                left: 310, //ADD BUTTON 3
+                top: 381,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -415,8 +415,8 @@ class MenuDrinksPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 663,
+                left: 310, //ADD BUTTON 5
+                top: 667,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -461,8 +461,8 @@ class MenuDrinksPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 310,
-                top: 540,
+                left: 310, //ADD BUTTON 4
+                top: 529,
                 child: Container(
                   width: 37,
                   height: 18,
@@ -490,7 +490,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                           width: 31,
                           height: 12,
                           child: Text(
-                            'ADD',
+                            'ADD', //ADD BUTTON 2
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
@@ -508,7 +508,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 600,
+                top: 604,
                 child: SizedBox(
                   width: 225,
                   height: 90,

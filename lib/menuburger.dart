@@ -121,7 +121,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],
@@ -167,7 +167,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],
@@ -197,7 +197,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         fontSize: 14,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w700,
-                        height: 0,
+                        height: 1,
                       ),
                     ),
                   ],
@@ -509,7 +509,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 310, // ADD BUTTON 4
-                top: 539,
+                top: 535,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
@@ -564,7 +564,7 @@ class MenuBurgerPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 600,
+                top: 605,
                 child: SizedBox(
                   width: 225,
                   height: 90,
@@ -588,7 +588,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],

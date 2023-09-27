@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/CherryPizza.dart';
+import 'package:tesgit/GarlicPizza.dart';
+import 'package:tesgit/MushroomPizza.dart';
+import 'package:tesgit/PepperoniPizza.dart';
 import 'package:tesgit/margaritapizza.dart';
 
 
@@ -226,7 +230,7 @@ class MenuPizzaPage1 extends StatelessWidget {
                    onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => MargaritaPizza(),
+                        builder: (context) => CherryPizza(),
                 ),
               );
             },
@@ -332,6 +336,14 @@ class MenuPizzaPage1 extends StatelessWidget {
               Positioned(
                 left: 310,
                 top: 395,
+                child: GestureDetector(
+                   onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => PepperoniPizza(),
+                ),
+              );
+            },
                 child: Container(
                   width: 37,
                   height: 18,
@@ -374,10 +386,19 @@ class MenuPizzaPage1 extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 310,
                 top: 663,
+                child: GestureDetector(
+                   onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => MushroomPizza(),
+                ),
+              );
+            },
                 child: Container(
                   width: 37,
                   height: 18,
@@ -421,9 +442,18 @@ class MenuPizzaPage1 extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 310,
                 top: 530,
+                child: GestureDetector(
+                   onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => GarlicPizza(),
+                ),
+              );
+            },
                 child: Container(
                   width: 37,
                   height: 18,
@@ -466,6 +496,7 @@ class MenuPizzaPage1 extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 170,

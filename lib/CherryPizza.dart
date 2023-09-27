@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menupizza.dart';
 
-class MargaritaPizza extends StatelessWidget {
-  const MargaritaPizza ({super.key});
+class CherryPizza extends StatelessWidget {
+  const CherryPizza ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class MargaritaPizza extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 120,
           backgroundColor: Colors.white,
-          title: Text('Margarita Pizza',
+          title: Text('Cherry Tomatoes Pizza',
           style: TextStyle(
             fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-            fontSize: 32,
+            fontSize: 30,
             color: Colors.black,
            ),
           ),
@@ -81,7 +81,7 @@ class MargaritaPizza1 extends StatelessWidget {
                   width: 304,
                   height: 80,
                   child: Text(
-                    'Our Margerita Pizza is best seller of pizza in \nour Deja Brew\'s Store. This pizza usually \ntopped with a variety of things, such as \ntomatoes, cheese, olives, anchovies, and garlic.',
+                    'Homemade pizza dough topped with roasted caramelized onions, burst summer tomatoes, sweet melted gouda cheese, herbs, creamy burrata, and topped with fresh basil.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -197,7 +197,7 @@ class MargaritaPizza1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.90.000 (Personal)',
+                                    'Rp.70.000 (Personal)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -241,7 +241,7 @@ class MargaritaPizza1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.110.000 (Regular)',
+                                    'Rp.105.000 (Regular)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -377,7 +377,7 @@ class MargaritaPizza1 extends StatelessWidget {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/margarita.png'),
+                      image: AssetImage('images/tomat.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 94a1f71a32c96716f204a9fd3992eff86f7073b4
 import 'package:tesgit/home_screen.dart';
 import 'package:tesgit/CherryPizza.dart';
 import 'package:tesgit/GarlicPizza.dart';
 import 'package:tesgit/MushroomPizza.dart';
 import 'package:tesgit/PepperoniPizza.dart';
 import 'package:tesgit/margaritapizza.dart';
-
 
 class MenuPizza extends StatelessWidget {
   const MenuPizza({super.key});
@@ -26,22 +29,24 @@ class MenuPizza extends StatelessWidget {
               Icons.arrow_back,
               color: Colors.black,
             ),
-            onPressed: (){
-               Navigator.push(context, 
-                      MaterialPageRoute(builder: (context)=> HomeScreen(),
-                      ),
-                      );
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              );
             },
+          ),
+          title: Text(
+            'Pizza',
+            style: TextStyle(
+              fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
+              fontSize: 28,
+              color: Colors.black,
             ),
-            title: Text(
-              'Pizza',
-              style: TextStyle(
-                fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-                fontSize: 28,
-                color: Colors.black,
-              ),
-            ),
-            centerTitle: true,
+          ),
+          centerTitle: true,
         ),
         body: ListView(children: [
           MenuPizzaPage1(),
@@ -215,7 +220,6 @@ class MenuPizzaPage1 extends StatelessWidget {
                   ),
                 ),
               ),
-              
               Positioned(
                 left: 26,
                 top: 61,
@@ -226,281 +230,280 @@ class MenuPizzaPage1 extends StatelessWidget {
                   decoration: BoxDecoration(),
                 ),
               ),
-              
               Positioned(
                 left: 310,
                 top: 255,
                 child: GestureDetector(
-                   onTap: () {
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => CherryPizza(),
-                ),
-              );
-            },
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
               Positioned(
                 left: 310,
                 top: 130,
                 child: GestureDetector(
-                   onTap: () {
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => MargaritaPizza(),
-                ),
-              );
-            },
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
               Positioned(
                 left: 310,
                 top: 395,
                 child: GestureDetector(
-                   onTap: () {
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => PepperoniPizza(),
-                ),
-              );
-            },
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
               ),
               Positioned(
                 left: 310,
                 top: 663,
                 child: GestureDetector(
-                   onTap: () {
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => MushroomPizza(),
-                ),
-              );
-            },
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
               ),
               Positioned(
                 left: 310,
                 top: 530,
                 child: GestureDetector(
-                   onTap: () {
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => GarlicPizza(),
-                ),
-              );
-            },
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
               ),
               Positioned(
                 left: 170,
@@ -559,7 +562,8 @@ class MenuPizzaPage1 extends StatelessWidget {
                       image: AssetImage("images/meat.png"),
                       fit: BoxFit.fill,
                     ),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2)),
                   ),
                 ),
               ),

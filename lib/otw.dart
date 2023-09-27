@@ -14,6 +14,7 @@ class otw extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
+      
 
 
       home: Scaffold(
@@ -32,8 +33,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 415,
-          height: 3000,
+          width: 412,
+          height: 842,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -210,34 +211,10 @@ class KanePunya extends StatelessWidget {
                             ),
                           ),
                           child: ClipOval(
-                            child: Image.asset('images/circle3.png',fit: BoxFit.fill,),
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
-                      ),
-
-
-
-
-
-
-
-
-
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: Container(
-                          width: 44,
-                          height: 44,
-                          decoration: ShapeDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/44x44"),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: OvalBorder(),
-                          ),
-                        ),
-                      ),
+                      ),                     
                     ],
                   ),
                 ),

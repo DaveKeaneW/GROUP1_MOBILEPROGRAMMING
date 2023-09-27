@@ -167,7 +167,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Positioned(
                     left: 100,
-                    top: 160,
+                    top: 150,
                     child: Align(
                       child: SizedBox(
                         width: 196,
@@ -177,7 +177,7 @@ class HomeScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: GoogleFonts.hurricane().fontFamily,
-                            fontSize: 24,
+                            fontSize: 40,
                             fontWeight: FontWeight.w400,
                             height: 1.2575,
                             color: const Color(0xffeacf94),
@@ -388,7 +388,11 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                     Align(
+                                Positioned(
+                                  left: 15,
+                                  top: 8,
+                                  child: 
+                                Align(
                                   child: SizedBox(
                                     width: 115,
                                     height: 36,
@@ -405,7 +409,10 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Align(
+                                ),
+                                Positioned(
+                                  top: 35,
+                                  child: Align(
                                   child: SizedBox(
                                     width: 145,
                                     height: 133,
@@ -413,6 +420,7 @@ class HomeScreen extends StatelessWidget {
                                     fit: BoxFit.cover,
                                     ),
                                   ),
+                                ),
                                 ),
                             ],
                           ),
@@ -426,7 +434,7 @@ class HomeScreen extends StatelessWidget {
                            );
                           },
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           width: 148,
                           height: 151,
                           child: Stack(
@@ -489,7 +497,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.fromLTRB(125, 30, 125.58, 45),
+                    margin: const EdgeInsets.fromLTRB(125, 25, 125.58, 45),
                     width: 148,
                     height: 151,
                     decoration: BoxDecoration(
@@ -505,6 +513,10 @@ class HomeScreen extends StatelessWidget {
                     },
                     child: Stack(
                       children: [
+                        Positioned(
+                          top: 5,
+                          left: 40,
+                          child: 
                          Align(
                             child: SizedBox(
                               width: 69,
@@ -522,12 +534,18 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                        ),
+                          Positioned(
+                            top: 30,
+                            left: 15,
+                            child: 
                        Align(
                             child: SizedBox(
                               width: 115,
                               height: 120,
                               child: Image.asset('images/drinks.png'),
                             ),
+                          ),
                           ),
                       ],
                           ),

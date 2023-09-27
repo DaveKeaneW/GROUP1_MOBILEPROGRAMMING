@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/welcome.dart';
-
 void main() {
   runApp(const MyApp());
 }

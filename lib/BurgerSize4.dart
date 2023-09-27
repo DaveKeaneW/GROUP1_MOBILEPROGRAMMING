@@ -15,14 +15,14 @@ class BurgerSize4 extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          MenuPizzaPage2(),
+          MenuBurgerSize4(),
         ]),
       ),
     );
   }
 }
 
-class MenuPizzaPage2 extends StatelessWidget {
+class MenuBurgerSize4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

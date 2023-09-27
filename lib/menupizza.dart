@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/margaritapizza.dart';
 
 
 class MenuPizza extends StatelessWidget {
@@ -221,6 +222,14 @@ class MenuPizzaPage1 extends StatelessWidget {
               Positioned(
                 left: 310,
                 top: 255,
+                child: GestureDetector(
+                   onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => MargaritaPizza(),
+                ),
+              );
+            },
                 child: Container(
                   width: 37,
                   height: 18,
@@ -264,9 +273,18 @@ class MenuPizzaPage1 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
               Positioned(
                 left: 310,
                 top: 130,
+                child: GestureDetector(
+                   onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => MargaritaPizza(),
+                ),
+              );
+            },
                 child: Container(
                   width: 37,
                   height: 18,
@@ -310,6 +328,7 @@ class MenuPizzaPage1 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
               Positioned(
                 left: 310,
                 top: 395,

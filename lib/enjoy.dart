@@ -35,7 +35,7 @@ class KanePunya extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 80,
+                left: 115,
                 top: 547,
                 child: Text(
                   'Enjoy Your Food !',
@@ -201,7 +201,7 @@ class KanePunya extends StatelessWidget {
               
               
               Positioned(
-                left: 40,
+                left: 70,
                 top: 687,
                 child: SizedBox(
                   width: 283,
@@ -255,7 +255,7 @@ class KanePunya extends StatelessWidget {
               
               
               Positioned(
-                left: 40,
+                left: 55,
                 top: 744,
                 child: SizedBox(
                   width: 299,

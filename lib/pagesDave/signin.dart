@@ -12,11 +12,25 @@ class SignInPage extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
+        extendBodyBehindAppBar: true, // Memperpanjang konten di bawah AppBar
+        appBar: AppBar(
+          backgroundColor: Colors.transparent, // Atur latar belakang AppBar menjadi transparan
+          elevation: 0, // Hilangkan bayangan AppBar
+          // Tambahkan tombol kembali di sini
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context); // Kembali ke halaman sebelumnya
+            },
+          ),
+          title: Text('Sign In'),
+        ),
         body: SignIn(),
       ),
     );
   }
 }
+
 
 class SignIn extends StatelessWidget {
   @override
@@ -25,7 +39,7 @@ class SignIn extends StatelessWidget {
       children: [
         Container(
           width: 412,
-          height: 842,
+          height: 867,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Color(0xFF201520),
@@ -170,20 +184,7 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
               ),
-               Positioned(
-                left: 10,
-                top: 20,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context); // This pops the current page and goes back to the previous page.
-                  },
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                ),
-              ),
+               
             ],
           ),
           

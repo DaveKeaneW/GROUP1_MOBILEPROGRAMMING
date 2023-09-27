@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tesgit/home_screen.dart';
 
 void main() {
   runApp(const enjoy());
@@ -29,8 +30,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 415,
-          height: 3000,
+          width: 412,
+          height: 843,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -61,15 +62,18 @@ class KanePunya extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
-                        top: 0,
+                        left: 5,
+                        top: 3,
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 44,
+                          height: 44,
                           decoration: ShapeDecoration(
-                            shape: OvalBorder(
+                            shape: CircleBorder(
                               side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
                             ),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
                       ),
@@ -230,8 +234,8 @@ class KanePunya extends StatelessWidget {
               
               
               Positioned(
-                left: 19,
-                top: 722,
+                left: 35,
+                top: 730,
                 child: Container(
                   width: 337,
                   height: 40,
@@ -254,28 +258,37 @@ class KanePunya extends StatelessWidget {
               
               
               
-              Positioned(
-                left: 55,
-                top: 744,
-                child: SizedBox(
-                  width: 299,
-                  height: 27,
-                  child: Text(
-                    'Back to Home',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'Inria Serif',
-                      fontWeight: FontWeight.w400,
-                      height: 0.08,
-                    ),
-                  ),
-                ),
-              ),
-              
-              
-              
+                    Positioned(
+  left: 55,
+  top: 736,
+  child: SizedBox(
+    width: 299,
+    height: 27,
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Color(0xFF2E1E2E), // Background color
+      ),
+      child: Text(
+        'Back to Home',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+          fontFamily: 'Inria Serif',
+          fontWeight: FontWeight.w400,
+          height: 0.08,
+        ),
+      ),
+    ),
+  ),
+),
+
               
               
               

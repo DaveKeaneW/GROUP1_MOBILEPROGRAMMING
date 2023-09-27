@@ -55,12 +55,12 @@ class WelcomeScreen2 extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
-                    height: 1.2125,
+                    height: 1.350,
                     color: Color(0xffefe3c8),
                   ),
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -82,7 +82,7 @@ class WelcomeScreen2 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 60,
+                    width: 70,
                     height: 60,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,

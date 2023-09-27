@@ -601,10 +601,10 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 32,
+                left: 29,
                 top: 580,
                 child: Container(
-                  width: 115,
+                  width: 120,
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(

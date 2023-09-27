@@ -113,7 +113,7 @@ class KanePunya extends StatelessWidget {
                 left: 0,
                 top: 139,
                 child: Container(
-                  width: 375,
+                  width: 500,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(

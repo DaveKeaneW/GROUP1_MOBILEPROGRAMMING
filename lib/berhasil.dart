@@ -29,8 +29,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 367,
-          height: 812,
+          width: 412,
+          height: 842,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -43,30 +43,27 @@ class KanePunya extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
+                        left: 42,
                         top: 0,
                         child: Container(
                           width: 50,
                           height: 50,
-                          decoration: ShapeDecoration(
-                            shape: OvalBorder(
-                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
-                            ),
-                          ),
+                          
                         ),
                       ),
-                      Positioned(
-                        left: 3,
+                       Positioned(
+                        left: 5,
                         top: 3,
                         child: Container(
                           width: 44,
                           height: 44,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/44x44"),
-                              fit: BoxFit.fill,
+                            shape: CircleBorder(
+                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
                             ),
-                            shape: OvalBorder(),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
                       ),
@@ -75,7 +72,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 20,
+                left: 45,
                 top: 175,
                 child: Container(
                   width: 328,

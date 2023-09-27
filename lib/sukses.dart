@@ -179,7 +179,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 286,
+                left: 345,
                 top: 45,
                 child: Container(
                   width: 50,
@@ -353,14 +353,14 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 19,
+                left: 0,
                 top: 135,
                 child: Container(
-                  width: 375,
+                  width: 800,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
-                        width: 3,
+                        width: 1,
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: Color(0xFFFDD7A2),
                       ),

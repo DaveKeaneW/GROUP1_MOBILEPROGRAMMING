@@ -23,6 +23,7 @@ class MenuBurger extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          //JUDUL MAKANAN
           title: Text(
             'Burger',
             style: TextStyle(
@@ -74,7 +75,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 35,
                 child: Text(
-                  'SouthWest Chicken Burger',
+                  'SouthWest Chicken Burger', //JUDUL 1
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -93,7 +94,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
+                        'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.', //DESC 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -103,7 +104,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.50.000',
+                        '\nRp.50.000', //HARGA 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -120,7 +121,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 170,
                 child: Text(
-                  'Bacon Swiss Burger',
+                  'Bacon Swiss Burger', //JUDUL 2
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -139,7 +140,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.',
+                        'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.', //DESC 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11.5,
@@ -149,7 +150,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.55.000',
+                        '\nRp.55.000', //HARGA 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -169,7 +170,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'A Double Cheeseburger consists of two 1.6\noz. beef patties, two slices of American  \ncheese, a sesame seed bun, ketchup, pickle \nslices, onions, and mustard.',
+                      'A Double Cheeseburger consists of two 1.6\noz. beef patties, two slices of American  \ncheese, a sesame seed bun, ketchup, pickle \nslices, onions, and mustard.', // DESC 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 11,
@@ -179,7 +180,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\nRp.43.000',
+                      '\nRp.43.000', //HARGA 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -195,7 +196,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 305,
                 child: Text(
-                  'Pulled Pork Burger',
+                  'Pulled Pork Burger', //JUDUL 3
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -209,7 +210,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 448,
                 child: Text(
-                  'Double Cheese Burger',
+                  'Double Cheese Burger', //JUDUL 4
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -223,7 +224,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                 left: 170,
                 top: 580,
                 child: Text(
-                  'Beef Burger',
+                  'Beef Burger', // JUDUL 5
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -242,7 +243,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'The Pulled Pork Burger is a smoky, sweetand spicy burger that is sure to be a hit at your next cookout! This burger is packed withflavor',
+                        'The Pulled Pork Burger is a smoky, sweetand spicy burger that is sure to be a hit at your next cookout! This burger is packed withflavor', //DESC 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -252,7 +253,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.67.000',
+                        '\nRp.67.000', // HARGA 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -515,7 +516,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard..',
+                        'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard..', //DESC 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -525,7 +526,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.45.000',
+                        '\nRp.45.000', //HARGA 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -546,7 +547,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/southwestburger.png"),
+                      image:
+                          AssetImage("images/southwestburger.png"), //GAMBAR 1
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -560,7 +562,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/bacoswissburger.png"),
+                      image:
+                          AssetImage("images/bacoswissburger.png"), // GAMBAR 2
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -574,7 +577,8 @@ class MenuBurgerPage1 extends StatelessWidget {
                   height: 106,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/pulledporkburger.png"),
+                      image:
+                          AssetImage("images/pulledporkburger.png"), //GAMBAR 3
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -591,7 +595,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("images/cheeseburger.png"),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fill, // GAMBAR 4
                     ),
                   ),
                 ),
@@ -605,7 +609,7 @@ class MenuBurgerPage1 extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("images/beefburger.png"),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fill, //GAMBAR 5
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),
                   ),

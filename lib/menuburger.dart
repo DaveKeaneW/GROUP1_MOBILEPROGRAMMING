@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/BurgerSize1.dart';
 
 class MenuBurger extends StatelessWidget {
   const MenuBurger({super.key});
@@ -70,7 +71,7 @@ class MenuBurgerPage1 extends StatelessWidget {
             ],
           ),
           child: Stack(
-            children: [
+            children: <Widget>[
               Positioned(
                 left: 170,
                 top: 38,
@@ -601,18 +602,16 @@ class MenuBurgerPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 29,
-                top: 580,
-                child: Container(
-                  width: 120,
-                  height: 106,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("images/beefburger.png"),
-                      fit: BoxFit.fill, //GAMBAR 5
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                  ),
+                left: 310,
+                top: 255,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => BurgerSize1(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],

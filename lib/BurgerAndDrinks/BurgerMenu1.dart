@@ -201,7 +201,7 @@ class BurgerMenu1 extends StatelessWidget {
               ),
               //TULISAN BURGER
               Image.asset(
-                "images/Burger.png",
+                "images/Burgerfont.png",
                 width: 450,
                 height: 135,
               ),

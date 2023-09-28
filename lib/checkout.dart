@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/otw.dart';
 import 'package:tesgit/otw.dart';
 
 void main() {

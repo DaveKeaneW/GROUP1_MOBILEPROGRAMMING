@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/otw.dart';
 import 'package:tesgit/otw.dart';
 
 void main() {
@@ -29,8 +30,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 410,
-          height: 30000,
+          width: 412,
+          height: 848,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -155,9 +156,10 @@ class KanePunya extends StatelessWidget {
                 // Misalnya, pindah ke halaman checkout atau tampilkan pesan
                                 );       
                             },
-              style: ElevatedButton.styleFrom (
-                primary: Color(0xFF2E1E2E), // Background color
-                                              ),
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF2E1E2E),
+                minimumSize: Size(343, 45), // Sesuaikan dengan ukuran kotak
+              ), // Background color
                   child: Text(
                               'Check Out',
                   style: TextStyle  (

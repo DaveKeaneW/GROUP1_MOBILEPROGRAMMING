@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tesgit/otw.dart';
 
 void main() {
-  runApp(const cekot());
+  runApp(const checkout());
 }
 
-class cekot extends StatelessWidget {
-  const cekot ({super.key});
+class checkout extends StatelessWidget {
+  const checkout ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +29,8 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 410,
-          height: 30000,
+          width: 412,
+          height: 848,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
@@ -47,6 +48,8 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
+
+
               Positioned(
                 left: 38,
                 top: 595,
@@ -55,12 +58,14 @@ class KanePunya extends StatelessWidget {
                   height: 45,
                   padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   decoration: ShapeDecoration(
-                    color: Color(0xFF543656),
+                    color: Color(0xFF5436560),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    
                   ),
+
+
+
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
                     child: Text(
@@ -77,6 +82,9 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
               Positioned(
                 left: 38,
                 top: 648,
@@ -89,8 +97,10 @@ class KanePunya extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                   
                   ),
+
+
+                  
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
                     child: Text.rich(
@@ -123,40 +133,46 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 38,
-                top: 738,
-                child: Container(
-                  width: 343,
-                  height: 45,
-                  padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF2E1E2E),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                   
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Check Out',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'OFL Sorts Mill Goudy TT',
-                          fontWeight: FontWeight.w500,
-                          height: 0,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                      Positioned(
+          left: 38,
+          top: 738,
+          child: Container(
+            width: 343,
+            height: 45,
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+            decoration: ShapeDecoration(
+              color: Color(0xFF2E1E2E),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
               ),
+            ),
+            
+            child: ElevatedButton( // Tambahkan ElevatedButton di sini
+              onPressed: () {
+                Navigator.push  ( context,
+                                            MaterialPageRoute  (  builder: (context) => otw()   ),
+                // Aksi yang ingin dilakukan saat tombol ditekan
+                // Misalnya, pindah ke halaman checkout atau tampilkan pesan
+                                );       
+                            },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF2E1E2E),
+                minimumSize: Size(343, 45), // Sesuaikan dengan ukuran kotak
+              ), // Background color
+                  child: Text(
+                              'Check Out',
+                  style: TextStyle  (
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: 'OFL Sorts Mill Goudy TT',
+                  fontWeight: FontWeight.w500,
+                  height: 0,
+                                    ),
+                              ),
+                      ),
+                  ),
+              ),
+             
               Positioned(
                 left: 345,
                 top: 45,

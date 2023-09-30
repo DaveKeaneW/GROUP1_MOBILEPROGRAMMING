@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/otw.dart';
 import 'package:tesgit/otw.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class checkout extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        scaffoldBackgroundColor: Color(0xFF201520),
       ),
       home: Scaffold(
         body: ListView(children: [
@@ -34,21 +35,7 @@ class KanePunya extends StatelessWidget {
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
-              Positioned(
-                left: 7,
-                top: 116,
-                child: Container(
-                  width: 375,
-                  height: 812,
-                  decoration: ShapeDecoration(
-                    color: Colors.white.withOpacity(0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(33.62),
-                    ),
-                  ),
-                ),
-              ),
-
+        
                 Positioned(
                 left: 22,
                 top: 19,
@@ -283,12 +270,12 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
 
-              Positioned(
-            left: 42,
-            top: 472, // Sesuaikan posisi TextField sesuai kebutuhan
+             Positioned(
+            left: 38,
+            top: 454, // Sesuaikan posisi TextField sesuai kebutuhan
             child: Container(
-              width: 250,
-              height:20,
+              width: 343,
+              height: 80,
               decoration: ShapeDecoration(
                 color: Color(0xFF2E1E2E),
                 shape: RoundedRectangleBorder(
@@ -296,8 +283,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
               child: TextField(
-                style: TextStyle(color: Colors.white),
-                 // Ganti warna teks sesuai kebutuhan
+                style: TextStyle(color: Colors.white), // Ganti warna teks sesuai kebutuhan
                 decoration: InputDecoration(
                   hintText: 'Enter your delivery address', // Text hint di dalam TextField
                   hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
@@ -306,7 +292,7 @@ class KanePunya extends StatelessWidget {
                     borderSide: BorderSide.none, // Hilangkan garis pinggir
                   ),
                 ),
-                maxLines: 20, // Sesuaikan jumlah baris maksimum sesuai kebutuhan
+                maxLines: 5, // Sesuaikan jumlah baris maksimum sesuai kebutuhan
               ),
             ),
           ),
@@ -416,3 +402,4 @@ class KanePunya extends StatelessWidget {
     );
   }
 }
+

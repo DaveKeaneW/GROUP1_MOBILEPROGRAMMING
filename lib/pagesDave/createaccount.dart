@@ -28,7 +28,7 @@ class RegisterPage extends StatelessWidget {
             FractionalTranslation(
               translation: Offset(0, -0), // Adjust the offset to move the image up
               child: Image.asset(
-                'assets/image/loginpage.png',
+                'images/loginpage.png',
                 height: 270,
                 width: 233,
                 alignment: Alignment.center,

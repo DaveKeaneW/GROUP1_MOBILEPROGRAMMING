@@ -15,7 +15,7 @@ class WellcomePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: defaultMargin ),
           children: [
             SizedBox(height: 130),
-            Image.asset('assets/image/loginpage.png',
+            Image.asset('images/loginpage.png',
                 height: 270,width: 233, alignment: Alignment.center, fit: BoxFit.cover),
                 SizedBox(height:30,),
                   Text("Welcome", style :welcomeTextStyle,textAlign: TextAlign.center,

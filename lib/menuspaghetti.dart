@@ -543,7 +543,7 @@ Positioned(
 ),
               Positioned(
                 left: 32,
-                top: 40,
+                top: 5,
                 child: Container(
                   width: 115,
                   height: 106,

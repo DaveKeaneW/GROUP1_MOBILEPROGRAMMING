@@ -1,11 +1,9 @@
+import 'menusnack.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tesgit/menuburger.dart';
 
-//SOUTHWEST BURGER SIZE
-
-class BurgerSize1 extends StatelessWidget {
-  const BurgerSize1({super.key});
+class CheeseFrenchFries extends StatelessWidget {
+  const CheeseFrenchFries ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,41 +15,35 @@ class BurgerSize1 extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 120,
           backgroundColor: Colors.white,
-          title: Text(
-            'Southwest Burger',
-            style: TextStyle(
-              fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-              fontSize: 32,
-              color: Colors.black,
-            ),
+          title: Text('Cheese French Fries',
+          style: TextStyle(
+            fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
+            fontSize: 32,
+            color: Colors.black,
+           ),
           ),
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-              size: 32,
+            icon: Icon(Icons.arrow_back,
+            color: Colors.black,
             ),
-            onPressed: () {
-              //BACK BUTTON
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuBurger()),
+            onPressed: (){
+              Navigator.push(context, 
+              MaterialPageRoute(builder: (context) => MenuSnack()),
               );
             },
           ),
         ),
-        body: ListView(
-          children: [
-            MenuBurger1(),
-          ],
+        body: ListView(children: [
+          CheeseFrenchFries1(),
+        ],
         ),
-      ),
-    );
+      ), 
+      );
   }
 }
 
-class MenuBurger1 extends StatelessWidget {
+class CheeseFrenchFries1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -87,12 +79,12 @@ class MenuBurger1 extends StatelessWidget {
                   width: 304,
                   height: 80,
                   child: Text(
-                    'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
+                    'Elevate your french fries experience with our delicious Cheesy French Fries, a delicious blend of crunchy and creamy, melty cheese.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontFamily: GoogleFonts.inter().fontFamily,
                       color: Colors.white,
                       fontSize: 14,
-                      fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0,
                     ),
@@ -203,12 +195,12 @@ class MenuBurger1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.30.000 (Personal)',
+                                    'Rp.30.000 (Small)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                      fontFamily: GoogleFonts.inter().fontFamily,
                                       color: Colors.black,
                                       fontSize: 14,
-                                      fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
                                     ),
@@ -247,12 +239,12 @@ class MenuBurger1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.40.000 (Regular)',
+                                    'Rp.40.000 (Medium)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                      fontFamily : GoogleFonts.inter().fontFamily,
                                       color: Colors.black,
                                       fontSize: 14,
-                                      fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
                                     ),
@@ -294,9 +286,9 @@ class MenuBurger1 extends StatelessWidget {
                                     'Rp.50.000 (Large)',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                      fontFamily: GoogleFonts.inter().fontFamily,
                                       color: Colors.black,
                                       fontSize: 14,
-                                      fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
                                     ),
@@ -358,9 +350,9 @@ class MenuBurger1 extends StatelessWidget {
                             'ADD TO CART',
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                              fontFamily: GoogleFonts.inter().fontFamily,
                               color: Colors.white,
                               fontSize: 15,
-                              fontFamily: 'Inter',
                               fontWeight: FontWeight.bold,
                               height: 0,
                             ),
@@ -379,7 +371,7 @@ class MenuBurger1 extends StatelessWidget {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/southwestburger.png'),
+                      image: AssetImage('images/cheesefr1.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

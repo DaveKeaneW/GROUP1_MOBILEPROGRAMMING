@@ -1,11 +1,9 @@
+import 'menusnack.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tesgit/menuburger.dart';
 
-//SOUTHWEST BURGER SIZE
-
-class BurgerSize1 extends StatelessWidget {
-  const BurgerSize1({super.key});
+class GarlicPar extends StatelessWidget {
+  const GarlicPar ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,41 +15,35 @@ class BurgerSize1 extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 120,
           backgroundColor: Colors.white,
-          title: Text(
-            'Southwest Burger',
-            style: TextStyle(
-              fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
-              fontSize: 32,
-              color: Colors.black,
-            ),
+          title: Text('Potato Wedges',
+          style: TextStyle(
+            fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
+            fontSize: 32,
+            color: Colors.black,
+           ),
           ),
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-              size: 32,
+            icon: Icon(Icons.arrow_back,
+            color: Colors.black,
             ),
-            onPressed: () {
-              //BACK BUTTON
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuBurger()),
+            onPressed: (){
+              Navigator.push(context, 
+              MaterialPageRoute(builder: (context) => MenuSnack()),
               );
             },
           ),
         ),
-        body: ListView(
-          children: [
-            MenuBurger1(),
-          ],
+        body: ListView(children: [
+          GarlicPar1(),
+        ],
         ),
-      ),
-    );
+      ), 
+      );
   }
 }
 
-class MenuBurger1 extends StatelessWidget {
+class GarlicPar1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -87,12 +79,12 @@ class MenuBurger1 extends StatelessWidget {
                   width: 304,
                   height: 80,
                   child: Text(
-                    'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
+                    'Treat yourself to the rustic charm of our Potato Wedges, a delicious snack or side dish that highlights the natural goodness of potatoes with a touch of crunch.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontFamily: GoogleFonts.inter().fontFamily,
                       color: Colors.white,
                       fontSize: 14,
-                      fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0,
                     ),
@@ -107,26 +99,7 @@ class MenuBurger1 extends StatelessWidget {
                   height: 100,
                   child: Stack(
                     children: [
-                      Positioned(
-                        left: 0,
-                        top: 3,
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFD9D9D9),
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      
                       Positioned(
                         left: 0,
                         top: 38,
@@ -143,78 +116,6 @@ class MenuBurger1 extends StatelessWidget {
                                 offset: Offset(0, 16),
                                 spreadRadius: 0,
                               )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 73,
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFD9D9D9),
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 32,
-                        top: 0,
-                        child: Container(
-                          width: 185,
-                          height: 25,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 165,
-                                  height: 25,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFFD9D9D9),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
-                                    shadows: [
-                                      BoxShadow(
-                                        color: Color(0x3F000000),
-                                        blurRadius: 32,
-                                        offset: Offset(0, 16),
-                                        spreadRadius: 0,
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: -5,
-                                top: 4,
-                                child: SizedBox(
-                                  width: 175,
-                                  child: Text(
-                                    'Rp.30.000 (Personal)',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
                         ),
@@ -247,56 +148,12 @@ class MenuBurger1 extends StatelessWidget {
                                 child: SizedBox(
                                   width: 175,
                                   child: Text(
-                                    'Rp.40.000 (Regular)',
+                                    'Rp.55.000',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                      fontFamily : GoogleFonts.inter().fontFamily,
                                       color: Colors.black,
                                       fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 32,
-                        top: 70,
-                        child: Container(
-                          width: 175,
-                          height: 28,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 165,
-                                  height: 25,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFFD9D9D9),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: -11,
-                                top: 4,
-                                child: SizedBox(
-                                  width: 175,
-                                  child: Text(
-                                    'Rp.50.000 (Large)',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
                                     ),
@@ -358,9 +215,9 @@ class MenuBurger1 extends StatelessWidget {
                             'ADD TO CART',
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                              fontFamily: GoogleFonts.inter().fontFamily,
                               color: Colors.white,
                               fontSize: 15,
-                              fontFamily: 'Inter',
                               fontWeight: FontWeight.bold,
                               height: 0,
                             ),
@@ -379,7 +236,7 @@ class MenuBurger1 extends StatelessWidget {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/southwestburger.png'),
+                      image: AssetImage('images/garlicpar1.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

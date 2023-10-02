@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/sharedDave/shared.dart';
 
 final double defaultMargin = 24;
@@ -89,7 +90,13 @@ class RegisterPage extends StatelessWidget {
             Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Tambahkan navigasi ke halaman WelcomePage di sini
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WellcomePage()),
+                    );
+                  },
                   child: Text(
                     'Sign Up',
                     style: TextStyle(

@@ -1,4 +1,4 @@
-import 'package:testgit/.dart';
+import 'welcome.dart';
 import 'package:flutter/material.dart';
 
 class StartApp extends StatelessWidget {
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), () {
       // Navigasi ke halaman berikutnya setelah durasi tertentu (contoh: 3 detik)
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MenuSpaghetti()), // Gunakan widget dari file next_page.dart
+        context, MaterialPageRoute(builder: (context) => WelcomeScreen()), // Gunakan widget dari file next_page.dart
       );
     });
   }

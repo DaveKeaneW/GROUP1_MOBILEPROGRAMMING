@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -38,28 +37,10 @@ class MenuSnack extends StatelessWidget {
         body: ListView(children: [
           MenuSnackPage1(),
         ]),
-=======
-
-class MenuSnack extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Menu Snack'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            // Isi menu snack di sini, seperti gambar, deskripsi, harga, dll.
-            // Anda dapat menggunakan berbagai widget seperti ListTile, Card, dsb.
-          ],
-        ),
->>>>>>> e5ea561eae5e5230dea33ffeabf7647a1625446c
       ),
     );
   }
 }
-<<<<<<< HEAD
 
 class MenuSnackPage1 extends StatelessWidget {
   @override
@@ -590,5 +571,3 @@ Positioned(
     );
   }
 }
-=======
->>>>>>> e5ea561eae5e5230dea33ffeabf7647a1625446c

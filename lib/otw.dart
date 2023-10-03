@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:tesgit/enjoy.dart';
 
 void main() {
@@ -49,8 +48,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
-
               Positioned(
                 left: 70,
                 top: 618,
@@ -69,48 +66,48 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
-
-             Positioned(
-          left: 37,
-          top: 721,
-          child: Container(
-            width: 337,
-            height: 45,
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-            decoration: ShapeDecoration(
-              color: Color(0xFF2E1E2E),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-            child: ElevatedButton( // Tambahkan ElevatedButton di sini
-              onPressed: () {
-                Navigator.push  ( context,
-                                            MaterialPageRoute  (  builder: (context) => enjoy()   ),
-                // Aksi yang ingin dilakukan saat tombol ditekan
-                // Misalnya, pindah ke halaman checkout atau tampilkan pesan
-                                );       
-                            },
-              style: ElevatedButton.styleFrom(
-                primary: Color(0xFF2E1E2E),
-                minimumSize: Size(500, 45), // Sesuaikan dengan ukuran kotak
-              ), 
-                  child: Text(
-                              'Done',
-                  style: TextStyle  (
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontFamily: 'OFL Sorts Mill Goudy TT',
-                  fontWeight: FontWeight.w500,
-                  height: 0,
-                                    ),
-                              ),
-                      ),
+              Positioned(
+                left: 37,
+                top: 721,
+                child: Container(
+                  width: 337,
+                  height: 45,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                  decoration: ShapeDecoration(
+                    color: Color(0xFF2E1E2E),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
                   ),
+                  child: ElevatedButton(
+                    // Tambahkan ElevatedButton di sini
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => enjoy()),
+                        // Aksi yang ingin dilakukan saat tombol ditekan
+                        // Misalnya, pindah ke halaman checkout atau tampilkan pesan
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF2E1E2E),
+                      minimumSize:
+                          Size(500, 45), // Sesuaikan dengan ukuran kotak
+                    ),
+                    child: Text(
+                      'Done',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'OFL Sorts Mill Goudy TT',
+                        fontWeight: FontWeight.w500,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-
-
               Positioned(
                 left: 292,
                 top: 45,
@@ -119,10 +116,6 @@ class KanePunya extends StatelessWidget {
                   height: 50,
                   child: Stack(
                     children: [
-                    
-
-
-
                       Positioned(
                         left: 5,
                         top: 3,
@@ -131,11 +124,15 @@ class KanePunya extends StatelessWidget {
                           height: 44,
                           decoration: ShapeDecoration(
                             shape: CircleBorder(
-                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
+                              side: BorderSide(
+                                  width: 1, color: Color(0xFFDCAA70)),
                             ),
                           ),
                           child: ClipOval(
-                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
+                            child: Image.asset(
+                              'images/user.png',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                       ),
@@ -143,8 +140,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
-
               Positioned(
                 left: 0,
                 top: 13,
@@ -171,9 +166,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
-
                       Positioned(
                         left: 45,
                         top: 39,
@@ -192,8 +184,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
                       Positioned(
                         left: 0,
                         top: 721,
@@ -214,8 +204,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
-
               Positioned(
                 left: 44,
                 top: 207,
@@ -246,9 +234,7 @@ class KanePunya extends StatelessWidget {
                                         child: Container(
                                           width: 74.91,
                                           height: 58.68,
-                                          child: Stack(children: [
-                                          
-                                          ]),
+                                          child: Stack(children: []),
                                         ),
                                       ),
                                     ],
@@ -259,9 +245,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
-
                       Positioned(
                         left: 142.71,
                         top: 144.96,
@@ -284,23 +267,16 @@ class KanePunya extends StatelessWidget {
                                         child: Container(
                                           width: 93.93,
                                           height: 88.16,
-                                          child: Stack(children: [
-                                          
-                                          ]),
+                                          child: Stack(children: []),
                                         ),
                                       ),
-
-
-
                                       Positioned(
                                         left: 0,
                                         top: 0.23,
                                         child: Container(
                                           width: 47.26,
                                           height: 87.48,
-                                          child: Stack(children: [
-                                          
-                                          ]),
+                                          child: Stack(children: []),
                                         ),
                                       ),
                                     ],
@@ -311,9 +287,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
-
                       Positioned(
                         left: 83.03,
                         top: 194.53,
@@ -328,19 +301,13 @@ class KanePunya extends StatelessWidget {
                                 child: Container(
                                   width: 50.89,
                                   height: 22.41,
-                                  child: Stack(children: [
-                                  
-                                  ]),
+                                  child: Stack(children: []),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-
-
-
-
                       Positioned(
                         left: 41.44,
                         top: 0,
@@ -355,9 +322,7 @@ class KanePunya extends StatelessWidget {
                                 child: Container(
                                   width: 48.17,
                                   height: 35.90,
-                                  child: Stack(children: [
-                                  
-                                  ]),
+                                  child: Stack(children: []),
                                 ),
                               ),
                             ],
@@ -372,6 +337,6 @@ class KanePunya extends StatelessWidget {
           ),
         ),
       ],
-    );
+    );  
   }
 }

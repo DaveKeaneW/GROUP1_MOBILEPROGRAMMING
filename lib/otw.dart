@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:tesgit/enjoy.dart';
+
 void main() {
   runApp(const otw());
 }
@@ -13,9 +15,6 @@ class otw extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
-      
-
-
       home: Scaffold(
         body: ListView(children: [
           KanePunya(),
@@ -24,7 +23,6 @@ class otw extends StatelessWidget {
     );
   }
 }
-
 
 class KanePunya extends StatelessWidget {
   @override
@@ -38,108 +36,8 @@ class KanePunya extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: -341,
-                top: 309,
-                child: Container(
-                  width: 303,
-                  height: 194,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 37.30,
-                        top: 56.14,
-                        child: Container(
-                          width: 220.27,
-                          height: 128.79,
-                          child: Stack(children: [
-                          ]),
-                        ),
-                      ),
-                    
-
-
-
-
-                      Positioned(
-                        left: 95.93,
-                        top: 31.65,
-                        child: Container(
-                          width: 113.05,
-                          height: 106.50,
-                          child: Stack(children: [
-                          ]),
-                        ),
-                      ),
-                      
-                      
-                      
-                      
-                      Positioned(
-                        left: 204.09,
-                        top: 82.27,
-                        child: Container(
-                          width: 42.38,
-                          height: 35.03,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 42.38,
-                                  height: 15.46,
-                                  child: Stack(children: [
-                                  ]),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      
-                      
-                      
-                      
-                      
-                      Positioned(
-                        left: 49.44,
-                        top: 94.67,
-                        child: Container(
-                          width: 33.81,
-                          height: 34.28,
-                          child: Stack(
-                            children: [
-                              
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 33.81,
-                                  height: 14.11,
-                                  child: Stack(children: [
-                                  
-                                  ]),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-
-
-
-
-
-
-              
-              Positioned(
-                left: 68,
-                top: 547,
+                left: 70,
+                top: 546,
                 child: Text(
                   'Your Food Is On The Way',
                   style: TextStyle(
@@ -153,15 +51,9 @@ class KanePunya extends StatelessWidget {
               ),
 
 
-
-
-
-
-
-
               Positioned(
-                left: 63,
-                top: 687,
+                left: 70,
+                top: 618,
                 child: SizedBox(
                   width: 283,
                   child: Text(
@@ -179,25 +71,58 @@ class KanePunya extends StatelessWidget {
               ),
 
 
-
-
-
-
-
-
-
-
-
+             Positioned(
+          left: 37,
+          top: 721,
+          child: Container(
+            width: 337,
+            height: 45,
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+            decoration: ShapeDecoration(
+              color: Color(0xFF2E1E2E),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+            ),
+            child: ElevatedButton( // Tambahkan ElevatedButton di sini
+              onPressed: () {
+                Navigator.push  ( context,
+                                            MaterialPageRoute  (  builder: (context) => enjoy()   ),
+                // Aksi yang ingin dilakukan saat tombol ditekan
+                // Misalnya, pindah ke halaman checkout atau tampilkan pesan
+                                );       
+                            },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF2E1E2E),
+                minimumSize: Size(500, 45), // Sesuaikan dengan ukuran kotak
+              ), 
+                  child: Text(
+                              'Done',
+                  style: TextStyle  (
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: 'OFL Sorts Mill Goudy TT',
+                  fontWeight: FontWeight.w500,
+                  height: 0,
+                                    ),
+                              ),
+                      ),
+                  ),
+              ),
 
 
               Positioned(
-                left: 345,
+                left: 292,
                 top: 45,
                 child: Container(
                   width: 50,
                   height: 50,
                   child: Stack(
                     children: [
+                    
+
+
+
                       Positioned(
                         left: 5,
                         top: 3,
@@ -213,27 +138,23 @@ class KanePunya extends StatelessWidget {
                             child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
                         ),
-                      ),                     
+                      ),
                     ],
                   ),
                 ),
               ),
 
 
-
-
-
-
               Positioned(
-                left: 21,
+                left: 0,
                 top: 13,
                 child: Container(
-                  width: 163,
-                  height: 115,
+                  width: 375,
+                  height: 128,
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
+                        left: 21,
                         top: 0,
                         child: SizedBox(
                           width: 95.47,
@@ -253,11 +174,8 @@ class KanePunya extends StatelessWidget {
 
 
 
-
-
-
                       Positioned(
-                        left: 24,
+                        left: 45,
                         top: 39,
                         child: SizedBox(
                           width: 139,
@@ -274,23 +192,179 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
+
+
+                      Positioned(
+                        left: 0,
+                        top: 721,
+                        child: Container(
+                          width: 375,
+                          decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 1,
+                                strokeAlign: BorderSide.strokeAlignCenter,
+                                color: Color(0xFFFDD7A2),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
+
+
               Positioned(
-                left: 0,
-                top: 141,
+                left: 44,
+                top: 207,
                 child: Container(
-                  width: 800,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        width: 1,
-                        strokeAlign: BorderSide.strokeAlignCenter,
-                        color: Color(0xFFFDD7A2),
+                  width: 280,
+                  height: 272.52,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 37.90,
+                        top: 162.76,
+                        child: Container(
+                          width: 165.28,
+                          height: 70.97,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 0,
+                                top: 0,
+                                child: Container(
+                                  width: 165.28,
+                                  height: 70.97,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 27.13,
+                                        top: -23.19,
+                                        child: Container(
+                                          width: 74.91,
+                                          height: 58.68,
+                                          child: Stack(children: [
+                                          
+                                          ]),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+
+
+
+                      Positioned(
+                        left: 142.71,
+                        top: 144.96,
+                        child: Container(
+                          width: 94.16,
+                          height: 104.75,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 0.01,
+                                top: 16.52,
+                                child: Container(
+                                  width: 93.93,
+                                  height: 88.16,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
+                                        child: Container(
+                                          width: 93.93,
+                                          height: 88.16,
+                                          child: Stack(children: [
+                                          
+                                          ]),
+                                        ),
+                                      ),
+
+
+
+                                      Positioned(
+                                        left: 0,
+                                        top: 0.23,
+                                        child: Container(
+                                          width: 47.26,
+                                          height: 87.48,
+                                          child: Stack(children: [
+                                          
+                                          ]),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+
+
+                      Positioned(
+                        left: 83.03,
+                        top: 194.53,
+                        child: Container(
+                          width: 93.02,
+                          height: 64.45,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 20.05,
+                                top: 2.67,
+                                child: Container(
+                                  width: 50.89,
+                                  height: 22.41,
+                                  child: Stack(children: [
+                                  
+                                  ]),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+
+
+
+                      Positioned(
+                        left: 41.44,
+                        top: 0,
+                        child: Container(
+                          width: 184.47,
+                          height: 145.13,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 32.30,
+                                top: 0,
+                                child: Container(
+                                  width: 48.17,
+                                  height: 35.90,
+                                  child: Stack(children: [
+                                  
+                                  ]),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),

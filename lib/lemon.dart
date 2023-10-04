@@ -211,7 +211,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   width: 300,
                   height: 283,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('images/lemonicetea.png'),
                       fit: BoxFit.fill,
                     ),

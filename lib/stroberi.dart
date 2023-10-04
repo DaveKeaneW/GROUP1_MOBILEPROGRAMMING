@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menudrinks.dart';
 
+//d
 class stroberi extends StatelessWidget {
   const stroberi({Key? key});
 

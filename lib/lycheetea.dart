@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/menuburger.dart';
+import 'package:tesgit/menudrinks.dart';
 
 class lycheetea extends StatelessWidget {
   const lycheetea({Key? key});
@@ -16,7 +17,7 @@ class lycheetea extends StatelessWidget {
           toolbarHeight: 120,
           backgroundColor: Colors.white,
           title: Text(
-            'Lychee Ice Tea',
+            'lychee Ice Tea',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 32,
@@ -33,7 +34,7 @@ class lycheetea extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MenuBurger()),
+                MaterialPageRoute(builder: (context) => MenuDrinks()),
               );
             },
           ),
@@ -62,14 +63,14 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
       builder: (context) {
         return AlertDialog(
           title: Text('Added to Cart'),
-          content: Text('SouthWest Burger added to your cart.'),
+          content: Text('lychee Ice Tea added to your cart.'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MenuBurger()),
+                  MaterialPageRoute(builder: (context) => MenuDrinks()),
                 );
               },
               child: Text('OK'),
@@ -115,7 +116,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   width: 304,
                   height: 80,
                   child: Text(
-                    'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
+                    'This lychee-infused iced green tea is a sweet and fruity drink inspired by the ancient Chinese lychee tea. Refreshing and energising.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -129,15 +130,13 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
               ),
               Positioned(
                 left: 50,
-                top: 450,
+                top: 480,
                 child: Container(
                   width: 300,
                   height: 400,
                   child: Column(
                     children: [
-                      _buildPriceOption(1, 'Rp.30.000 (Small)'),
-                      _buildPriceOption(2, 'Rp.40.000 (Medium)'),
-                      _buildPriceOption(3, 'Rp.50.000 (Large)'),
+                      _buildPriceOption(2, 'Rp.30.000'),
                     ],
                   ),
                 ),
@@ -213,7 +212,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/southwestburger.png'),
+                      image: AssetImage('images/leciicetea.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [

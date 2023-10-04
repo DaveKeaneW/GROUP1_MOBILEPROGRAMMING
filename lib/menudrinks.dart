@@ -86,7 +86,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 38,
                 child: Text(
-                  'SouthWest Burger', //JUDUL 1
+                  'StrawBerry MilkShake', //JUDUL 1
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -105,7 +105,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.', //DESC 1
+                        'sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, Strawberry.', //DESC 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -115,7 +115,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.50.000', //HARGA 1
+                        '\nRp.45.000', //HARGA 1
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -132,7 +132,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 175,
                 child: Text(
-                  'Bacon Swiss Burger', //JUDUL 2
+                  'Lychee Ice Tea', //JUDUL 2
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -151,7 +151,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.', //DESC 2
+                        'This lychee-infused iced green tea is a sweet and fruity drink inspired by the ancient Chinese lychee tea. Refreshing and energising.', //DESC 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11.5,
@@ -161,7 +161,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.55.000', //HARGA 2
+                        '\nRp.30.000', //HARGA 2
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -181,7 +181,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'A Double Cheeseburger consists of two 1.6\noz. beef patties, two slices of American  \ncheese, a sesame seed bun, ketchup, pickle \nslices, onions, and mustard.', // DESC 4
+                      'navel, cara cara, or blood oranges—whichever\nyou prefer—just note that the color of your\ncocktails will vary depending on the citrus\nyou use.', // DESC 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 11,
@@ -191,7 +191,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\nRp.43.000', //HARGA 4
+                      '\nRp.67.000', //HARGA 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -207,7 +207,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 309,
                 child: Text(
-                  'Pulled Pork Burger', //JUDUL 3
+                  'Lemon Ice Tea', //JUDUL 3
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -221,7 +221,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 448,
                 child: Text(
-                  'Cheese Burger', //JUDUL 4
+                  'Orange Blush', //JUDUL 4
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -235,7 +235,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 580,
                 child: Text(
-                  'Beef Burger', // JUDUL 5
+                  'Thai Ice Tea', // JUDUL 5
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -254,7 +254,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'The Pulled Pork Burger is a smoky, sweetand spicy burger that is sure to be a hit at your next cookout! This burger is packed withflavor', //DESC 3
+                        'Lemon iced tea combines black tea, fresh lemon juice, and sugar to make a bold and refreshing drink.', //DESC 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -264,7 +264,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.67.000', // HARGA 3
+                        '\nRp.35.000', // HARGA 3
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -289,7 +289,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 310,
-                top: 255,
+                top: 257, // ADD BUTTON 2
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
@@ -344,7 +344,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 310, //ADD BUTTON 1
-                top: 135,
+                top: 120,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
@@ -572,7 +572,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard..', //DESC 5
+                        'Thai Iced Tea is a refreshing drink that is served over ice and made with brewed black tea and spices like vanilla, cinnamon, cardamom.', //DESC 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
@@ -582,7 +582,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\nRp.45.000', //HARGA 5
+                        '\nRp.37.000', //HARGA 5
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -603,8 +603,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/southwestburger.png"), //GAMBAR 1
+                      image: AssetImage("images/stroberimilk.png"), //GAMBAR 1
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -618,8 +617,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/bacoswissburger.png"), // GAMBAR 2
+                      image: AssetImage("images/leciicetea.png"), // GAMBAR 2
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -633,8 +631,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   height: 106,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image:
-                          AssetImage("images/pulledporkburger.png"), //GAMBAR 3
+                      image: AssetImage("images/lemonicetea.png"), //GAMBAR 3
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -650,7 +647,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/cheeseburger.png"),
+                      image: AssetImage("images/orangebush.png"),
                       fit: BoxFit.fill, // GAMBAR 4
                     ),
                   ),
@@ -664,7 +661,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/beefburger.jpg"),
+                      image: AssetImage("images/thaiicetea.png"),
                       fit: BoxFit.fill, //GAMBAR 5
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),

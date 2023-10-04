@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tesgit/menuburger.dart';
 import 'package:tesgit/menudrinks.dart';
 
 // ORANGE BLUSH NOT THAI ICE TEA

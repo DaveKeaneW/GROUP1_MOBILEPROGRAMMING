@@ -35,7 +35,7 @@ class KanePunya extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 20,
+                left: 45,
                 top: 175,
                 child: Container(
                   width: 328,
@@ -46,16 +46,18 @@ class KanePunya extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),
+                  
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 143,
+                        left: 125,
                         top: 97,
                         child: Container(
                           width: 82,
                           height: 82,
                           child: Stack(
                             children: [
+                              
                               Positioned(
                                 left: 0,
                                 top: 0,
@@ -74,9 +76,10 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
+                      
                       Positioned(
-                        left: 140,
-                        top: 199,
+                        left: 118,
+                        top: 210,
                         child: Text(
                           'Success',
                           style: TextStyle(
@@ -89,7 +92,7 @@ class KanePunya extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 37,
+                        left: 25,
                         top: 277,
                         child: SizedBox(
                           width: 283,
@@ -125,7 +128,7 @@ class KanePunya extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 44,
+                        left: 40,
                         top: 396,
                         child: SizedBox(
                           width: 249,
@@ -146,26 +149,28 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
+
+
               Positioned(
-                left: 90,
-                top: 725,
-                child: Container(
-                  width: 235,
-                  height: 40,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF2E1E2E),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
+                        left: 340,
+                        top: 50,
+                        child: Container(
+                          width: 44,
+                          height: 44,
+                          child: ClipOval(
+                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
+                          ),
+                        ),
+                      ),
+
+
+                      
               Positioned(
-                left: 70,
-                top: 736,
+                left: 85, //NEXT
+                top: 750,
                 child: SizedBox(
-                  width: 200,
-                  height: 27,
+                  width: 260,
+                  height: 35,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -177,14 +182,13 @@ class KanePunya extends StatelessWidget {
                       primary: Color(0xFF2E1E2E), // Background color
                     ),
                     child: Text(
-                      'Next',
-                      textAlign: TextAlign.center,
+                      'Done',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        fontFamily: 'Inria Serif',
-                        fontWeight: FontWeight.w400,
-                        height: 0.08,
+                        fontFamily: 'OFL Sorts Mill Goudy TT',
+                        fontWeight: FontWeight.w500,
+                        height: 0,
                       ),
                     ),
                   ),
@@ -204,16 +208,10 @@ class KanePunya extends StatelessWidget {
                         child: Container(
                           width: 50,
                           height: 50,
-                          decoration: ShapeDecoration(
-                            shape: OvalBorder(
-                              side: BorderSide(
-                                  width: 1, color: Color(0xFFDCAA70)),
-                            ),
-                          ),
                         ),
                       ),
                       Positioned(
-                        left: 345,
+                        left: 350,
                         top: 45,
                         child: Container(
                           width: 50,
@@ -315,7 +313,8 @@ class KanePunya extends StatelessWidget {
             ],
           ),
         ),
+        
       ],
-    );
+      );
   }
 }

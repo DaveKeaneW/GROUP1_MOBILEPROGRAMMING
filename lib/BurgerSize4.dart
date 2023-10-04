@@ -5,7 +5,7 @@ import 'package:tesgit/menuburger.dart';
 //BEEF BURGER SIZE
 
 class BurgerSize4 extends StatelessWidget {
-  const BurgerSize4({super.key});
+  const BurgerSize4({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,6 @@ class BurgerSize4 extends StatelessWidget {
               size: 32,
             ),
             onPressed: () {
-              //BACK BUTTON
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MenuBurger()),
@@ -43,7 +42,7 @@ class BurgerSize4 extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            MenuBurger4(),
+            MargaritaPizza1(),
           ],
         ),
       ),
@@ -51,7 +50,38 @@ class BurgerSize4 extends StatelessWidget {
   }
 }
 
-class MenuBurger4 extends StatelessWidget {
+class MargaritaPizza1 extends StatefulWidget {
+  @override
+  _MargaritaPizza1State createState() => _MargaritaPizza1State();
+}
+
+class _MargaritaPizza1State extends State<MargaritaPizza1> {
+  int _selectedPrice = 1;
+
+  void _addToCart() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Added to Cart'),
+          content: Text('Beef Burger added to your cart.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuBurger()),
+                );
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -75,14 +105,14 @@ class MenuBurger4 extends StatelessWidget {
                 blurRadius: 48,
                 offset: Offset(6, 7),
                 spreadRadius: 0,
-              )
+              ),
             ],
           ),
           child: Stack(
             children: [
               Positioned(
                 left: 51,
-                top: 370,
+                top: 360,
                 child: SizedBox(
                   width: 304,
                   height: 80,
@@ -94,219 +124,22 @@ class MenuBurger4 extends StatelessWidget {
                       fontSize: 14,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
-                      height: 0,
+                      height: 1.3,
                     ),
                   ),
                 ),
               ),
               Positioned(
-                left: 100,
-                top: 475,
+                left: 50,
+                top: 450,
                 child: Container(
-                  width: 200,
-                  height: 100,
-                  child: Stack(
+                  width: 300,
+                  height: 400,
+                  child: Column(
                     children: [
-                      Positioned(
-                        left: 0,
-                        top: 3,
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFD9D9D9),
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 38,
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFD9D9D9),
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 73,
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFD9D9D9),
-                            shape: OvalBorder(),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 16),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 32,
-                        top: 0,
-                        child: Container(
-                          width: 185,
-                          height: 25,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 165,
-                                  height: 25,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFFD9D9D9),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
-                                    shadows: [
-                                      BoxShadow(
-                                        color: Color(0x3F000000),
-                                        blurRadius: 32,
-                                        offset: Offset(0, 16),
-                                        spreadRadius: 0,
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: -5,
-                                top: 4,
-                                child: SizedBox(
-                                  width: 175,
-                                  child: Text(
-                                    'Rp.30.000 (Personal)',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 32,
-                        top: 35,
-                        child: Container(
-                          width: 175,
-                          height: 25,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 165,
-                                  height: 25,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFFD9D9D9),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: -5,
-                                top: 4,
-                                child: SizedBox(
-                                  width: 175,
-                                  child: Text(
-                                    'Rp.40.000 (Regular)',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 32,
-                        top: 70,
-                        child: Container(
-                          width: 175,
-                          height: 28,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 165,
-                                  height: 25,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFFD9D9D9),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: -11,
-                                top: 4,
-                                child: SizedBox(
-                                  width: 175,
-                                  child: Text(
-                                    'Rp.45.000 (Large)',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      _buildPriceOption(1, 'Rp.25.000 (Small)'),
+                      _buildPriceOption(2, 'Rp.30.000 (Medium)'),
+                      _buildPriceOption(3, 'Rp.45.000 (Large)'),
                     ],
                   ),
                 ),
@@ -328,58 +161,61 @@ class MenuBurger4 extends StatelessWidget {
               Positioned(
                 left: 62,
                 top: 630,
-                child: Container(
-                  width: 276,
-                  height: 42,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 276,
-                          height: 42,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(45),
+                child: GestureDetector(
+                  onTap: _addToCart,
+                  child: Container(
+                    width: 276,
+                    height: 42,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 276,
+                            height: 42,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(45),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 22.38,
-                        top: 12,
-                        child: SizedBox(
-                          width: 231.24,
-                          height: 28,
-                          child: Text(
-                            'ADD TO CART',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.bold,
-                              height: 0,
+                        Positioned(
+                          left: 22.38,
+                          top: 12,
+                          child: SizedBox(
+                            width: 231.24,
+                            height: 28,
+                            child: Text(
+                              'ADD TO CART',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
-                left: 57, //tambah 10
+                left: 57,
                 top: 50,
                 child: Container(
                   width: 300,
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/beefburger.jpg'),
+                      image: AssetImage('images/sizebeef.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [
@@ -388,7 +224,7 @@ class MenuBurger4 extends StatelessWidget {
                         blurRadius: 4,
                         offset: Offset(0, 4),
                         spreadRadius: 0,
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -407,6 +243,35 @@ class MenuBurger4 extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildPriceOption(int value, String label) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedPrice = value;
+        });
+      },
+      child: Container(
+        width: 290,
+        margin: EdgeInsets.only(bottom: 10),
+        padding: EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          label,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _selectedPrice == value ? Colors.white : Colors.black,
+            fontSize: 16,
+            fontFamily: GoogleFonts.inter().fontFamily,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
     );
   }
 }

@@ -54,7 +54,6 @@ class MargaritaPizza1 extends StatefulWidget {
 }
 
 class _MargaritaPizza1State extends State<MargaritaPizza1> {
-<<<<<<< HEAD
   int _selectedPrice = 1;
 
   void _addToCart() {
@@ -81,15 +80,11 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
       },
     );
   }
-=======
-  int _selectedPrice = 1; // 1: Rp.90.000, 2: Rp.110.000, 3: Rp.130.000
->>>>>>> d25ff5f02e004bd06a9226b4c840d42ced5bf28c
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
         Container(
           width: 412,
           height: 725,
@@ -141,17 +136,9 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   height: 400,
                   child: Column(
                     children: [
-<<<<<<< HEAD
                       _buildPriceOption(1, 'Rp.90.000 (Personal)'),
                       _buildPriceOption(2, 'Rp.110.000 (Regular)'),
                       _buildPriceOption(3, 'Rp.130.000 (Large)'),
-=======
-
-                      _buildPriceOption(1, 'Rp.90.000 (Personal)'),
-                      _buildPriceOption(2, 'Rp.110.000 (Regular)'),
-                      _buildPriceOption(3, 'Rp.130.000 (Large)'),
-
->>>>>>> d25ff5f02e004bd06a9226b4c840d42ced5bf28c
                     ],
                   ),
                 ),
@@ -258,8 +245,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
     );
   }
 
-Widget _buildPriceOption(int value, String label) {
-<<<<<<< HEAD
+  Widget _buildPriceOption(int value, String label) {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -287,63 +273,4 @@ Widget _buildPriceOption(int value, String label) {
       ),
     );
   }
-=======
-  return GestureDetector(
-    onTap: () {
-      setState(() {
-        _selectedPrice = value;
-      });
-    },
-    child: Container(
-      margin: EdgeInsets.symmetric(vertical: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
-          width: 1,
-        ),
-      ),
-      width: 290,
-      height: 40,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            width: 30,
-            height: 30,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
-              border: Border.all(
-                color: Colors.transparent,
-                width: 2,
-              ),
-            ),
-            child: _selectedPrice == value
-                ? Icon(
-                    Icons.check,
-                    size: 18,
-                    color: Colors.white,
-                  )
-                : null,
-          ),
-          SizedBox(width: 10),
-          Text(
-            label,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontFamily: GoogleFonts.inter().fontFamily,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
-
->>>>>>> d25ff5f02e004bd06a9226b4c840d42ced5bf28c
 }

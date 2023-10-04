@@ -149,16 +149,7 @@ class KanePunya extends StatelessWidget {
                                 height: 0,
                               ),
                             ),
-                            TextSpan(
-                              text: ' ',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'OFL Sorts Mill Goudy TT',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
+
                           ],
                         ),
                         textAlign: TextAlign.center,

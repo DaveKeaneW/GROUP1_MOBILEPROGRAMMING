@@ -82,7 +82,7 @@ class RegisterPage extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             TextField(
-              controller: _usernameTextController,
+              controller: _passwordTextController,
               obscureText: true,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(

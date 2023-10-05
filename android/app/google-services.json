@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1028127372089",
+    "project_id": "signinmobprog",
+    "storage_bucket": "signinmobprog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028127372089:android:9f5a49192d6403c48a6ee8",
+        "android_client_info": {
+          "package_name": "com.signin.moprog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFLGH5TF3vM30ctTUalAa-tga-wPtPj40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

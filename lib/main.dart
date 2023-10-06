@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tesgit/home_screen.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/welcome.dart';
+import 'tampilanawal.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home : WellcomePage(),
+      home : SplashScreen(),
     );
   }
 }

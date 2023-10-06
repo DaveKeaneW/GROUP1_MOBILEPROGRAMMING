@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> e5ea561eae5e5230dea33ffeabf7647a1625446c
 import 'package:tesgit/home_screen.dart';
 import 'package:tesgit/CherryPizza.dart';
 import 'package:tesgit/GarlicPizza.dart';

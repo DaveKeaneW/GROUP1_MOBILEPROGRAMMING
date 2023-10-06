@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
@@ -6,6 +7,9 @@ import 'package:tesgit/sharedDave/shared.dart';
 final double defaultMargin = 24;
 
 class RegisterPage extends StatelessWidget {
+  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _usernameTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +58,7 @@ class RegisterPage extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
             TextField(
+              controller: _emailTextController,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: 'Email',
@@ -65,6 +70,7 @@ class RegisterPage extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             TextField(
+              controller: _usernameTextController,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: 'Username',
@@ -76,6 +82,7 @@ class RegisterPage extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             TextField(
+              controller: _passwordTextController,
               obscureText: true,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
@@ -90,13 +97,15 @@ class RegisterPage extends StatelessWidget {
             Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {
-                    // Tambahkan navigasi ke halaman WelcomePage di sini
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WellcomePage()),
-                    );
-                  },
+                   onPressed: () async {
+                    try { await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      email: _emailTextController.text, password: _passwordTextController.text,
+                       ); print("Created New Account");
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => WellcomePage()));
+                         } catch (error) {
+                          print("Error $error");
+                        }
+                      },
                   child: Text(
                     'Sign Up',
                     style: TextStyle(

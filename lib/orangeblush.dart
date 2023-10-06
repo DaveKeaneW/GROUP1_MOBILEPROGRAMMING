@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tesgit/menuburger.dart';
+import 'package:tesgit/menudrinks.dart';
 
-//BACON SWISS BURGER SIZE
+// THAI ICE TEA NOT ORANGE BLUSH
+//d
 
-class BurgerSize2 extends StatelessWidget {
-  const BurgerSize2({Key? key});
+class orange extends StatelessWidget {
+  const orange({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class BurgerSize2 extends StatelessWidget {
           toolbarHeight: 120,
           backgroundColor: Colors.white,
           title: Text(
-            'BaconSwiss Burger',
+            'Thai Ice Tea',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 32,
@@ -35,7 +36,7 @@ class BurgerSize2 extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MenuBurger()),
+                MaterialPageRoute(builder: (context) => MenuDrinks()),
               );
             },
           ),
@@ -64,14 +65,14 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
       builder: (context) {
         return AlertDialog(
           title: Text('Added to Cart'),
-          content: Text('BaconSwiss Burger added to your cart.'),
+          content: Text('Thai Ice Tea added to your cart.'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MenuBurger()),
+                  MaterialPageRoute(builder: (context) => MenuDrinks()),
                 );
               },
               child: Text('OK'),
@@ -117,7 +118,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   width: 304,
                   height: 80,
                   child: Text(
-                    'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.',
+                    'Thai Iced Tea is a refreshing drink that is served over ice and made with brewed black tea and spices like vanilla, cinnamon, cardamom.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -131,15 +132,13 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
               ),
               Positioned(
                 left: 50,
-                top: 450,
+                top: 480,
                 child: Container(
                   width: 300,
                   height: 400,
                   child: Column(
                     children: [
-                      _buildPriceOption(1, 'Rp.30.000 (Small)'),
-                      _buildPriceOption(2, 'Rp.40.000 (Medium)'),
-                      _buildPriceOption(3, 'Rp.55.000 (Large)'),
+                      _buildPriceOption(2, 'Rp.37.000'),
                     ],
                   ),
                 ),
@@ -215,7 +214,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   height: 283,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/bacoswissburger.png'),
+                      image: AssetImage('images/thaiicetea.png'),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [
@@ -275,4 +274,3 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
     );
   }
 }
-//Ps

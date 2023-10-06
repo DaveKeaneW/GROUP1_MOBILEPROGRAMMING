@@ -50,7 +50,32 @@ class MargaritaPizza1 extends StatefulWidget {
 }
 
 class _MargaritaPizza1State extends State<MargaritaPizza1> {
-  int _selectedPrice = 1; // 1: Rp.90.000, 2: Rp.110.000, 3: Rp.130.000
+  int _selectedPrice = 1;
+
+  void _addToCart() {
+    // Add your logic here to add the selected menu to the cart.
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Added to Cart'),
+          content: Text('Margarita Pizza added to your cart.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuPizza()),
+                ); // Navigate back to MenuPizza
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -132,6 +157,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                 left: 62,
                 top: 630,
                 child: GestureDetector(
+<<<<<<< HEAD
                   onTap: () {
                     final cartProvider =
                         Provider.of<CartProvider>(context, listen: false);
@@ -150,6 +176,9 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                       ),
                     );
                   },
+=======
+                  onTap: _addToCart, // Call _addToCart when tapped
+>>>>>>> 5388674f9a65e4ef704368a88984081b07a02dde
                   child: Container(
                     width: 276,
                     height: 42,
@@ -164,8 +193,12 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                             decoration: ShapeDecoration(
                               color: Colors.white.withOpacity(0),
                               shape: RoundedRectangleBorder(
+<<<<<<< HEAD
                                 side: BorderSide(
                                     width: 1, color: Colors.white),
+=======
+                                side: BorderSide(width: 1, color: Colors.white),
+>>>>>>> 5388674f9a65e4ef704368a88984081b07a02dde
                                 borderRadius: BorderRadius.circular(45),
                               ),
                             ),
@@ -242,6 +275,7 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
         });
       },
       child: Container(
+<<<<<<< HEAD
         margin: EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -286,9 +320,32 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
             ),
           ],
         ),
+=======
+        width: 290,
+        margin: EdgeInsets.only(bottom: 10),
+        padding: EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          label,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _selectedPrice == value ? Colors.white : Colors.black,
+            fontSize: 16,
+            fontFamily: GoogleFonts.inter().fontFamily,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+>>>>>>> 5388674f9a65e4ef704368a88984081b07a02dde
       ),
     );
   }
 }
+<<<<<<< HEAD
 
            
+=======
+//ferdi
+>>>>>>> 5388674f9a65e4ef704368a88984081b07a02dde

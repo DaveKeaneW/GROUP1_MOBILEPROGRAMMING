@@ -1,3 +1,5 @@
+import 'package:tesgit/pagesDave/pagesdave.dart';
+
 import 'welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), () {
       // Navigasi ke halaman berikutnya setelah durasi tertentu (contoh: 3 detik)
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => WelcomeScreen()), // Gunakan widget dari file next_page.dart
+        context, MaterialPageRoute(builder: (context) => WellcomePage()), // Gunakan widget dari file next_page.dart
       );
     });
   }

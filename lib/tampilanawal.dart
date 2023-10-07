@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                WelcomeScreen()), // Gunakan widget dari file next_page.dart
+                WellcomePage()), // Gunakan widget dari file next_page.dart
       );
     });
   }

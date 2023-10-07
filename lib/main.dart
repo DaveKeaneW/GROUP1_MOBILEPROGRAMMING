@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
 >>>>>>> b9b6b249fa4a224dc5a525abd3fa250bc5872a96
 =======
 
-      home : SplashScreen(),
+      home : WellcomePage(),
     );
   }
 }

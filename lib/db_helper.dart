@@ -24,21 +24,31 @@ class DBHelper {
   }
 
   _onCreate(Database db, int version) async {
-    await db.execute(
-        'CREATE TABLE cart (id INTEGER PRIMARY KEY , productId VARCHAR UNIQUE,productName TEXT,initialPrice INTEGER, productPrice INTEGER , quantity INTEGER, unitTag TEXT , image TEXT,description TEXT)'
-        );
+  await db.execute('''
+    CREATE TABLE cart (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      productId VARCHAR UNIQUE,
+      productName TEXT,
+      initialPrice INTEGER,
+      productPrice INTEGER,
+      quantity INTEGER,
+      unitTag TEXT,
+      image TEXT,
+      description TEXT
+    )
+  ''');
   }
 
   Future<Cart> insert(Cart cart) async {
-    var dbClient = await db;
-    if (dbClient != null) {
-      await dbClient.insert('cart', cart.toMap());
-      return cart;
-    } else {
-      // Tangani kesalahan ketika dbClient adalah null
-      throw Exception("Database is null");
-    }
+  var dbClient = await db;
+  if (dbClient != null) {
+    await dbClient.insert('cart', cart.toMap());
+    return cart;
+  } else {
+    // Tangani kesalahan ketika dbClient adalah null
+    throw Exception("Database is null");
   }
+}
 
   Future<List<Cart>> getCartList() async {
   var dbClient = await db;

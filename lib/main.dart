@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tesgit/otw.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
-import 'package:tesgit/user.dart';
 import 'package:tesgit/welcome.dart';
 import 'tampilanawal.dart';
 import 'package:provider/provider.dart';

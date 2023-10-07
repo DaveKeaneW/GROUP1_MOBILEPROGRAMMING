@@ -7,69 +7,70 @@ import 'cart.dart';
 import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
-class ProductListScreenPizza extends StatefulWidget {
-  const ProductListScreenPizza({Key? key}) : super(key: key);
+class ProductListScreenDrinks extends StatefulWidget {
+  const ProductListScreenDrinks({Key? key}) : super(key: key);
 
   @override
-  _ProductListScreenStatePizza createState() => _ProductListScreenStatePizza();
+  _ProductListScreenStateDrinks createState() =>
+      _ProductListScreenStateDrinks();
 }
 
-class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
+class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
   List<Cart> products = [
     Cart(
       id: null,
-      productId: '11',
-      productName: 'Margarita Pizza',
-      initialPrice: 110,
-      productPrice: 110,
+      productId: '21',
+      productName: 'StrawBerry Milkshake',
+      initialPrice: 45,
+      productPrice: 45,
       quantity: 1,
-      image: 'images/margarita.png',
+      image: 'images/stroberimilk.png',
       description:
-          'A classic Italian delight featuring a harmonious blend of fresh mozzarella, vibrant tomato sauce, fragrant basil, and a thin, crispy crust.',
+          'sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, Strawberry.',
     ),
     Cart(
       id: null,
-      productId: '12',
-      productName: 'Cherry Tomatoes Pizza',
-      initialPrice: 105,
-      productPrice: 105,
+      productId: '22',
+      productName: 'Lychee Ice Tea',
+      initialPrice: 30,
+      productPrice: 30,
       quantity: 1,
-      image: 'images/tomat.png',
+      image: 'images/leciicetea.png',
       description:
-          'Bursting with flavor, this pizza showcases sweet cherry tomatoes atop a bed of gooey cheese and a perfectly baked dough.',
+          'This lychee-infused iced green tea is a sweet and fruity drink inspired by the ancient Chinese lychee tea. Refreshing and energising.',
     ),
     Cart(
       id: null,
-      productId: '13',
-      productName: 'Pepperoni Pizza',
-      initialPrice: 126,
-      productPrice: 126,
+      productId: '23',
+      productName: 'Lemon Ice Tea',
+      initialPrice: 35,
+      productPrice: 35,
       quantity: 1,
-      image: 'images/meat.png',
+      image: 'images/lemonicetea.png',
       description:
-          'A pizza lovers favorite, this pie boasts spicy pepperoni slices atop a golden, cheesy foundation.',
+          'Lemon iced tea combines black tea, fresh lemon juice, and sugar to make a bold and refreshing drink.',
     ),
     Cart(
       id: null,
-      productId: '14',
-      productName: 'Garlic Cheese Pizza',
-      initialPrice: 123,
-      productPrice: 123,
+      productId: '24',
+      productName: 'Orange Blush',
+      initialPrice: 65,
+      productPrice: 65,
       quantity: 1,
-      image: 'images/cheese.png',
+      image: 'images/orangebush.png',
       description:
-          'A savory sensation with a garlic-infused crust and a generous layer of melted cheese, perfect for garlic enthusiasts.',
+          'navel, cara cara, or blood oranges—whichever you prefer—just note that the color of your cocktails will vary depending on the citrus you use.',
     ),
     Cart(
       id: null,
-      productId: '15',
-      productName: 'Mushroom Chicken Pizza',
-      initialPrice: 105,
-      productPrice: 105,
+      productId: '25',
+      productName: 'Thai Ice Tea',
+      initialPrice: 37,
+      productPrice: 37,
       quantity: 1,
-      image: 'images/mushroom.png',
+      image: 'images/thaiicetea.png',
       description:
-          'A delightful combination of tender chicken, earthy mushrooms, and rich cheese, creating a satisfying and hearty pizza experience.',
+          'Thai Iced Tea is a refreshing drink that is served over ice and made with brewed black tea and spices like vanilla, cinnamon, cardamom.',
     ),
     // Tambahkan produk lainnya ke dalam daftar ini
   ];
@@ -97,7 +98,7 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
             },
           ),
           title: Text(
-            'Pizza',
+            'Drinks',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,

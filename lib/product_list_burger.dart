@@ -7,69 +7,70 @@ import 'cart.dart';
 import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
-class ProductListScreenPizza extends StatefulWidget {
-  const ProductListScreenPizza({Key? key}) : super(key: key);
+class ProductListScreenBurger extends StatefulWidget {
+  const ProductListScreenBurger({Key? key}) : super(key: key);
 
   @override
-  _ProductListScreenStatePizza createState() => _ProductListScreenStatePizza();
+  _ProductListScreenStateBurger createState() =>
+      _ProductListScreenStateBurger();
 }
 
-class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
+class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
   List<Cart> products = [
     Cart(
       id: null,
-      productId: '11',
-      productName: 'Margarita Pizza',
-      initialPrice: 110,
-      productPrice: 110,
+      productId: '16',
+      productName: 'SouthWest Chicken Burger',
+      initialPrice: 50,
+      productPrice: 50,
       quantity: 1,
-      image: 'images/margarita.png',
+      image: 'images/southwestburger.png',
       description:
-          'A classic Italian delight featuring a harmonious blend of fresh mozzarella, vibrant tomato sauce, fragrant basil, and a thin, crispy crust.',
+          'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
     ),
     Cart(
       id: null,
-      productId: '12',
-      productName: 'Cherry Tomatoes Pizza',
-      initialPrice: 105,
-      productPrice: 105,
+      productId: '17',
+      productName: 'Bacon Swiss Burger',
+      initialPrice: 55,
+      productPrice: 55,
       quantity: 1,
-      image: 'images/tomat.png',
+      image: 'images/bacoswissburger.png',
       description:
-          'Bursting with flavor, this pizza showcases sweet cherry tomatoes atop a bed of gooey cheese and a perfectly baked dough.',
+          'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.',
     ),
     Cart(
       id: null,
-      productId: '13',
-      productName: 'Pepperoni Pizza',
-      initialPrice: 126,
-      productPrice: 126,
+      productId: '18',
+      productName: 'Pulled Pork Burger',
+      initialPrice: 67,
+      productPrice: 67,
       quantity: 1,
-      image: 'images/meat.png',
+      image: 'images/pulledporkburger.png',
       description:
-          'A pizza lovers favorite, this pie boasts spicy pepperoni slices atop a golden, cheesy foundation.',
+          'The Pulled Pork Burger is a smoky, sweet and spicy burger that is sure to be a hit at your next cookout! This burger is packed with flavor',
     ),
     Cart(
       id: null,
-      productId: '14',
-      productName: 'Garlic Cheese Pizza',
-      initialPrice: 123,
-      productPrice: 123,
+      productId: '19',
+      productName: 'Double Cheese Burger',
+      initialPrice: 43,
+      productPrice: 43,
       quantity: 1,
-      image: 'images/cheese.png',
+      image: 'images/cheeseburger.png',
       description:
-          'A savory sensation with a garlic-infused crust and a generous layer of melted cheese, perfect for garlic enthusiasts.',
+          'A Double Cheeseburger consists of two 1.6 oz. beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard.',
     ),
     Cart(
       id: null,
-      productId: '15',
-      productName: 'Mushroom Chicken Pizza',
-      initialPrice: 105,
-      productPrice: 105,
+      productId: '20',
+      productName: 'Beef Burger',
+      initialPrice: 45,
+      productPrice: 45,
       quantity: 1,
-      image: 'images/mushroom.png',
+      image: 'images/beefburger.jpg',
       description:
-          'A delightful combination of tender chicken, earthy mushrooms, and rich cheese, creating a satisfying and hearty pizza experience.',
+          'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard.',
     ),
     // Tambahkan produk lainnya ke dalam daftar ini
   ];
@@ -97,7 +98,7 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
             },
           ),
           title: Text(
-            'Pizza',
+            'Burger',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,

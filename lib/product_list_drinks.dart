@@ -24,7 +24,7 @@ class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
       initialPrice: 45,
       productPrice: 45,
       quantity: 1,
-      image: 'img/stroberimilk.png',
+      image: 'images/stroberimilk.png',
       description:
           'sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, Strawberry.',
     ),
@@ -35,7 +35,7 @@ class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
       initialPrice: 30,
       productPrice: 30,
       quantity: 1,
-      image: 'img/leciicetea.png',
+      image: 'images/leciicetea.png',
       description:
           'This lychee-infused iced green tea is a sweet and fruity drink inspired by the ancient Chinese lychee tea. Refreshing and energising.',
     ),
@@ -46,7 +46,7 @@ class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
       initialPrice: 35,
       productPrice: 35,
       quantity: 1,
-      image: 'img/lemonicetea.png',
+      image: 'images/lemonicetea.png',
       description:
           'Lemon iced tea combines black tea, fresh lemon juice, and sugar to make a bold and refreshing drink.',
     ),
@@ -57,7 +57,7 @@ class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
       initialPrice: 65,
       productPrice: 65,
       quantity: 1,
-      image: 'img/orangebush.png',
+      image: 'images/orangebush.png',
       description:
           'navel, cara cara, or blood oranges—whichever you prefer—just note that the color of your cocktails will vary depending on the citrus you use.',
     ),
@@ -68,7 +68,7 @@ class _ProductListScreenStateDrinks extends State<ProductListScreenDrinks> {
       initialPrice: 37,
       productPrice: 37,
       quantity: 1,
-      image: 'img/thaiicetea.png',
+      image: 'images/thaiicetea.png',
       description:
           'Thai Iced Tea is a refreshing drink that is served over ice and made with brewed black tea and spices like vanilla, cinnamon, cardamom.',
     ),

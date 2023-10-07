@@ -24,7 +24,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       initialPrice: 50,
       productPrice: 50,
       quantity: 1,
-      image: 'img/southwestburger.png',
+      image: 'images/southwestburger.png',
       description:
           'These southwest chicken burgers are made with diced red bell pepper, shallots, and southwest spices, and pack a ton of flavor. Assembled and cooked in under 20 minutes.',
     ),
@@ -35,7 +35,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       initialPrice: 55,
       productPrice: 55,
       quantity: 1,
-      image: 'img/bacoswissburger.png',
+      image: 'images/bacoswissburger.png',
       description:
           'Step up your burger game with some extra toppings: sautéed mushrooms and onions, crispy bacon, Swiss cheese, and barbeque sauce.',
     ),
@@ -46,7 +46,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       initialPrice: 67,
       productPrice: 67,
       quantity: 1,
-      image: 'img/pulledporkburger.png',
+      image: 'images/pulledporkburger.png',
       description:
           'The Pulled Pork Burger is a smoky, sweet and spicy burger that is sure to be a hit at your next cookout! This burger is packed with flavor',
     ),
@@ -57,7 +57,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       initialPrice: 43,
       productPrice: 43,
       quantity: 1,
-      image: 'img/cheeseburger.png',
+      image: 'images/cheeseburger.png',
       description:
           'A Double Cheeseburger consists of two 1.6 oz. beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard.',
     ),
@@ -68,7 +68,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       initialPrice: 45,
       productPrice: 45,
       quantity: 1,
-      image: 'img/beefburger.jpg',
+      image: 'images/beefburger.jpg',
       description:
           'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard.',
     ),

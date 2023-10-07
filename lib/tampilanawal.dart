@@ -1,4 +1,5 @@
 import 'package:tesgit/pagesDave/pagesdave.dart';
+import 'package:tesgit/product_list_burger.dart';
 
 import 'welcome.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), () {
       // Navigasi ke halaman berikutnya setelah durasi tertentu (contoh: 3 detik)
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => WellcomePage()), // Gunakan widget dari file next_page.dart
+        context,
+        MaterialPageRoute(
+            builder: (context) =>
+                WelcomeScreen()), // Gunakan widget dari file next_page.dart
       );
     });
   }
@@ -72,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 750,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('img/buger1.png'),
+                        image: AssetImage('images/buger1.png'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -86,7 +90,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 750,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('img/pija1.png'),
+                        image: AssetImage('images/pija1.png'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -112,7 +116,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 13,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('img/resap.png'),
+                        image: AssetImage('images/resap.png'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -126,7 +130,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 130,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('img/logo.png'),
+                        image: AssetImage('images/logo.png'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -182,5 +186,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-

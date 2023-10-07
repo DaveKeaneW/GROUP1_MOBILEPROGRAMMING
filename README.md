@@ -7,7 +7,7 @@ KELOMPOK 1
 - 535220046 Darren Natanael S
 - 535220050 Olivia Clarabella Khotiera
 
-
+TINGGAL deskripsi video, dan halaman judul PDF yang dikumpulkan.
 
 
 # tesgit

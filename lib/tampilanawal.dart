@@ -1,7 +1,5 @@
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/product_list_burger.dart';
-import 'package:tesgit/user.dart';
-
 import 'welcome.dart';
 import 'package:flutter/material.dart';
 

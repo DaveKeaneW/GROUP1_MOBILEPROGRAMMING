@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tesgit/home_screen.dart';
 import 'package:tesgit/otw.dart';
 
-void main() {
-  runApp(const User());
-}
 
 class User extends StatelessWidget {
   const User({super.key});

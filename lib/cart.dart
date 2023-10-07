@@ -1,4 +1,6 @@
 import 'package:badges/badges.dart' as badges;
+import 'package:tesgit/enjoy.dart';
+import 'package:tesgit/otw.dart';
 import 'cartmodel.dart';
 import 'db_helper.dart';
 import 'package:flutter/material.dart';
@@ -83,14 +85,22 @@ class _CartScreenState extends State<CartScreen> {
 void showPaymentConfirmationDialog(BuildContext context) {
   AwesomeDialog(
     context: context,
-    dialogType: DialogType.SUCCES, // Atau sesuaikan dengan tipe dialog yang Anda inginkan
+    dialogType: DialogType.SUCCES,
     animType: AnimType.BOTTOMSLIDE,
     showCloseIcon: true,
     title: "Success",
     desc: "Payment has been confirmed. Your order has been received. Please wait a while...",
     btnOkText: "OK",
     btnOkOnPress: () {
-      Navigator.of(context).pop(); // Tutup dialog konfirmasi
+      // Close the confirmation dialog
+      Navigator.of(context).pop();
+
+      // Navigate to the new page
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => OnTheWay(), // Replace with the actual page you want to navigate to
+        ),
+      );
     },
   )..show();
 }

@@ -7,7 +7,6 @@ import 'cart.dart';
 import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
-
 class ProductListScreenSnack extends StatefulWidget {
   const ProductListScreenSnack({Key? key}) : super(key: key);
 
@@ -24,7 +23,7 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
       initialPrice: 34,
       productPrice: 34,
       quantity: 1,
-      image: 'img/prenprais.png',
+      image: 'images/prenprais.png',
       description: 'Crispy golden potato sticks, a classic snack loved by all.',
     ),
     Cart(
@@ -34,8 +33,9 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
       initialPrice: 44,
       productPrice: 44,
       quantity: 1,
-      image: 'img/cheesefr.png',
-      description: 'Irresistibly cheesy and seasoned fries for a mouthwatering indulgence.',
+      image: 'images/cheesefr.png',
+      description:
+          'Irresistibly cheesy and seasoned fries for a mouthwatering indulgence.',
     ),
     Cart(
       id: null,
@@ -44,8 +44,9 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
       initialPrice: 36,
       productPrice: 36,
       quantity: 1,
-      image: 'img/potatowed.png',
-      description: 'Thick-cut potato wedges, perfectly seasoned and baked to perfection.',
+      image: 'images/potatowed.png',
+      description:
+          'Thick-cut potato wedges, perfectly seasoned and baked to perfection.',
     ),
     Cart(
       id: null,
@@ -54,7 +55,7 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
       initialPrice: 37,
       productPrice: 37,
       quantity: 1,
-      image: 'img/onionring.png',
+      image: 'images/onionring.png',
       description: 'Crispy and flavorful onion rings, a delightful side dish.',
     ),
     Cart(
@@ -64,8 +65,9 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
       initialPrice: 55,
       productPrice: 55,
       quantity: 1,
-      image: 'img/garlicpar.png',
-      description: 'Juicy and tender chicken wings, seasoned and cooked to savory perfection.',
+      image: 'images/garlicpar.png',
+      description:
+          'Juicy and tender chicken wings, seasoned and cooked to savory perfection.',
     ),
     // Tambahkan produk lainnya ke dalam daftar ini
   ];
@@ -104,14 +106,16 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
           actions: [
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
               },
               child: Center(
                 child: badges.Badge(
                   showBadge: true,
                   badgeContent: Consumer<CartProvider>(
                     builder: (context, value, child) {
-                      return Text(value.getCounter().toString(), style: TextStyle(color: Colors.white));
+                      return Text(value.getCounter().toString(),
+                          style: TextStyle(color: Colors.white));
                     },
                   ),
                   badgeAnimation: badges.BadgeAnimation.rotation(
@@ -155,56 +159,72 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
                                   children: [
                                     Text(
                                       product.productName!,
-                                      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500),
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     Text(
                                       product.description!,
-                                      style: TextStyle(fontSize: 14.0, color: Colors.grey),
+                                      style: TextStyle(
+                                          fontSize: 14.0, color: Colors.grey),
                                     ),
                                     SizedBox(height: 8.0),
                                     Text(
-                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000" }',
-                                      style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
+                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000"}',
+                                      style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(height: 16.0),
                                     Align(
                                       alignment: Alignment.centerRight,
                                       child: InkWell(
                                         onTap: () {
-                                          dbHelper!.insert(
+                                          dbHelper!
+                                              .insert(
                                             product,
-                                          ).then((value) {
-                                            cart.addTotalPrice(product.productPrice!.toDouble());
+                                          )
+                                              .then((value) {
+                                            cart.addTotalPrice(product
+                                                .productPrice!
+                                                .toDouble());
                                             cart.addCounter();
 
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.green,
-                                              content: Text('Product is added to cart'),
+                                              content: Text(
+                                                  'Product is added to cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           }).onError((error, stackTrace) {
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.red,
-                                              content: Text('Product is already added in cart'),
+                                              content: Text(
+                                                  'Product is already added in cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           });
                                         },
                                         child: Container(
                                           height: 40.0,
                                           width: 120.0,
                                           decoration: BoxDecoration(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
-                                            borderRadius: BorderRadius.circular(5),
+                                            color: const Color.fromARGB(
+                                                255, 255, 255, 255),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
                                           ),
                                           child: Center(
                                             child: Text(
                                               'Add to cart',
-                                              style: TextStyle(color: Colors.black),
+                                              style: TextStyle(
+                                                  color: Colors.black),
                                             ),
                                           ),
                                         ),

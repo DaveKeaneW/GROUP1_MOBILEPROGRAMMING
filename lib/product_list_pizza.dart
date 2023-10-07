@@ -7,7 +7,6 @@ import 'cart.dart';
 import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
-
 class ProductListScreenPizza extends StatefulWidget {
   const ProductListScreenPizza({Key? key}) : super(key: key);
 
@@ -24,8 +23,9 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
       initialPrice: 110,
       productPrice: 110,
       quantity: 1,
-      image: 'img/margarita.png',
-      description: 'A classic Italian delight featuring a harmonious blend of fresh mozzarella, vibrant tomato sauce, fragrant basil, and a thin, crispy crust.',
+      image: 'images/margarita.png',
+      description:
+          'A classic Italian delight featuring a harmonious blend of fresh mozzarella, vibrant tomato sauce, fragrant basil, and a thin, crispy crust.',
     ),
     Cart(
       id: null,
@@ -34,8 +34,9 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
       initialPrice: 105,
       productPrice: 105,
       quantity: 1,
-      image: 'img/tomat.png',
-      description: 'Bursting with flavor, this pizza showcases sweet cherry tomatoes atop a bed of gooey cheese and a perfectly baked dough.',
+      image: 'images/tomat.png',
+      description:
+          'Bursting with flavor, this pizza showcases sweet cherry tomatoes atop a bed of gooey cheese and a perfectly baked dough.',
     ),
     Cart(
       id: null,
@@ -44,8 +45,9 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
       initialPrice: 126,
       productPrice: 126,
       quantity: 1,
-      image: 'img/meat.png',
-      description: 'A pizza lovers favorite, this pie boasts spicy pepperoni slices atop a golden, cheesy foundation.',
+      image: 'images/meat.png',
+      description:
+          'A pizza lovers favorite, this pie boasts spicy pepperoni slices atop a golden, cheesy foundation.',
     ),
     Cart(
       id: null,
@@ -54,8 +56,9 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
       initialPrice: 123,
       productPrice: 123,
       quantity: 1,
-      image: 'img/cheese.png',
-      description: 'A savory sensation with a garlic-infused crust and a generous layer of melted cheese, perfect for garlic enthusiasts.',
+      image: 'images/cheese.png',
+      description:
+          'A savory sensation with a garlic-infused crust and a generous layer of melted cheese, perfect for garlic enthusiasts.',
     ),
     Cart(
       id: null,
@@ -64,8 +67,9 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
       initialPrice: 105,
       productPrice: 105,
       quantity: 1,
-      image: 'img/mushroom.png',
-      description: 'A delightful combination of tender chicken, earthy mushrooms, and rich cheese, creating a satisfying and hearty pizza experience.',
+      image: 'images/mushroom.png',
+      description:
+          'A delightful combination of tender chicken, earthy mushrooms, and rich cheese, creating a satisfying and hearty pizza experience.',
     ),
     // Tambahkan produk lainnya ke dalam daftar ini
   ];
@@ -104,14 +108,16 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
           actions: [
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
               },
               child: Center(
                 child: badges.Badge(
                   showBadge: true,
                   badgeContent: Consumer<CartProvider>(
                     builder: (context, value, child) {
-                      return Text(value.getCounter().toString(), style: TextStyle(color: Colors.white));
+                      return Text(value.getCounter().toString(),
+                          style: TextStyle(color: Colors.white));
                     },
                   ),
                   badgeAnimation: badges.BadgeAnimation.rotation(
@@ -155,56 +161,72 @@ class _ProductListScreenStatePizza extends State<ProductListScreenPizza> {
                                   children: [
                                     Text(
                                       product.productName!,
-                                      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500),
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     Text(
                                       product.description!,
-                                      style: TextStyle(fontSize: 14.0, color: Colors.grey),
+                                      style: TextStyle(
+                                          fontSize: 14.0, color: Colors.grey),
                                     ),
                                     SizedBox(height: 8.0),
                                     Text(
-                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000" }',
-                                      style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
+                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000"}',
+                                      style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(height: 16.0),
                                     Align(
                                       alignment: Alignment.centerRight,
                                       child: InkWell(
                                         onTap: () {
-                                          dbHelper!.insert(
+                                          dbHelper!
+                                              .insert(
                                             product,
-                                          ).then((value) {
-                                            cart.addTotalPrice(product.productPrice!.toDouble());
+                                          )
+                                              .then((value) {
+                                            cart.addTotalPrice(product
+                                                .productPrice!
+                                                .toDouble());
                                             cart.addCounter();
 
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.green,
-                                              content: Text('Product is added to cart'),
+                                              content: Text(
+                                                  'Product is added to cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           }).onError((error, stackTrace) {
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.red,
-                                              content: Text('Product is already added in cart'),
+                                              content: Text(
+                                                  'Product is already added in cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           });
                                         },
                                         child: Container(
                                           height: 40.0,
                                           width: 120.0,
                                           decoration: BoxDecoration(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
-                                            borderRadius: BorderRadius.circular(5),
+                                            color: const Color.fromARGB(
+                                                255, 255, 255, 255),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
                                           ),
                                           child: Center(
                                             child: Text(
                                               'Add to cart',
-                                              style: TextStyle(color: Colors.black),
+                                              style: TextStyle(
+                                                  color: Colors.black),
                                             ),
                                           ),
                                         ),

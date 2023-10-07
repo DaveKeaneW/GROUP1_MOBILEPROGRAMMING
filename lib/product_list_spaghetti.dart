@@ -7,15 +7,16 @@ import 'cart.dart';
 import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
-
 class ProductListScreenSpaghetti extends StatefulWidget {
   const ProductListScreenSpaghetti({Key? key}) : super(key: key);
 
   @override
-  _ProductListScreenStateSpaghetti createState() => _ProductListScreenStateSpaghetti();
+  _ProductListScreenStateSpaghetti createState() =>
+      _ProductListScreenStateSpaghetti();
 }
 
-class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti> {
+class _ProductListScreenStateSpaghetti
+    extends State<ProductListScreenSpaghetti> {
   List<Cart> products = [
     Cart(
       id: null,
@@ -24,7 +25,7 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
       initialPrice: 50,
       productPrice: 50,
       quantity: 1,
-      image: 'img/spagg_bolo.png',
+      image: 'images/spagg_bolo.png',
       description: 'Delicious spaghetti with Bolognese sauce.',
     ),
     Cart(
@@ -34,7 +35,7 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
       initialPrice: 45,
       productPrice: 45,
       quantity: 1,
-      image: 'img/spagg_alio.png',
+      image: 'images/spagg_alio.png',
       description: 'Classic spaghetti with garlic and olive oil.',
     ),
     Cart(
@@ -44,7 +45,7 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
       initialPrice: 47,
       productPrice: 47,
       quantity: 1,
-      image: 'img/spagg_toma.png',
+      image: 'images/spagg_toma.png',
       description: 'Delicious spaghetti with rich and fresh tomato sauce.',
     ),
     Cart(
@@ -54,7 +55,7 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
       initialPrice: 68,
       productPrice: 68,
       quantity: 1,
-      image: 'img/spagg_alle.png',
+      image: 'images/spagg_alle.png',
       description: 'Classic spaghetti with fresh clams, garlic, and olive oil.',
     ),
     Cart(
@@ -64,7 +65,7 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
       initialPrice: 57,
       productPrice: 57,
       quantity: 1,
-      image: 'img/spagg_cream.png',
+      image: 'images/spagg_cream.png',
       description: 'Creamy mushroom spaghetti for a flavorful delight.',
     ),
     // Tambahkan produk lainnya ke dalam daftar ini
@@ -104,14 +105,16 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
           actions: [
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
               },
               child: Center(
                 child: badges.Badge(
                   showBadge: true,
                   badgeContent: Consumer<CartProvider>(
                     builder: (context, value, child) {
-                      return Text(value.getCounter().toString(), style: TextStyle(color: Colors.white));
+                      return Text(value.getCounter().toString(),
+                          style: TextStyle(color: Colors.white));
                     },
                   ),
                   badgeAnimation: badges.BadgeAnimation.rotation(
@@ -155,56 +158,72 @@ class _ProductListScreenStateSpaghetti extends State<ProductListScreenSpaghetti>
                                   children: [
                                     Text(
                                       product.productName!,
-                                      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500),
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     Text(
                                       product.description!,
-                                      style: TextStyle(fontSize: 14.0, color: Colors.grey),
+                                      style: TextStyle(
+                                          fontSize: 14.0, color: Colors.grey),
                                     ),
                                     SizedBox(height: 8.0),
                                     Text(
-                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000" }',
-                                      style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
+                                      'Rp.${product.productPrice?.toStringAsFixed(3) ?? "0.000"}',
+                                      style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(height: 16.0),
                                     Align(
                                       alignment: Alignment.centerRight,
                                       child: InkWell(
                                         onTap: () {
-                                          dbHelper!.insert(
+                                          dbHelper!
+                                              .insert(
                                             product,
-                                          ).then((value) {
-                                            cart.addTotalPrice(product.productPrice!.toDouble());
+                                          )
+                                              .then((value) {
+                                            cart.addTotalPrice(product
+                                                .productPrice!
+                                                .toDouble());
                                             cart.addCounter();
 
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.green,
-                                              content: Text('Product is added to cart'),
+                                              content: Text(
+                                                  'Product is added to cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           }).onError((error, stackTrace) {
                                             final snackBar = SnackBar(
                                               backgroundColor: Colors.red,
-                                              content: Text('Product is already added in cart'),
+                                              content: Text(
+                                                  'Product is already added in cart'),
                                               duration: Duration(seconds: 1),
                                             );
 
-                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackBar);
                                           });
                                         },
                                         child: Container(
                                           height: 40.0,
                                           width: 120.0,
                                           decoration: BoxDecoration(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
-                                            borderRadius: BorderRadius.circular(5),
+                                            color: const Color.fromARGB(
+                                                255, 255, 255, 255),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
                                           ),
                                           child: Center(
                                             child: Text(
                                               'Add to cart',
-                                              style: TextStyle(color: Colors.black),
+                                              style: TextStyle(
+                                                  color: Colors.black),
                                             ),
                                           ),
                                         ),

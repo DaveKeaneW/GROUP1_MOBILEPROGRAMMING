@@ -27,7 +27,9 @@ class SignInPage extends StatelessWidget {
           ),
           title: Text('Sign In'),
         ),
-        body: SignIn(),
+        body: SingleChildScrollView( // Wrap with SingleChildScrollView
+          child: SignIn(),
+        ),
       ),
     );
   }

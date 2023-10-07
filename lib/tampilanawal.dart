@@ -1,5 +1,6 @@
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/product_list_burger.dart';
+import 'package:tesgit/user.dart';
 
 import 'welcome.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                WelcomeScreen()), // Gunakan widget dari file next_page.dart
+                WellcomePage()), // Gunakan widget dari file next_page.dart
       );
     });
   }

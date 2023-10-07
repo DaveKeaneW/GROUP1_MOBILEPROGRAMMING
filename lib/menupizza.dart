@@ -6,7 +6,6 @@ import 'package:tesgit/CherryPizza.dart';
 import 'package:tesgit/GarlicPizza.dart';
 import 'package:tesgit/MushroomPizza.dart';
 import 'package:tesgit/PepperoniPizza.dart';
-import 'package:tesgit/margaritapizza.dart';
 import 'package:provider/provider.dart';
 
 class MenuPizza extends StatelessWidget {
@@ -325,13 +324,8 @@ class MenuPizzaPage1 extends StatelessWidget {
                 left: 310,
                 top: 130,
                 child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => MargaritaPizza(),
-                      ),
-                    );
-                  },
+                  onTap: () 
+                    
                   child: Container(
                     width: 37,
                     height: 18,

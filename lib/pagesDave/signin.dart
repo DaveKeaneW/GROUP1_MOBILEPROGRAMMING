@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/sharedDave/shared.dart';
 import 'package:tesgit/welcome.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 class SignInPage extends StatelessWidget {
+  
   const SignInPage({Key? key}) : super(key: key);
 
   @override
@@ -33,6 +35,8 @@ class SignInPage extends StatelessWidget {
 
 
 class SignIn extends StatelessWidget {
+  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -115,9 +119,10 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   child: TextField(
+                    controller: _emailTextController,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      labelText: 'Username',
+                      labelText: 'Email',
                       labelStyle: TextStyle(color: Colors.white),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
@@ -142,6 +147,7 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   child: TextField(
+                    controller: _passwordTextController,
                     style: TextStyle(color: Colors.white),
                     obscureText: true, // Password field should obscure text
                     decoration: InputDecoration(
@@ -157,13 +163,18 @@ class SignIn extends StatelessWidget {
               ),
               Positioned(
                 left: 245,
-                top: 430, // Sesuaikan dengan posisi yang Anda inginkan
+                top: 430, // Sesuaikan posisi 
                 child: 
                 ElevatedButton(
                   onPressed: () {
-                   Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => WelcomeScreen()), 
-                      );
+                    FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailTextController.text, 
+                    password: _passwordTextController.text).then((value){
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                    }).onError((error, stackTrace) {
+                      print("Error ${error.toString()})");
+                    });
+     
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color(0xFF543656), // Warna latar belakang tombol

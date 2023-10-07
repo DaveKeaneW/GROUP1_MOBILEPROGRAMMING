@@ -98,17 +98,14 @@ class RegisterPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                    onPressed: () async {
-    try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: _emailTextController.text,
-        password: _passwordTextController.text,
-      );
-      print("Created New Account");
-      Navigator.push(context, MaterialPageRoute(builder: (context) => WellcomePage()));
-    } catch (error) {
-      print("Error $error");
-    }
-  },
+                    try { await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      email: _emailTextController.text, password: _passwordTextController.text,
+                       ); print("Created New Account");
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => WellcomePage()));
+                         } catch (error) {
+                          print("Error $error");
+                        }
+                      },
                   child: Text(
                     'Sign Up',
                     style: TextStyle(

@@ -3,7 +3,12 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+<<<<<<< HEAD
   rive_common
+=======
+  firebase_auth
+  firebase_core
+>>>>>>> b9b6b249fa4a224dc5a525abd3fa250bc5872a96
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

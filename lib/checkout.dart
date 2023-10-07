@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tesgit/otw.dart';
+import 'package:tesgit/berhasil.dart';
 
 void main() {
   runApp(const checkout());
@@ -149,16 +149,7 @@ class KanePunya extends StatelessWidget {
                                 height: 0,
                               ),
                             ),
-                            TextSpan(
-                              text: ' ',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'OFL Sorts Mill Goudy TT',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
+
                           ],
                         ),
                         textAlign: TextAlign.center,
@@ -166,44 +157,36 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-                      Positioned(
-          left: 38,
-          top: 738,
-          child: Container(
-            width: 343,
-            height: 45,
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-            decoration: ShapeDecoration(
-              color: Color(0xFF2E1E2E),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-            
-            child: ElevatedButton( // Tambahkan ElevatedButton di sini
-              onPressed: () {
-                Navigator.push  ( context,
-                                            MaterialPageRoute  (  builder: (context) => otw()   ),
-                // Aksi yang ingin dilakukan saat tombol ditekan
-                // Misalnya, pindah ke halaman checkout atau tampilkan pesan
-                                );       
-                            },
-              style: ElevatedButton.styleFrom(
-                primary: Color(0xFF2E1E2E),
-                minimumSize: Size(343, 45), // Sesuaikan dengan ukuran kotak
-              ), // Background color
-                  child: Text(
-                              'Check Out',
-                  style: TextStyle  (
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontFamily: 'OFL Sorts Mill Goudy TT',
-                  fontWeight: FontWeight.w500,
-                  height: 0,
-                                    ),
-                              ),
+
+              
+                       Positioned(
+                left: 42, // payy 
+                top: 750,
+                child: SizedBox(
+                  width: 330,
+                  height: 35,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => berhasil()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF2E1E2E), // Background color
+                    ),
+                    child: Text(
+                      'PAY',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'OFL Sorts Mill Goudy TT',
+                        fontWeight: FontWeight.w500,
+                        height: 0,
                       ),
+                    ),
                   ),
+                ),
               ),
              
               Positioned(
@@ -220,11 +203,6 @@ class KanePunya extends StatelessWidget {
                         child: Container(
                           width: 44,
                           height: 44,
-                          decoration: ShapeDecoration(
-                            shape: CircleBorder(
-                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
-                            ),
-                          ),
                           child: ClipOval(
                             child: Image.asset('images/user.png',fit: BoxFit.fill,),
                           ),
@@ -254,20 +232,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
 
-              Positioned(
-                left: 38,
-                top: 454,
-                child: Container(
-                  width: 343,
-                  height: 80,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF2E1E2E),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
+            
 
              Positioned(
             left: 38,
@@ -316,20 +281,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
 
-              Positioned(
-                left: 38,
-                top: 180,
-                child: Container(
-                  width: 343,
-                  height: 240,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF2E1E2E),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ),
+              
 
 
               Positioned(

@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesgit/home_screen.dart';
+import 'package:tesgit/lemon.dart';
+import 'package:tesgit/lycheetea.dart';
+import 'package:tesgit/orangeblush.dart';
+import 'package:tesgit/stroberi.dart';
+import 'package:tesgit/thaitea.dart';
 
+//d
 class MenuDrinks extends StatelessWidget {
   const MenuDrinks({super.key});
 
@@ -20,7 +27,12 @@ class MenuDrinks extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              );
             },
           ),
           //JUDUL MINUMAN
@@ -73,7 +85,7 @@ class MenuDrinksPage1 extends StatelessWidget {
             children: [
               Positioned(
                 left: 170,
-                top: 35,
+                top: 38,
                 child: Text(
                   'StrawBerry MilkShake', //JUDUL 1
                   style: TextStyle(
@@ -87,7 +99,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 55,
+                top: 58,
                 child: SizedBox(
                   width: 209,
                   child: Column(
@@ -110,7 +122,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],
@@ -119,7 +131,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 170,
+                top: 175,
                 child: Text(
                   'Lychee Ice Tea', //JUDUL 2
                   style: TextStyle(
@@ -133,7 +145,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 190,
+                top: 195,
                 child: SizedBox(
                   width: 216,
                   child: Column(
@@ -156,7 +168,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],
@@ -170,7 +182,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'navel, cara cara, or blood oranges—whichever\nyou prefer—just note that the color of your\ncocktails will vary depending on citrus you use.', // DESC 4
+                      'navel, cara cara, or blood oranges—whichever\nyou prefer—just note that the color of your\ncocktails will vary depending on the citrus\nyou use.', // DESC 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 11,
@@ -180,13 +192,13 @@ class MenuDrinksPage1 extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\nRp.65.000', //HARGA 4
+                      '\nRp.67.000', //HARGA 4
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w700,
-                        height: 1.3,
+                        height: 1,
                       ),
                     ),
                   ],
@@ -194,7 +206,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 305,
+                top: 309,
                 child: Text(
                   'Lemon Ice Tea', //JUDUL 3
                   style: TextStyle(
@@ -224,7 +236,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                 left: 170,
                 top: 580,
                 child: Text(
-                  'Thai Iced Tea', // JUDUL 5
+                  'Thai Ice Tea', // JUDUL 5
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -236,7 +248,7 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 170,
-                top: 330,
+                top: 335,
                 child: SizedBox(
                   width: 225,
                   child: Column(
@@ -278,237 +290,282 @@ class MenuDrinksPage1 extends StatelessWidget {
               ),
               Positioned(
                 left: 310,
-                top: 255,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                top: 257, // ADD BUTTON 2
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => lycheetea(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 1
-                top: 121,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                top: 120,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => stroberi(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 3
-                top: 381,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                top: 389,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => lemon(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 310, //ADD BUTTON 5
-                top: 667,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                top: 665,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => orange(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
-                left: 310, //ADD BUTTON 4
-                top: 529,
-                child: Container(
-                  width: 37,
-                  height: 18,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 37,
-                          height: 18,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
+                left: 310, // ADD BUTTON 4
+                top: 535,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => thaitea(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 37,
+                    height: 18,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 37,
+                            height: 18,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 3,
-                        child: SizedBox(
-                          width: 31,
-                          height: 12,
-                          child: Text(
-                            'ADD', //ADD BUTTON 2
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
+                        Positioned(
+                          left: 3,
+                          top: 3,
+                          child: SizedBox(
+                            width: 31,
+                            height: 12,
+                            child: Text(
+                              'ADD',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               Positioned(
                 left: 170,
-                top: 604,
+                top: 605,
                 child: SizedBox(
                   width: 225,
                   height: 90,
@@ -532,7 +589,7 @@ class MenuDrinksPage1 extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
-                          height: 0,
+                          height: 1,
                         ),
                       ),
                     ],
@@ -598,10 +655,10 @@ class MenuDrinksPage1 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 32,
+                left: 30,
                 top: 580,
                 child: Container(
-                  width: 115,
+                  width: 120,
                   height: 106,
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -619,4 +676,4 @@ class MenuDrinksPage1 extends StatelessWidget {
     );
   }
 }
-//p
+//PD

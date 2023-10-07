@@ -54,7 +54,32 @@ class MargaritaPizza1 extends StatefulWidget {
 }
 
 class _MargaritaPizza1State extends State<MargaritaPizza1> {
-  int _selectedPrice = 1; // 1: Rp.90.000, 2: Rp.110.000, 3: Rp.130.000
+  int _selectedPrice = 1;
+
+  void _addToCart() {
+    // Add your logic here to add the selected menu to the cart.
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Added to Cart'),
+          content: Text('Margarita Pizza added to your cart.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuPizza()),
+                ); // Navigate back to MenuPizza
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,11 +136,9 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
                   height: 400,
                   child: Column(
                     children: [
-
                       _buildPriceOption(1, 'Rp.90.000 (Personal)'),
                       _buildPriceOption(2, 'Rp.110.000 (Regular)'),
                       _buildPriceOption(3, 'Rp.130.000 (Large)'),
-
                     ],
                   ),
                 ),
@@ -137,46 +160,49 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
               Positioned(
                 left: 62,
                 top: 630,
-                child: Container(
-                  width: 276,
-                  height: 42,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 276,
-                          height: 42,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(45),
+                child: GestureDetector(
+                  onTap: _addToCart, // Call _addToCart when tapped
+                  child: Container(
+                    width: 276,
+                    height: 42,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 276,
+                            height: 42,
+                            decoration: ShapeDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.white),
+                                borderRadius: BorderRadius.circular(45),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 22.38,
-                        top: 12,
-                        child: SizedBox(
-                          width: 231.24,
-                          height: 28,
-                          child: Text(
-                            'ADD TO CART',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.bold,
-                              height: 0,
+                        Positioned(
+                          left: 22.38,
+                          top: 12,
+                          child: SizedBox(
+                            width: 231.24,
+                            height: 28,
+                            child: Text(
+                              'ADD TO CART',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -219,62 +245,33 @@ class _MargaritaPizza1State extends State<MargaritaPizza1> {
     );
   }
 
-Widget _buildPriceOption(int value, String label) {
-  return GestureDetector(
-    onTap: () {
-      setState(() {
-        _selectedPrice = value;
-      });
-    },
-    child: Container(
-      margin: EdgeInsets.symmetric(vertical: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
+  Widget _buildPriceOption(int value, String label) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedPrice = value;
+        });
+      },
+      child: Container(
+        width: 290,
+        margin: EdgeInsets.only(bottom: 10),
+        padding: EdgeInsets.all(12),
+        decoration: BoxDecoration(
           color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
-          width: 1,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          label,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _selectedPrice == value ? Colors.white : Colors.black,
+            fontSize: 16,
+            fontFamily: GoogleFonts.inter().fontFamily,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
-      width: 290,
-      height: 40,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            width: 30,
-            height: 30,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: _selectedPrice == value ? Color(0xFF533556) : Colors.white,
-              border: Border.all(
-                color: Colors.transparent,
-                width: 2,
-              ),
-            ),
-            child: _selectedPrice == value
-                ? Icon(
-                    Icons.check,
-                    size: 18,
-                    color: Colors.white,
-                  )
-                : null,
-          ),
-          SizedBox(width: 10),
-          Text(
-            label,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontFamily: GoogleFonts.inter().fontFamily,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
+    );
+  }
 }
-
-
-}
+//ferdi

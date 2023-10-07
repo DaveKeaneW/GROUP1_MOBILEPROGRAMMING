@@ -5,7 +5,6 @@ void main() {
   runApp(const enjoy());
 }
 
-
 class enjoy extends StatelessWidget {
   const enjoy({super.key});
 
@@ -24,6 +23,9 @@ class enjoy extends StatelessWidget {
   }
 }
 
+
+
+
 class KanePunya extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,6 +40,7 @@ class KanePunya extends StatelessWidget {
               Positioned(
                 left: 115,
                 top: 547,
+              
                 child: Text(
                   'Enjoy Your Food !',
                   style: TextStyle(
@@ -49,10 +52,7 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              
-              
-              
+
               Positioned(
                 left: 345,
                 top: 45,
@@ -67,36 +67,8 @@ class KanePunya extends StatelessWidget {
                         child: Container(
                           width: 44,
                           height: 44,
-                          decoration: ShapeDecoration(
-                            shape: CircleBorder(
-                              side: BorderSide(width: 1, color: Color(0xFFDCAA70)),
-                            ),
-                          ),
                           child: ClipOval(
                             child: Image.asset('images/user.png',fit: BoxFit.fill,),
-                          ),
-                        ),
-                      ),
-                      
-                      
-                      
-                      
-                    
-                      
-                      
-                      
-                      Positioned(
-                        left: 15,
-                        top: 15,
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: ShapeDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/44x44"),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: OvalBorder(),
                           ),
                         ),
                       ),
@@ -104,14 +76,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              
-              
-              
-              
-              
-              
-              
               
               Positioned(
                 left: 0,
@@ -129,13 +93,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              
-              
-              
-              
-              
-              
               
               Positioned(
                 left: 21,
@@ -164,14 +121,6 @@ class KanePunya extends StatelessWidget {
                         ),
                       ),
                       
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
                       Positioned(
                         left: 24,
                         top: 39,
@@ -194,16 +143,7 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+
               Positioned(
                 left: 70,
                 top: 687,
@@ -225,76 +165,36 @@ class KanePunya extends StatelessWidget {
               
               
               
-              
-              
-              
-              
-              
-              
-              
-              
-              Positioned(
-                left: 35,
-                top: 730,
-                child: Container(
-                  width: 337,
-                  height: 40,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF2E1E2E),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                    Positioned(
+                left: 85, //NEXT
+                top: 750,
+                child: SizedBox(
+                  width: 260,
+                  height: 35,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF2E1E2E), // Background color
+                    ),
+                    child: Text(
+                      'Back To Home ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'OFL Sorts Mill Goudy TT',
+                        fontWeight: FontWeight.w500,
+                        height: 0,
+                      ),
                     ),
                   ),
                 ),
               ),
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-                    Positioned(
-  left: 55,
-  top: 736,
-  child: SizedBox(
-    width: 299,
-    height: 27,
-    child: ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
-        );
-      },
-      style: ElevatedButton.styleFrom(
-        primary: Color(0xFF2E1E2E), // Background color
-      ),
-      child: Text(
-        'Back to Home',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontFamily: 'Inria Serif',
-          fontWeight: FontWeight.w400,
-          height: 0.08,
-        ),
-      ),
-    ),
-  ),
-),
 
-              
-              
-              
-              
-              
-              
               Positioned(
                 left: 47,
                 top: 213,
@@ -337,20 +237,7 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+
                       Positioned(
                         left: 142.71,
                         top: 144.96,
@@ -373,32 +260,19 @@ class KanePunya extends StatelessWidget {
                                         child: Container(
                                           width: 93.93,
                                           height: 88.16,
-                                          child: Stack(children: [
-                                          
-                                          ]),
+                                          child: Stack(children: [ ]
+                                          ),
                                         ),
                                       ),
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
-                                      
+ 
                                       Positioned(
                                         left: 0,
                                         top: 0.23,
                                         child: Container(
                                           width: 47.26,
                                           height: 87.48,
-                                          child: Stack(children: [
-                                          
-                                          ]),
+                                          child: Stack(children: []
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -409,21 +283,7 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+
                       Positioned(
                         left: 83.03,
                         top: 194.53,
@@ -446,13 +306,7 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+
                       Positioned(
                         left: 41.44,
                         top: 0,

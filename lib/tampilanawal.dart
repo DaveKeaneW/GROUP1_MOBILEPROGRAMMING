@@ -1,3 +1,4 @@
+import 'package:tesgit/enjoy.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/product_list_burger.dart';
 import 'welcome.dart';
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                WellcomePage()), // Gunakan widget dari file next_page.dart
+                enjoy()), // Gunakan widget dari file next_page.dart
       );
     });
   }

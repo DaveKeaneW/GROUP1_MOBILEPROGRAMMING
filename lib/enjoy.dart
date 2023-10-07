@@ -17,14 +17,16 @@ class enjoy extends StatelessWidget {
       home: Scaffold(
         body: ListView(children: [
           KanePunya(),
+          Image.asset(
+            'images/Safe Food.png', // Ganti dengan path gambar Anda
+            width: 300, // Sesuaikan dengan lebar yang Anda inginkan
+            height: 300, // Sesuaikan dengan tinggi yang Anda inginkan
+          ),
         ]),
       ),
     );
   }
 }
-
-
-
 
 class KanePunya extends StatelessWidget {
   @override
@@ -37,10 +39,14 @@ class KanePunya extends StatelessWidget {
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
+              Image.asset(
+                'images/Safe Food.png', // Ganti dengan path gambar Anda
+                width: 400, // Sesuaikan dengan lebar yang Anda inginkan
+                height: 700, // Sesuaikan dengan tinggi yang Anda inginkan
+              ),
               Positioned(
                 left: 115,
                 top: 547,
-              
                 child: Text(
                   'Enjoy Your Food !',
                   style: TextStyle(
@@ -52,7 +58,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
               Positioned(
                 left: 345,
                 top: 45,
@@ -68,7 +73,10 @@ class KanePunya extends StatelessWidget {
                           width: 44,
                           height: 44,
                           child: ClipOval(
-                            child: Image.asset('images/user.png',fit: BoxFit.fill,),
+                            child: Image.asset(
+                              'images/user.png',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                       ),
@@ -76,7 +84,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
               Positioned(
                 left: 0,
                 top: 139,
@@ -93,7 +100,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
               Positioned(
                 left: 21,
                 top: 13,
@@ -120,7 +126,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
                       Positioned(
                         left: 24,
                         top: 39,
@@ -143,7 +148,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
               Positioned(
                 left: 70,
                 top: 687,
@@ -162,10 +166,7 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              
-              
-                    Positioned(
+              Positioned(
                 left: 85, //NEXT
                 top: 750,
                 child: SizedBox(
@@ -194,7 +195,6 @@ class KanePunya extends StatelessWidget {
                   ),
                 ),
               ),
-
               Positioned(
                 left: 47,
                 top: 213,
@@ -225,8 +225,7 @@ class KanePunya extends StatelessWidget {
                                         child: Container(
                                           width: 74.91,
                                           height: 58.68,
-                                          child: Stack(children: [
-                                          ]),
+                                          child: Stack(children: []),
                                         ),
                                       ),
                                     ],
@@ -237,7 +236,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Positioned(
                         left: 142.71,
                         top: 144.96,
@@ -260,19 +258,16 @@ class KanePunya extends StatelessWidget {
                                         child: Container(
                                           width: 93.93,
                                           height: 88.16,
-                                          child: Stack(children: [ ]
-                                          ),
+                                          child: Stack(children: []),
                                         ),
                                       ),
- 
                                       Positioned(
                                         left: 0,
                                         top: 0.23,
                                         child: Container(
                                           width: 47.26,
                                           height: 87.48,
-                                          child: Stack(children: []
-                                          ),
+                                          child: Stack(children: []),
                                         ),
                                       ),
                                     ],
@@ -283,7 +278,6 @@ class KanePunya extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Positioned(
                         left: 83.03,
                         top: 194.53,
@@ -298,15 +292,13 @@ class KanePunya extends StatelessWidget {
                                 child: Container(
                                   width: 50.89,
                                   height: 22.41,
-                                  child: Stack(children: [
-                                  ]),
+                                  child: Stack(children: []),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-
                       Positioned(
                         left: 41.44,
                         top: 0,
@@ -321,8 +313,7 @@ class KanePunya extends StatelessWidget {
                                 child: Container(
                                   width: 48.17,
                                   height: 35.90,
-                                  child: Stack(children: [
-                                  ]),
+                                  child: Stack(children: []),
                                 ),
                               ),
                             ],

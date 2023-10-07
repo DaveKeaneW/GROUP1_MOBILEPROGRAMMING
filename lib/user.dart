@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tesgit/home_screen.dart';
+import 'package:tesgit/otw.dart';
 
 void main() {
   runApp(const User());
@@ -24,6 +26,10 @@ class User extends StatelessWidget {
 
 class ProfileAccount extends StatelessWidget {
   @override
+  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _usernameTextController = TextEditingController();
+  TextEditingController _phoneTextController = TextEditingController();
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -123,6 +129,7 @@ class ProfileAccount extends StatelessWidget {
                   width: 335,
                   height: 45,
                   child: TextField(
+                    controller: _emailTextController,
                     style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
@@ -130,26 +137,7 @@ class ProfileAccount extends StatelessWidget {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      hintText: 'Email',
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 43,
-                top: 472,
-                child: Container(
-                  width: 335,
-                  height: 45,
-                  child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      hintText: 'Number Phone',
+                      hintText: 'phone',
                     ),
                   ),
                 ),
@@ -216,20 +204,6 @@ class ProfileAccount extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 45,
-                top: 460,
-                child: Text(
-                  'Address',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0.18,
-                  ),
-                ),
-              ),
-              Positioned(
                 left: 50, //Back
                 top: 731,
                 child: SizedBox(
@@ -237,7 +211,10 @@ class ProfileAccount extends StatelessWidget {
                   height: 27,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pop(context); // Tambahkan baris ini
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFF2E1E2E), // Background color

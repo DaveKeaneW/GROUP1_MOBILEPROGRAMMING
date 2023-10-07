@@ -41,12 +41,12 @@ class KanePunya extends StatelessWidget {
           child: Stack(
             children: [
               Image.asset(
-                'images/Safe Food.png', // Ganti dengan path gambar Anda
+                'images/maps.png', // Ganti dengan path gambar Anda
                 width: 400, // Sesuaikan dengan lebar yang Anda inginkan
                 height: 700, // Sesuaikan dengan tinggi yang Anda inginkan
               ),
               Positioned(
-                left: 115,
+                left: 80,
                 top: 547,
                 child: Text(
                   'Your Food Is On The Way',

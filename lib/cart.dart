@@ -16,7 +16,8 @@ class CartScreen extends StatefulWidget {
   _CartScreenState createState() => _CartScreenState();
 }
 
-TextEditingController _addressController = TextEditingController(); // Tambahkan controller
+TextEditingController _addressController =
+    TextEditingController(); // Tambahkan controller
 
 class _CartScreenState extends State<CartScreen> {
   DBHelper? dbHelper = DBHelper();
@@ -30,88 +31,94 @@ class _CartScreenState extends State<CartScreen> {
   }
 
   void showCheckoutDialog(BuildContext context, String shippingAddress) {
-  AwesomeDialog(
-    context: context,
-    dialogType: DialogType.NO_HEADER,
-    animType: AnimType.BOTTOMSLIDE,
-    showCloseIcon: true,
-    body: Column(
-      children: [
-        Text(
-          "Choose Payment Method:",
-          style: TextStyle(fontSize: 16),
-        ),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: () {
-            // Tindakan saat tombol "Cash" ditekan
-            // Misalnya, navigasi ke layar pembayaran dengan uang tunai
-            Navigator.of(context).pop(); // Tutup dialog pertama
-            showPaymentConfirmationDialog(context);
-          },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
+    AwesomeDialog(
+      context: context,
+      dialogType: DialogType.NO_HEADER,
+      animType: AnimType.BOTTOMSLIDE,
+      showCloseIcon: true,
+      body: Column(
+        children: [
+          Text(
+            "Choose Payment Method:",
+            style: TextStyle(fontSize: 16),
           ),
-          child: Text(
-            'Cash',
-            style: TextStyle(
-              color: Colors.black,
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              // Tindakan saat tombol "Cash" ditekan
+              // Misalnya, navigasi ke layar pembayaran dengan uang tunai
+              Navigator.of(context).pop(); // Tutup dialog pertama
+              showPaymentConfirmationDialog(context);
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            child: Text(
+              'Cash',
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
           ),
-        ),
-        SizedBox(height: 10),
-        ElevatedButton(
-          onPressed: () {
-            // Tindakan saat tombol "E-pay" ditekan
-            // Misalnya, navigasi ke layar pembayaran elektronik
-            Navigator.of(context).pop(); // Tutup dialog pertama
-            showPaymentConfirmationDialog(context);
-          },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
-          ),
-          child: Text(
-            'E-pay',
-            style: TextStyle(
-              color: Colors.black,
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              // Tindakan saat tombol "E-pay" ditekan
+              // Misalnya, navigasi ke layar pembayaran elektronik
+              Navigator.of(context).pop(); // Tutup dialog pertama
+              showPaymentConfirmationDialog(context);
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            child: Text(
+              'E-pay',
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  )..show();
-}
+        ],
+      ),
+    )..show();
+  }
 
-void showPaymentConfirmationDialog(BuildContext context) {
-  AwesomeDialog(
-    context: context,
-    dialogType: DialogType.SUCCES,
-    animType: AnimType.BOTTOMSLIDE,
-    showCloseIcon: true,
-    title: "Success",
-    desc: "Payment has been confirmed. Your order has been received. Please wait a while...",
-    btnOkText: "OK",
-    btnOkOnPress: () {
-      // Close the confirmation dialog
-      Navigator.of(context).pop();
+  void showPaymentConfirmationDialog(BuildContext context) {
+    AwesomeDialog(
+      context: context,
+      dialogType: DialogType.SUCCES,
+      animType: AnimType.BOTTOMSLIDE,
+      showCloseIcon: true,
+      title: "Success",
+      desc:
+          "Payment has been confirmed. Your order has been received. Please wait a while...",
+      btnOkText: "OK",
+      btnOkOnPress: () {
+        // Close the confirmation dialog
+        Navigator.of(context).pop();
 
-      // Navigate to the new page
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => OnTheWay(), // Replace with the actual page you want to navigate to
-        ),
-      );
-    },
-  )..show();
-}
+        // Navigate to the new page
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) =>
+                OnTheWay(), // Replace with the actual page you want to navigate to
+          ),
+        );
+      },
+    )..show();
+  }
 
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<CartProvider>(context);
-    Future<List<Cart>> cartItemsFuture = cart.getData(); // Mengambil daftar produk dalam keranjang dari _cart
+    Future<List<Cart>> cartItemsFuture =
+        cart.getData(); // Mengambil daftar produk dalam keranjang dari _cart
     double tax = 0.15 * cart.getTotalPrice(); // 15% tax rate
-    double deliveryCharges = 15.0; // Biaya pengiriman Rp. 15.000 // Total harga termasuk tax dan biaya pengiriman
-    double totalPrice = cart.getTotalPrice() + tax + deliveryCharges; // Total harga termasuk tax dan biaya pengiriman
+    double deliveryCharges =
+        15.0; // Biaya pengiriman Rp. 15.000 // Total harga termasuk tax dan biaya pengiriman
+    double totalPrice = cart.getTotalPrice() +
+        tax +
+        deliveryCharges; // Total harga termasuk tax dan biaya pengiriman
 
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
@@ -168,11 +175,10 @@ void showPaymentConfirmationDialog(BuildContext context) {
           ],
         ),
         body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-           
-            FutureBuilder(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              FutureBuilder(
                 future: cartItemsFuture,
                 builder: (context, AsyncSnapshot<List<Cart>> snapshot) {
                   if (snapshot.hasData) {
@@ -456,10 +462,7 @@ void showPaymentConfirmationDialog(BuildContext context) {
                                                                     255,
                                                                     0,
                                                                     0,
-                                                                    0
-                                                                    )
-                                                                    )
-                                                                    ),
+                                                                    0))),
                                                       ],
                                                     ),
                                                   ),
@@ -483,60 +486,61 @@ void showPaymentConfirmationDialog(BuildContext context) {
                 },
               ),
               Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: TextField(
-        controller: _addressController,
-        decoration: InputDecoration(
-          labelText: 'Shipping Address', // Label kotak teks
-          border: OutlineInputBorder(),
-        ),
-      ),
-    ),
-              Consumer<CartProvider>(builder: (context, value, child) {
-              return Visibility(
-                visible: totalPrice.toStringAsFixed(3) == "0.000" ? false : true,
-                child: Column(
-                  children: [
-                    ReusableWidget(
-                      title: 'Sub Total',
-                      value: 'Rp. ' + cart.getTotalPrice().toStringAsFixed(3),
-                      titleFontSize: 18.0,
-                      valueFontSize: 18.0,
-                      ),
-                    ReusableWidget(
-                      title: 'Tax (15%)',
-                      value: 'Rp.' + tax.toStringAsFixed(3),
-                      titleFontSize: 18.0,
-                      valueFontSize: 18.0,
-                    ),
-                    ReusableWidget(
-                      title: 'Delivery Charges',
-                      value: 'Rp.' + deliveryCharges.toStringAsFixed(3),
-                      titleFontSize: 18.0,
-                      valueFontSize: 18.0,
-                    ),
-                    ReusableWidget(
-                      title: 'Total',
-                      value: 'Rp.' + totalPrice.toStringAsFixed(3),
-                      titleFontSize: 18.0,
-                      valueFontSize: 18.0,
-                    ),
-                    SizedBox(height: 20),
-                    ElevatedButton(
-              onPressed: () {
-                String shippingAddress = _addressController.text;
-                showCheckoutDialog(context, shippingAddress);
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: TextField(
+                  controller: _addressController,
+                  decoration: InputDecoration(
+                    labelText: 'Shipping Address', // Label kotak teks
+                    border: OutlineInputBorder(),
+                  ),
+                ),
               ),
-              child: Text(
-                'Payment',
-                style: TextStyle(
-                  color: Colors.black,
-    ),
-  ),
-)
+              Consumer<CartProvider>(builder: (context, value, child) {
+                return Visibility(
+                  visible:
+                      totalPrice.toStringAsFixed(3) == "0.000" ? false : true,
+                  child: Column(
+                    children: [
+                      ReusableWidget(
+                        title: 'Sub Total',
+                        value: 'Rp. ' + cart.getTotalPrice().toStringAsFixed(3),
+                        titleFontSize: 18.0,
+                        valueFontSize: 18.0,
+                      ),
+                      ReusableWidget(
+                        title: 'Tax (15%)',
+                        value: 'Rp.' + tax.toStringAsFixed(3),
+                        titleFontSize: 18.0,
+                        valueFontSize: 18.0,
+                      ),
+                      ReusableWidget(
+                        title: 'Delivery Charges',
+                        value: 'Rp.' + deliveryCharges.toStringAsFixed(3),
+                        titleFontSize: 18.0,
+                        valueFontSize: 18.0,
+                      ),
+                      ReusableWidget(
+                        title: 'Total',
+                        value: 'Rp.' + totalPrice.toStringAsFixed(3),
+                        titleFontSize: 18.0,
+                        valueFontSize: 18.0,
+                      ),
+                      SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () {
+                          String shippingAddress = _addressController.text;
+                          showCheckoutDialog(context, shippingAddress);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                        ),
+                        child: Text(
+                          'Payment',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 );

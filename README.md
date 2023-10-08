@@ -7,34 +7,11 @@ KELOMPOK 1
 - 535220046 Darren Natanael S
 - 535220050 Olivia Clarabella Khotiera
 
+------------------------------------------
 PROPOSAL DEJA BREW KELOMPOK 1.pdf
+------------------------------------------
 
-Aplikasi pemesanan makanan adalah terobosan yang sangat praktis
-dalam dunia kuliner, memberikan kita kemudahan untuk menikmati
-hidangan favorit tanpa harus meninggalkan rumah atau kantor. Ini
-adalah solusi yang sangat sesuai dengan kehidupan yang sibuk dan
-serba cepat saat ini. Dengan aplikasi ini, Anda tidak hanya dapat
-menjelajahi beragam restoran di sekitar Anda, tetapi juga melihat
-menu lengkap mereka dengan deskripsi hidangan yang menggoda
-dan gambar yang menggiurkan.
-Proses pemesanan menjadi
-sangat mudah dengan
-pilihan tambah ke
-keranjang belanja dan
-pembayaran online yang
-aman. Dengan keamanan
-yang kuat dan dukungan
-pelanggan yang responsif,
-aplikasi ini memberikan
-pengalaman makanan yang
-nyaman dan memuaskan.
-Dengan hanya beberapa
-klik, Anda dapat
-menjadikan pengalaman
-makan lebih efisien,
-menghemat waktu, dan
-memenuhi selera kuliner
-Anda tanpa repot
+Kami membuat salah satu aplikasi restoran dan ordering yang berjudul Deja Brew App. Kami menggunakan firebase sebagai database.
 
 
 # tesgit

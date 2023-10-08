@@ -8,18 +8,21 @@ import 'db_helper.dart';
 import 'package:provider/provider.dart';
 
 class ProductListScreenBurger extends StatefulWidget {
+  // class extend stateful widget yang meruapakan tampilan widgetnya
   const ProductListScreenBurger({Key? key}) : super(key: key);
 
   @override
-  _ProductListScreenStateBurger createState() =>
-      _ProductListScreenStateBurger();
+  _ProductListScreenStateBurger
+      createState() => //implementasi dari metode abstrak createState yang didefinisikan dalam widget StatefulWidget. Metode ini digunakan untuk membuat sebuah instance dari kelas state yang terkait dengan widget ProductListScreenBurger.
+          _ProductListScreenStateBurger();
 }
 
 class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
+  //_ProductListScreenStateBurger. Ini adalah kelas yang digunakan sebagai state untuk widget ProductListScreenBurger
   List<Cart> products = [
     Cart(
       id: null,
-      productId: '16',
+      productId: '16', //product id dalam database
       productName: 'SouthWest Chicken Burger',
       initialPrice: 50,
       productPrice: 50,
@@ -72,10 +75,10 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
       description:
           'A beef burger consists of two beef patties, two slices of American cheese, a sesame seed bun, ketchup, pickle slices, onions, and mustard.',
     ),
-    // Tambahkan produk lainnya ke dalam daftar ini
   ];
 
-  DBHelper? dbHelper = DBHelper();
+  DBHelper? dbHelper =
+      DBHelper(); //deklarasi dan inisialisasi variabel dbHelper dengan sebuah instance dari kelas DBHelper
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +101,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
             },
           ),
           title: Text(
-            'Burger',
+            'Burger', //title
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,
@@ -110,19 +113,24 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
             InkWell(
               onTap: () {
                 Navigator.push(
-  context,
-  PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => CartScreen(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(1.0, 0.0);
-      const end = Offset.zero;
-      const curve = Curves.easeInOut;
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-      var offsetAnimation = animation.drive(tween);
-      return SlideTransition(position: offsetAnimation, child: child);
-    },
-  ),
-);
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation,
+                            secondaryAnimation) => //animasi/transisi
+                        CartScreen(),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      const begin = Offset(1.0, 0.0);
+                      const end = Offset.zero;
+                      const curve = Curves.easeInOut;
+                      var tween = Tween(begin: begin, end: end)
+                          .chain(CurveTween(curve: curve));
+                      var offsetAnimation = animation.drive(tween);
+                      return SlideTransition(
+                          position: offsetAnimation, child: child);
+                    },
+                  ),
+                );
               },
               child: Center(
                 child: badges.Badge(

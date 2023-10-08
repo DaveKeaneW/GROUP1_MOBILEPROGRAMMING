@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesgit/enjoy.dart';
 
-
 class OnTheWay extends StatelessWidget {
   const OnTheWay({super.key});
 
@@ -16,15 +15,9 @@ class OnTheWay extends StatelessWidget {
         body: ListView(children: [
           KanePunya(),
           Image.asset(
-<<<<<<< HEAD
             'images/maps.png', // Ganti dengan path gambar Anda
             width: 320, // Sesuaikan dengan lebar yang Anda inginkan
             height: 300, // Sesuaikan dengan tinggi yang Anda inginkan
-=======
-            'images/maps.png', 
-            width: 300, 
-            height: 300, 
->>>>>>> 114c387e8dcf31f9f38784b237a7147670f00ce1
           ),
         ]),
       ),
@@ -44,15 +37,9 @@ class KanePunya extends StatelessWidget {
           child: Stack(
             children: [
               Image.asset(
-<<<<<<< HEAD
                 'images/maps.png', // Ganti dengan path gambar Anda
                 width: 500, // Sesuaikan dengan lebar yang Anda inginkan
                 height: 700, // Sesuaikan dengan tinggi yang Anda inginkan
-=======
-                'images/maps.png', 
-                width: 400, 
-                height: 700,
->>>>>>> 114c387e8dcf31f9f38784b237a7147670f00ce1
               ),
               Positioned(
                 left: 70,
@@ -143,7 +130,7 @@ class KanePunya extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xFF666C7A),
                       fontSize: 16,
-                      fontFamily:GoogleFonts.rosarivo().fontFamily ,
+                      fontFamily: GoogleFonts.rosarivo().fontFamily,
                       fontWeight: FontWeight.w500,
                       height: 0.08,
                     ),
@@ -151,7 +138,7 @@ class KanePunya extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 85, 
+                left: 85,
                 top: 750,
                 child: SizedBox(
                   width: 260,
@@ -159,20 +146,24 @@ class KanePunya extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-  context,
-  PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => enjoy(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(1.0, 0.0);
-      const end = Offset.zero;
-      var curve = Curves.easeInOut;
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-      var offsetAnimation = animation.drive(tween);
-      return SlideTransition(position: offsetAnimation, child: child);
-    },
-  ),
-);
-
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  enjoy(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            const begin = Offset(1.0, 0.0);
+                            const end = Offset.zero;
+                            var curve = Curves.easeInOut;
+                            var tween = Tween(begin: begin, end: end)
+                                .chain(CurveTween(curve: curve));
+                            var offsetAnimation = animation.drive(tween);
+                            return SlideTransition(
+                                position: offsetAnimation, child: child);
+                          },
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFF2E1E2E), // Background color

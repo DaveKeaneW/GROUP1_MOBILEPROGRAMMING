@@ -9,7 +9,8 @@ final double defaultMargin = 24;
 class RegisterPage extends StatelessWidget {
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _usernameTextController = TextEditingController();
+  TextEditingController _usernameTextController =
+      TextEditingController(); //Kode yang Anda tunjukkan adalah deklarasi dan inisialisasi tiga buah variabel _emailTextController, _passwordTextController, dan _usernameTextController yang semuanya bertipe TextEditingController. Ini adalah contoh penggunaan TextEditingController dalam Flutter untuk mengontrol teks input dalam aplikasi Anda
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +48,7 @@ class RegisterPage extends StatelessWidget {
               child: FractionalTranslation(
                 translation: Offset(0, -0.1),
                 child: Text(
-                  'Create Your Account',
+                  'Create Your Account', //text create acc
                   style: GoogleFonts.inriaSerif(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class RegisterPage extends StatelessWidget {
               controller: _emailTextController,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                labelText: 'Email',
+                labelText: 'Email', //email
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -74,7 +75,7 @@ class RegisterPage extends StatelessWidget {
               controller: _usernameTextController,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Username', //username
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -87,7 +88,7 @@ class RegisterPage extends StatelessWidget {
               obscureText: true,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                labelText: 'Password',
+                labelText: 'Password', //paswword
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -99,6 +100,7 @@ class RegisterPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () async {
+                    //saat tekan create account createuseremail,pass msk firebase
                     try {
                       await FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
@@ -115,6 +117,7 @@ class RegisterPage extends StatelessWidget {
                     }
                   },
                   child: Text(
+                    //sign up
                     'Sign Up',
                     style: TextStyle(
                       fontSize: 15,

@@ -15,7 +15,8 @@ class CartScreen extends StatefulWidget {
   _CartScreenState createState() => _CartScreenState();
 }
 
-  TextEditingController _addressController = TextEditingController(); // Tambahkan controller
+TextEditingController _addressController =
+    TextEditingController(); // Tambahkan controller
 
 class _CartScreenState extends State<CartScreen> {
   DBHelper? dbHelper = DBHelper();
@@ -28,90 +29,95 @@ class _CartScreenState extends State<CartScreen> {
     return totalPrice;
   }
 
-
   void showCheckoutDialog(BuildContext context, String shippingAddress) {
-  AwesomeDialog(
-    context: context,
-    dialogType: DialogType.NO_HEADER,
-    animType: AnimType.BOTTOMSLIDE,
-    showCloseIcon: true,
-    body: Column(
-      children: [
-        Text(
-          "Choose Payment Method:",
-          style: TextStyle(fontSize: 16),
-        ),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: () {
-            // Tindakan saat tombol "Cash" ditekan
-            // Misalnya, navigasi ke layar pembayaran dengan uang tunai
-            Navigator.of(context).pop(); // Tutup dialog pertama
-            showPaymentConfirmationDialog(context);
-          },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
+    AwesomeDialog(
+      context: context,
+      dialogType: DialogType.NO_HEADER,
+      animType: AnimType.BOTTOMSLIDE,
+      showCloseIcon: true,
+      body: Column(
+        children: [
+          Text(
+            "Choose Payment Method:",
+            style: TextStyle(fontSize: 16),
           ),
-          child: Text(
-            'Cash',
-            style: TextStyle(
-              color: Colors.black,
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              // Tindakan saat tombol "Cash" ditekan
+              // Misalnya, navigasi ke layar pembayaran dengan uang tunai
+              Navigator.of(context).pop(); // Tutup dialog pertama
+              showPaymentConfirmationDialog(context);
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            child: Text(
+              'Cash',
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
           ),
-        ),
-        SizedBox(height: 10),
-        ElevatedButton(
-          onPressed: () {
-            // Tindakan saat tombol "E-pay" ditekan
-            // Misalnya, navigasi ke layar pembayaran elektronik
-            Navigator.of(context).pop(); // Tutup dialog pertama
-            showPaymentConfirmationDialog(context);
-          },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
-          ),
-          child: Text(
-            'E-pay',
-            style: TextStyle(
-              color: Colors.black,
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              // Tindakan saat tombol "E-pay" ditekan
+              // Misalnya, navigasi ke layar pembayaran elektronik
+              Navigator.of(context).pop(); // Tutup dialog pertama
+              showPaymentConfirmationDialog(context);
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            child: Text(
+              'E-pay',
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  )..show();
-}
+        ],
+      ),
+    )..show();
+  }
 
-void showPaymentConfirmationDialog(BuildContext context) {
-  AwesomeDialog(
-    context: context,
-    dialogType: DialogType.SUCCES,
-    animType: AnimType.BOTTOMSLIDE,
-    showCloseIcon: true,
-    title: "Success",
-    desc: "Payment has been confirmed. Your order has been received. Please wait a while...",
-    btnOkText: "OK",
-    btnOkOnPress: () {
-      // Close the confirmation dialog
-      Navigator.of(context).pop();
+  void showPaymentConfirmationDialog(BuildContext context) {
+    AwesomeDialog(
+      context: context,
+      dialogType: DialogType.SUCCES,
+      animType: AnimType.BOTTOMSLIDE,
+      showCloseIcon: true,
+      title: "Success",
+      desc:
+          "Payment has been confirmed. Your order has been received. Please wait a while...",
+      btnOkText: "OK",
+      btnOkOnPress: () {
+        // Close the confirmation dialog
+        Navigator.of(context).pop();
 
-      // Navigate to the new page
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => OnTheWay(), // Replace with the actual page you want to navigate to
-        ),
-      );
-    },
-  )..show();
-}
+        // Navigate to the new page
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) =>
+                OnTheWay(), // Replace with the actual page you want to navigate to
+          ),
+        );
+      },
+    )..show();
+  }
 
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<CartProvider>(context);
-    Future<List<Cart>> cartItemsFuture = cart.getData(); // Mengambil daftar produk dalam keranjang dari _cart
+    Future<List<Cart>> cartItemsFuture =
+        cart.getData(); // Mengambil daftar produk dalam keranjang dari _cart
     double tax = 0.15 * cart.getTotalPrice(); // 15% tax rate
-    double deliveryCharges = 15.0; // Biaya pengiriman Rp. 15.000 // Total harga termasuk tax dan biaya pengiriman
-    double totalPrice = cart.getTotalPrice() + tax + deliveryCharges; // Total harga termasuk tax dan biaya pengiriman
+    double deliveryCharges =
+        15.0; // Biaya pengiriman Rp. 15.000 // Total harga termasuk tax dan biaya pengiriman
+    double totalPrice = cart.getTotalPrice() +
+        tax +
+        deliveryCharges; // Total harga termasuk tax dan biaya pengiriman
 
     return Scaffold(
       appBar: AppBar(
@@ -170,7 +176,7 @@ void showPaymentConfirmationDialog(BuildContext context) {
                         child: Column(
                           children: [
                             Image(
-                              image: AssetImage('img/empty_cart.png'),
+                              image: AssetImage('images/empty_cart.png'),
                             ),
                             SizedBox(
                               height: 20,
@@ -440,11 +446,9 @@ void showPaymentConfirmationDialog(BuildContext context) {
                                                                 Icons.add,
                                                                 color: Colors
                                                                     .white,
-                                                              )
-                                                              ),
+                                                              )),
                                                         ],
                                                       ),
-                                                      
                                                     ),
                                                   ),
                                                 ),
@@ -464,21 +468,21 @@ void showPaymentConfirmationDialog(BuildContext context) {
                     }
                   }
                   return Text('');
-                }
+                }),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: TextField(
+                controller: _addressController,
+                decoration: InputDecoration(
+                  labelText: 'Shipping Address', // Label kotak teks
+                  border: OutlineInputBorder(),
                 ),
-                Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: TextField(
-        controller: _addressController,
-        decoration: InputDecoration(
-          labelText: 'Shipping Address', // Label kotak teks
-          border: OutlineInputBorder(),
-        ),
-      ),
-    ),
+              ),
+            ),
             Consumer<CartProvider>(builder: (context, value, child) {
               return Visibility(
-                visible: totalPrice.toStringAsFixed(3) == "0.000" ? false : true,
+                visible:
+                    totalPrice.toStringAsFixed(3) == "0.000" ? false : true,
                 child: Column(
                   children: [
                     ReusableWidget(
@@ -486,7 +490,7 @@ void showPaymentConfirmationDialog(BuildContext context) {
                       value: 'Rp. ' + cart.getTotalPrice().toStringAsFixed(3),
                       titleFontSize: 18.0,
                       valueFontSize: 18.0,
-                      ),
+                    ),
                     ReusableWidget(
                       title: 'Tax (15%)',
                       value: 'Rp.' + tax.toStringAsFixed(3),
@@ -507,20 +511,20 @@ void showPaymentConfirmationDialog(BuildContext context) {
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
-              onPressed: () {
-                String shippingAddress = _addressController.text;
-                showCheckoutDialog(context, shippingAddress);
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-              ),
-              child: Text(
-                'Payment',
-                style: TextStyle(
-                  color: Colors.black,
-    ),
-  ),
-)
+                      onPressed: () {
+                        String shippingAddress = _addressController.text;
+                        showCheckoutDialog(context, shippingAddress);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                      ),
+                      child: Text(
+                        'Payment',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               );

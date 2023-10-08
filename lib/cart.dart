@@ -99,19 +99,20 @@ class _CartScreenState extends State<CartScreen> {
 
         // Navigate to the new page
         Navigator.of(context).push(
-  PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => OnTheWay(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = 0.0;
-      const end = 1.0;
-      var curve = Curves.easeInOut;
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-      var scaleAnimation = animation.drive(tween);
-      return ScaleTransition(scale: scaleAnimation, child: child);
-    },
-  ),
-);
-
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => OnTheWay(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              const begin = 0.0;
+              const end = 1.0;
+              var curve = Curves.easeInOut;
+              var tween =
+                  Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+              var scaleAnimation = animation.drive(tween);
+              return ScaleTransition(scale: scaleAnimation, child: child);
+            },
+          ),
+        );
       },
     )..show();
   }
@@ -196,7 +197,7 @@ class _CartScreenState extends State<CartScreen> {
                         child: Column(
                           children: [
                             Image(
-                              image: AssetImage('img/empty_cart.png'),
+                              image: AssetImage('images/empty_cart.png'),
                             ),
                             SizedBox(
                               height: 20,

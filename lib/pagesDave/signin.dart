@@ -174,9 +174,24 @@ class SignIn extends StatelessWidget {
                             password: _passwordTextController.text)
                         .then((value) {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => WelcomeScreen()));
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => WelcomeScreen(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = 0.0;
+      const end = 1.0;
+      var curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var scaleAnimation = animation.drive(tween);
+
+      return ScaleTransition(
+        scale: scaleAnimation,
+        child: child,
+      );
+    },
+  ),
+);
+
                     }).onError((error, stackTrace) {
                       print("Error ${error.toString()})");
                     });

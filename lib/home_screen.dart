@@ -78,53 +78,34 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Positioned(
                       left: 0,
-                      top: 135,
+                      top: 145,
                       child: Align(
                         child: SizedBox(
                           width: 450,
-                          height: 5,
+                          height: 2,
                           child: Container(
                             decoration: const BoxDecoration(
-                              color: Color(0xff201520),
+                              color: Color(0xffeacf94),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Positioned(
-                      left: 40,
+                      left: 120,
                       top: 200,
-                      child: Container(
-                        padding: const EdgeInsets.fromLTRB(10, 16, 150, 15),
-                        width: 322,
-                        height: 56,
-                        decoration: BoxDecoration(
-                          color: const Color(0xff2e1e2e),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.fromLTRB(10, 0, 10, 1),
-                              width: 30,
-                              height: 30,
-                              child: Image.asset('images/search.png'),
-                            ),
-                            Text(
-                              'Find a Food',
+                      child: 
+                      Text(
+                              'Our Menu',
                               style: TextStyle(
-                                fontFamily:
-                                    GoogleFonts.irishGrover().fontFamily,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
+                                
+                                fontFamily: GoogleFonts.hurricane().fontFamily,
+                                fontSize: 45,
+                                fontWeight: FontWeight.bold,
                                 height: 1.21,
-                                color: const Color(0x7fffffff),
+                                color: const Color(0xffeacf94),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
                     ),
                     Positioned(
                       left: 16,
@@ -166,27 +147,6 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
-                      left: 100,
-                      top: 150,
-                      child: Align(
-                        child: SizedBox(
-                          width: 196,
-                          height: 80,
-                          child: Text(
-                            'Our Menu',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.hurricane().fontFamily,
-                              fontSize: 40,
-                              fontWeight: FontWeight.w400,
-                              height: 1.2575,
-                              color: const Color(0xffeacf94),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -206,12 +166,19 @@ class HomeScreen extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProductListScreenBurger(),
-                                ),
-                              );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenBurger(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                             },
                             child: Container(
                               margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
@@ -283,12 +250,19 @@ class HomeScreen extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProductListScreenPizza(),
-                                ),
-                              );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenPizza(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                             },
                             child: Container(
                               margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -376,11 +350,19 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductListScreenSpaghetti(),
-                          ),
-                        );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenSpaghetti(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                       },
                       child: Container(
                         margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -442,11 +424,19 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductListScreenSnack(),
-                          ),
-                        );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenSnack(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                       },
                       child: Container(
                         margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -524,11 +514,19 @@ class HomeScreen extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ProductListScreenDrinks(),
-                      ),
-                    );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenDrinks(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                   },
                   child: Stack(
                     children: [

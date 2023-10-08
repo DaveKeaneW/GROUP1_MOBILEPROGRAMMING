@@ -15,6 +15,7 @@ class StartApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: SplashScreen(), // Gunakan SplashScreen sebagai home page awal
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -35,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                OnTheWay()), // Gunakan widget dari file next_page.dart
+                WellcomePage()), // Gunakan widget dari file next_page.dart
       );
     });
   }

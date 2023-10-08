@@ -1,6 +1,7 @@
 import 'package:tesgit/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:tesgit/welcome2.dart'; 
+import 'package:tesgit/welcome2.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -68,13 +69,14 @@ class WelcomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => const HomeScreen()),
+                        
                       );
                     },
                     child: const Text(
                       'Skip',
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                        fontSize: 20, // Sesuaikan ukuran font
+                        fontSize: 20, 
                         fontWeight: FontWeight.w400,
                         height: 1.2125,
                         color: Color(0xffefe3c8),
@@ -89,14 +91,25 @@ class WelcomeScreen extends StatelessWidget {
                       color: Colors.transparent,
                     ),
                     child: Center(
-                      child: Image.asset('images/circle2.png'),
+                      child: Image.asset('images/circle.png'),
                     ),
                   ),
                   InkWell(
                     onTap: () {
                       Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => const WelcomeScreen2()),
-                      );
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => const WelcomeScreen2(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(1.0, 0.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
+
                     },
                     child: Container(
                       width: 40,

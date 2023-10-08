@@ -166,12 +166,19 @@ class HomeScreen extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProductListScreenBurger(),
-                                ),
-                              );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenBurger(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                             },
                             child: Container(
                               margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
@@ -243,12 +250,19 @@ class HomeScreen extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProductListScreenPizza(),
-                                ),
-                              );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenPizza(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                             },
                             child: Container(
                               margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -336,11 +350,19 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductListScreenSpaghetti(),
-                          ),
-                        );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenSpaghetti(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                       },
                       child: Container(
                         margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -402,11 +424,19 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductListScreenSnack(),
-                          ),
-                        );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenSnack(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                       },
                       child: Container(
                         margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -484,11 +514,19 @@ class HomeScreen extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ProductListScreenDrinks(),
-                      ),
-                    );
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => ProductListScreenDrinks(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
                   },
                   child: Stack(
                     children: [

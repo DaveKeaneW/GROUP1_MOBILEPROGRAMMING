@@ -99,11 +99,19 @@ class _CartScreenState extends State<CartScreen> {
 
         // Navigate to the new page
         Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) =>
-                OnTheWay(), // Replace with the actual page you want to navigate to
-          ),
-        );
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => OnTheWay(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = 0.0;
+      const end = 1.0;
+      var curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var scaleAnimation = animation.drive(tween);
+      return ScaleTransition(scale: scaleAnimation, child: child);
+    },
+  ),
+);
+
       },
     )..show();
   }

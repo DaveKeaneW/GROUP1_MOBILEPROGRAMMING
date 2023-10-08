@@ -101,7 +101,7 @@ class _ProductListScreenStateBurger extends State<ProductListScreenBurger> {
             },
           ),
           title: Text(
-            'Burger', //title
+            'Burger',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,

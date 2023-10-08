@@ -95,7 +95,7 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
             },
           ),
           title: Text(
-            'Spaghetti',
+            'Snack',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,

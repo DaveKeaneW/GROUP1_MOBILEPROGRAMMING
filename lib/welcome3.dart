@@ -55,7 +55,7 @@ class WelcomeScreen3 extends StatelessWidget {
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
                     height: 1.2125,
-                    color: Color(0xffffffff),
+                    color: Color(0xffefe3c8),
                   ),
                 ),
               ),

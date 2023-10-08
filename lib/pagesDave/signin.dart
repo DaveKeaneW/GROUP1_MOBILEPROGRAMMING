@@ -3,12 +3,12 @@ import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/sharedDave/shared.dart';
 import 'package:tesgit/welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
 class SignInPage extends StatelessWidget {
-  
   const SignInPage({Key? key}) : super(key: key);
 
   @override
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
@@ -16,7 +16,8 @@ class SignInPage extends StatelessWidget {
       home: Scaffold(
         extendBodyBehindAppBar: true, // Memperpanjang konten di bawah AppBar
         appBar: AppBar(
-          backgroundColor: Colors.transparent, // Atur latar belakang AppBar menjadi transparan
+          backgroundColor: Colors
+              .transparent, // Atur latar belakang AppBar menjadi transparan
           elevation: 0, // Hilangkan bayangan AppBar
           // Tambahkan tombol kembali di sini
           leading: IconButton(
@@ -27,14 +28,14 @@ class SignInPage extends StatelessWidget {
           ),
           title: Text('Sign In'),
         ),
-        body: SingleChildScrollView( // Wrap with SingleChildScrollView
+        body: SingleChildScrollView(
+          // Wrap with SingleChildScrollView
           child: SignIn(),
         ),
       ),
     );
   }
 }
-
 
 class SignIn extends StatelessWidget {
   TextEditingController _emailTextController = TextEditingController();
@@ -145,7 +146,6 @@ class SignIn extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       side: BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(20.0),
-                      
                     ),
                   ),
                   child: TextField(
@@ -165,28 +165,47 @@ class SignIn extends StatelessWidget {
               ),
               Positioned(
                 left: 245,
-                top: 430, // Sesuaikan posisi 
-                child: 
-                ElevatedButton(
+                top: 430, // Sesuaikan posisi
+                child: ElevatedButton(
                   onPressed: () {
-                    FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailTextController.text, 
-                    password: _passwordTextController.text).then((value){
-                        Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                    FirebaseAuth.instance
+                        .signInWithEmailAndPassword(
+                            email: _emailTextController.text,
+                            password: _passwordTextController.text)
+                        .then((value) {
+                      Navigator.push(
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => WelcomeScreen(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = 0.0;
+      const end = 1.0;
+      var curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var scaleAnimation = animation.drive(tween);
+
+      return ScaleTransition(
+        scale: scaleAnimation,
+        child: child,
+      );
+    },
+  ),
+);
+
                     }).onError((error, stackTrace) {
                       print("Error ${error.toString()})");
                     });
-     
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color(0xFF543656), // Warna latar belakang tombol
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                      minimumSize: Size(130, 40), // Atur tinggi dan lebar tombol 
+                    minimumSize: Size(130, 40), // Atur tinggi dan lebar tombol
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
                     child: Text(
                       'Sign In',
                       style: TextStyle(
@@ -197,10 +216,8 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
               ),
-               
             ],
           ),
-          
         ),
       ],
     );

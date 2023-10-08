@@ -1,6 +1,7 @@
+import 'package:tesgit/enjoy.dart';
+import 'package:tesgit/otw.dart';
 import 'package:tesgit/pagesDave/pagesdave.dart';
 import 'package:tesgit/product_list_burger.dart';
-
 import 'welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class StartApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: SplashScreen(), // Gunakan SplashScreen sebagai home page awal
+      debugShowCheckedModeBanner: false,
     );
   }
 }

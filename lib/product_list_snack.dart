@@ -95,7 +95,7 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
             },
           ),
           title: Text(
-            'Spaghetti',
+            'Snack',
             style: TextStyle(
               fontFamily: GoogleFonts.jacquesFrancois().fontFamily,
               fontSize: 28,
@@ -106,8 +106,20 @@ class _ProductListScreenStateSnack extends State<ProductListScreenSnack> {
           actions: [
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CartScreen()));
+                Navigator.push(
+  context,
+  PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => CartScreen(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(1.0, 0.0);
+      const end = Offset.zero;
+      const curve = Curves.easeInOut;
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+      return SlideTransition(position: offsetAnimation, child: child);
+    },
+  ),
+);
               },
               child: Center(
                 child: badges.Badge(

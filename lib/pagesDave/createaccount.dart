@@ -15,8 +15,8 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: primaryColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent, 
-        elevation: 0, 
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -31,7 +31,8 @@ class RegisterPage extends StatelessWidget {
           children: [
             SizedBox(height: 20), // Adjusted height
             FractionalTranslation(
-              translation: Offset(0, -0), // Adjust the offset to move the image up
+              translation:
+                  Offset(0, -0), // Adjust the offset to move the image up
               child: Image.asset(
                 'images/loginpage.png',
                 height: 270,
@@ -97,15 +98,22 @@ class RegisterPage extends StatelessWidget {
             Row(
               children: [
                 ElevatedButton(
-                   onPressed: () async {
-                    try { await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                      email: _emailTextController.text, password: _passwordTextController.text,
-                       ); print("Created New Account");
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => WellcomePage()));
-                         } catch (error) {
-                          print("Error $error");
-                        }
-                      },
+                  onPressed: () async {
+                    try {
+                      await FirebaseAuth.instance
+                          .createUserWithEmailAndPassword(
+                        email: _emailTextController.text,
+                        password: _passwordTextController.text,
+                      );
+                      print("Created New Account");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WellcomePage()));
+                    } catch (error) {
+                      print("Error $error");
+                    }
+                  },
                   child: Text(
                     'Sign Up',
                     style: TextStyle(

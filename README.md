@@ -1,6 +1,6 @@
 KELOMPOK 1
 
--535220007 Kane Pradipa Komala
+- 535220007 Kane Pradipa Komala
 - 535220022 Dave Keane Wijaya
 - 535220028 Sheila Tania
 - 535220031 Ferdinand

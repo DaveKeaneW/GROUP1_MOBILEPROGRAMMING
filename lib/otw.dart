@@ -20,7 +20,7 @@ class OnTheWay extends StatelessWidget {
           KanePunya(),
           Image.asset(
             'images/maps.png', // Ganti dengan path gambar Anda
-            width: 300, // Sesuaikan dengan lebar yang Anda inginkan
+            width: 320, // Sesuaikan dengan lebar yang Anda inginkan
             height: 300, // Sesuaikan dengan tinggi yang Anda inginkan
           ),
         ]),
@@ -35,14 +35,14 @@ class KanePunya extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 412,
+          width: 440,
           height: 843,
           decoration: BoxDecoration(color: Color(0xFF201520)),
           child: Stack(
             children: [
               Image.asset(
                 'images/maps.png', // Ganti dengan path gambar Anda
-                width: 400, // Sesuaikan dengan lebar yang Anda inginkan
+                width: 500, // Sesuaikan dengan lebar yang Anda inginkan
                 height: 700, // Sesuaikan dengan tinggi yang Anda inginkan
               ),
               Positioned(

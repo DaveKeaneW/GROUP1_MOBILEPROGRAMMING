@@ -7,7 +7,10 @@ KELOMPOK 1
 - 535220046 Darren Natanael S
 - 535220050 Olivia Clarabella Khotiera
 
-TINGGAL deskripsi video, dan halaman judul PDF yang dikumpulkan.
+PROPOSAL DEJA BREW KELOMPOK 1.PDF
+
+
+TINGGAL deskripsi video
 
 
 # tesgit
